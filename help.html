@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RU Browser – Help & FAQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  background:#020617;
+  color:#ffffff;
+}
+
+/* HEADER */
+header{
+  padding:80px 20px;
+  text-align:center;
+  background:radial-gradient(circle at top,#1e40af,#020617);
+}
+
+header h1{
+  font-size:42px;
+  margin-bottom:10px;
+  font-weight:800;
+}
+
+header p{
+  font-size:18px;
+  color:#c7d2fe;
+}
+
+/* SECTION */
+.section{
+  padding:90px 20px;
+  max-width:900px;
+  margin:auto;
+}
+
+/* GLASS CARD */
+.card{
+  margin-bottom:30px;
+  padding:35px;
+  border-radius:22px;
+  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+.card h2{
+  margin-top:0;
+  font-size:24px;
+  font-weight:700;
+}
+
+.card p{
+  color:#cbd5f5;
+  line-height:1.7;
+  font-size:16px;
+}
+
+/* FAQ */
+.faq-item{
+  margin-bottom:16px;
+  border-radius:18px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+.faq-question{
+  width:100%;
+  padding:22px 26px;
+  background:none;
+  border:none;
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  padding:0 26px;
+  color:#cbd5f5;
+  font-size:15px;
+  line-height:1.6;
+  transition:0.4s ease;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:35px;
+  border-top:1px solid rgba(255,255,255,0.15);
+  color:#94a3b8;
+  font-size:14px;
+}
+
+footer a{
+  color:#60a5fa;
+  text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  header h1{font-size:32px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Help & FAQ</h1>
+  <p>RU Browser Support Center</p>
+</header>
+
+<section class="section">
+
+  <!-- HELP -->
+  <div class="card">
+    <h2>Help & Support</h2>
+    <p>
+      Welcome to RU Browser Help Center.  
+      RU Browser is designed to be fast, lightweight, and privacy-focused
+      for Android and Windows users.
+    </p>
+    <p>
+      If you face any issues related to performance, privacy, or features,
+      please check the FAQ below or contact our support team.
+    </p>
+    <p>
+      📧 Support Email: <b>myjawla@gmail.com</b>
+    </p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What is RU Browser?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        RU Browser is a fast, lightweight, and privacy-focused web browser
+        available for Android and Windows platforms.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Is RU Browser safe to use?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. RU Browser minimizes unnecessary permissions and includes
+        privacy-focused settings to protect your data.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Does RU Browser collect personal data?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        RU Browser does not sell personal browsing data and focuses on
+        user privacy and security.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Is RU Browser available for Windows?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. RU Browser is available for both Android and Windows users.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How can I contact RU Browser support?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        You can contact us anytime at <b>myjawla@gmail.com</b>.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2025 RU Browser ·
+  <a href="index.html">Home</a>
+</footer>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const ans = btn.nextElementSibling;
+    const icon = btn.querySelector("span");
+
+    if(ans.style.maxHeight){
+      ans.style.maxHeight = null;
+      ans.style.padding = "0 26px";
+      icon.textContent = "+";
+    }else{
+      ans.style.maxHeight = ans.scrollHeight + "px";
+      ans.style.padding = "15px 26px 25px";
+      icon.textContent = "−";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
