@@ -7,7 +7,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-<meta name="description" content="Official RU Apps hub. Download RU Browser, RU Gallery, RU Calendar and RU Calculator. Fast, lightweight and modern apps.">
+<meta name="description" content="Official RU Apps hub. Download RU Browser, RU Gallery, RU Calendar and RU Calculator.">
 <meta name="author" content="RU Apps">
 
 <style>
@@ -44,7 +44,7 @@ header p{
   margin:auto;
 }
 
-/* APPS SECTION */
+/* APPS */
 .apps-section{
   padding:80px 20px;
 }
@@ -56,31 +56,37 @@ header p{
   gap:28px;
 }
 
-/* APP CARD */
+/* CARD */
 .app-card{
   padding:34px;
   border-radius:24px;
-  backdrop-filter:blur(18px);
   background:rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.15);
+  backdrop-filter:blur(18px);
   transition:0.3s;
+  text-align:center;
 }
 .app-card:hover{
   transform:translateY(-10px);
   background:rgba(255,255,255,0.1);
 }
 
-/* ICON */
+/* ICON IMAGE */
 .app-icon{
-  width:64px;
-  height:64px;
+  width:72px;
+  height:72px;
   border-radius:18px;
+  margin:0 auto 18px;
+  overflow:hidden;
+  background:#0f172a;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:30px;
-  margin-bottom:18px;
-  background:linear-gradient(135deg,#2563eb,#38bdf8);
+}
+.app-icon img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
 }
 
 /* TEXT */
@@ -141,33 +147,41 @@ footer a{
 
     <!-- RU Browser -->
     <div class="app-card">
-      <div class="app-icon">🌐</div>
+      <div class="app-icon">
+        <img src="icons/rubrowser.png" alt="RU Browser">
+      </div>
       <h3>RU Browser</h3>
-      <p>Fast, lightweight and privacy-focused browser for Android & Windows.</p>
+      <p>Fast, lightweight and privacy-focused browser.</p>
       <a href="./rubrowser.html">View App</a>
     </div>
 
     <!-- RU Gallery -->
     <div class="app-card">
-      <div class="app-icon">🖼️</div>
+      <div class="app-icon">
+        <img src="icons/rugallery.png" alt="RU Gallery">
+      </div>
       <h3>RU Gallery</h3>
-      <p>Simple and fast photo gallery app with clean modern design.</p>
+      <p>Simple and fast photo gallery app.</p>
       <a href="./rugallery.html">View App</a>
     </div>
 
     <!-- RU Calendar -->
     <div class="app-card">
-      <div class="app-icon">📅</div>
+      <div class="app-icon">
+        <img src="icons/rucalendar.png" alt="RU Calendar">
+      </div>
       <h3>RU Calendar</h3>
-      <p>Lightweight calendar app to manage events and reminders.</p>
+      <p>Lightweight calendar app with reminders.</p>
       <a href="./rucalendar.html">View App</a>
     </div>
 
     <!-- RU Calculator -->
     <div class="app-card">
-      <div class="app-icon">🧮</div>
+      <div class="app-icon">
+        <img src="icons/rucalculator.png" alt="RU Calculator">
+      </div>
       <h3>RU Calculator</h3>
-      <p>Clean, fast and accurate calculator for everyday calculations.</p>
+      <p>Fast and accurate calculator for daily use.</p>
       <a href="./rucalculator.html">View App</a>
     </div>
 
