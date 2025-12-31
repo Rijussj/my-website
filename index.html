@@ -41,46 +41,41 @@ body{
 
 .hero p{
   max-width:760px;
-  margin:0 auto 34px;
+  margin:0 auto 36px;
   font-size:18px;
   line-height:1.6;
   color:#c7d2fe;
 }
 
-/* DOWNLOAD BUTTONS */
-.download-buttons{
+/* DOWNLOAD AREA */
+.download-area{
   display:flex;
   justify-content:center;
-  gap:18px;
+  align-items:center;
+  gap:22px;
   flex-wrap:wrap;
+  margin-bottom:10px;
 }
 
-.download-btn{
+/* WINDOWS BUTTON */
+.win-btn{
   display:flex;
   align-items:center;
-  gap:12px;
-  padding:14px 26px;
+  gap:10px;
+  padding:16px 28px;
   border-radius:16px;
   font-weight:600;
   font-size:15px;
-  text-decoration:none;
   color:white;
+  text-decoration:none;
   backdrop-filter:blur(14px);
   background:rgba(255,255,255,0.08);
   border:1px solid rgba(255,255,255,0.18);
-  transition:0.3s ease;
+  transition:0.3s;
 }
-
-.download-btn:hover{
+.win-btn:hover{
   transform:translateY(-5px);
   background:rgba(255,255,255,0.14);
-}
-
-/* ICON */
-.icon{
-  width:22px;
-  height:22px;
-  display:inline-flex;
 }
 
 /* QUICK LINKS */
@@ -99,7 +94,6 @@ body{
 .section{
   padding:100px 20px;
 }
-
 .section h2{
   text-align:center;
   font-size:36px;
@@ -115,7 +109,6 @@ body{
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
   gap:26px;
 }
-
 .card{
   padding:32px;
   border-radius:22px;
@@ -123,13 +116,11 @@ body{
   background:rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.15);
 }
-
 .card h3{
   margin:0 0 10px;
   font-size:18px;
   font-weight:700;
 }
-
 .card p{
   font-size:15px;
   line-height:1.6;
@@ -144,7 +135,6 @@ footer{
   color:#94a3b8;
   font-size:14px;
 }
-
 footer a{
   color:#60a5fa;
   text-decoration:none;
@@ -172,29 +162,21 @@ footer a{
     </p>
 
     <!-- DOWNLOAD BUTTONS -->
-    <div class="download-buttons">
+    <div class="download-area">
 
-      <!-- ANDROID -->
-      <a class="download-btn" href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
-        <span class="icon">
-          <!-- Play Store Icon -->
-          <svg viewBox="0 0 512 512" fill="currentColor">
-            <path d="M325.3 234.3L104.6 13.7C95.2 4.3 80 10.8 80 24v464c0 13.2 15.2 19.7 24.6 10.3l220.7-220.6c6.3-6.3 6.3-16.5 0-22.8z"/>
-            <path d="M392.6 305.7l-61.5-61.5-74.7 74.7 61.5 61.5c8.9 8.9 23.4 8.9 32.3 0l42.4-42.4c8.9-8.9 8.9-23.4 0-32.3z"/>
-            <path d="M392.6 206.3c8.9-8.9 8.9-23.4 0-32.3l-42.4-42.4c-8.9-8.9-23.4-8.9-32.3 0l-61.5 61.5 74.7 74.7 61.5-61.5z"/>
-          </svg>
-        </span>
-        Download for Android
+      <!-- ANDROID (OFFICIAL PLAY STORE BADGE) -->
+      <a href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
+        <img
+          src="google-play-badge.png"
+          alt="Get it on Google Play"
+          style="height:60px">
       </a>
 
       <!-- WINDOWS -->
-      <a class="download-btn" href="#" title="Coming Soon">
-        <span class="icon">
-          <!-- Windows Icon -->
-          <svg viewBox="0 0 448 512" fill="currentColor">
-            <path d="M0 93.7l183.6-25.1.1 176.4L0 245.1V93.7zm0 324.6l183.6 25.1V268.1L0 268.9v149.4zm203.8 27.9L448 480V268.4l-244.2-.3v177.5zm244.2-410.2L203.8 65.8v179.4l244.2-.3V36z"/>
-          </svg>
-        </span>
+      <a class="win-btn" href="#" title="Coming Soon">
+        <svg width="22" height="22" viewBox="0 0 448 512" fill="currentColor">
+          <path d="M0 93.7l183.6-25.1.1 176.4L0 245.1V93.7zm0 324.6l183.6 25.1V268.1L0 268.9v149.4zm203.8 27.9L448 480V268.4l-244.2-.3v177.5zm244.2-410.2L203.8 65.8v179.4l244.2-.3V36z"/>
+        </svg>
         Download for Windows
       </a>
 
