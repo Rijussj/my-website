@@ -136,4 +136,99 @@ footer a{
       for Android and Windows.
     </p>
     <p>
-      If you face any issue rela
+      If you face any issue related to performance, privacy, or features,
+      please check the FAQ below or contact us directly.
+    </p>
+    <p>
+      📧 Support Email: <b>myjawla@gmail.com</b>
+    </p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="card">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        What is RU Browser?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        RU Browser is a fast, lightweight, and privacy-focused web browser
+        available for Android and Windows platforms.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Is RU Browser safe to use?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. RU Browser minimizes unnecessary permissions and includes
+        privacy-focused settings to protect your data.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Does RU Browser collect personal data?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        RU Browser does not sell personal browsing data and focuses on
+        user privacy and security.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        Is RU Browser available for Windows?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        Yes. RU Browser is available for both Android and Windows users.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">
+        How can I contact RU Browser support?
+        <span>+</span>
+      </button>
+      <div class="faq-answer">
+        You can contact us anytime at <b>myjawla@gmail.com</b>.
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<footer>
+  © 2025 RU Browser ·
+  <a href="./index.html">Home</a> ·
+  <a href="./privacy.html">Privacy Policy</a>
+</footer>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    const ans = btn.nextElementSibling;
+    const icon = btn.querySelector("span");
+
+    if(ans.style.maxHeight){
+      ans.style.maxHeight = null;
+      ans.style.padding = "0 26px";
+      icon.textContent = "+";
+    }else{
+      ans.style.maxHeight = ans.scrollHeight + "px";
+      ans.style.padding = "15px 26px 25px";
+      icon.textContent = "−";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
