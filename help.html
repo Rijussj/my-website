@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>RU Browser – Fast & Secure Browser</title>
+<title>RU Browser – Help & FAQ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 *{box-sizing:border-box}
@@ -17,217 +17,123 @@ body{
   color:#ffffff;
 }
 
-/* HERO */
-.hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+/* HEADER */
+header{
+  padding:80px 20px;
   text-align:center;
-  padding:40px 20px;
-  background:radial-gradient(circle at top,#1e40af,#020617 65%);
+  background:radial-gradient(circle at top,#1e40af,#020617);
 }
 
-/* LOGO */
-.logo{
-  font-size:52px;
-  font-weight:900;
-  letter-spacing:-1.5px;
-  margin-bottom:14px;
-  background:linear-gradient(90deg,#60a5fa,#2563eb,#38bdf8);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.hero p{
-  max-width:760px;
-  margin:0 auto 36px;
-  font-size:18px;
-  line-height:1.6;
-  color:#c7d2fe;
-}
-
-/* DOWNLOAD AREA */
-.download-area{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:22px;
-  flex-wrap:wrap;
+header h1{
+  font-size:42px;
   margin-bottom:10px;
+  font-weight:800;
 }
 
-/* WINDOWS BUTTON */
-.win-btn{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  padding:16px 28px;
-  border-radius:16px;
-  font-weight:600;
-  font-size:15px;
-  color:white;
-  text-decoration:none;
-  backdrop-filter:blur(14px);
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.18);
-  transition:0.3s;
-}
-.win-btn:hover{
-  transform:translateY(-5px);
-  background:rgba(255,255,255,0.14);
-}
-
-/* QUICK LINKS */
-.quick-links{
-  margin-top:24px;
-}
-.quick-links a{
-  color:#93c5fd;
-  text-decoration:none;
-  margin:0 10px;
-  font-size:14px;
-  font-weight:500;
+header p{
+  font-size:17px;
+  color:#c7d2fe;
 }
 
 /* SECTION */
 .section{
-  padding:100px 20px;
-}
-.section h2{
-  text-align:center;
-  font-size:36px;
-  font-weight:800;
-  margin-bottom:60px;
+  padding:90px 20px;
+  max-width:900px;
+  margin:auto;
 }
 
-/* FEATURES */
-.features{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:26px;
-}
+/* GLASS CARD */
 .card{
-  padding:32px;
+  margin-bottom:30px;
+  padding:36px;
   border-radius:22px;
-  backdrop-filter:blur(16px);
+  backdrop-filter:blur(18px);
   background:rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.15);
 }
-.card h3{
-  margin:0 0 10px;
-  font-size:18px;
+
+.card h2{
+  margin-top:0;
+  font-size:24px;
   font-weight:700;
 }
+
 .card p{
+  font-size:16px;
+  line-height:1.7;
+  color:#cbd5f5;
+}
+
+/* FAQ */
+.faq-item{
+  margin-bottom:16px;
+  border-radius:18px;
+  overflow:hidden;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+.faq-question{
+  width:100%;
+  padding:22px 26px;
+  background:none;
+  border:none;
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  padding:0 26px;
+  color:#cbd5f5;
   font-size:15px;
   line-height:1.6;
-  color:#c7d2fe;
+  transition:0.4s ease;
 }
 
 /* FOOTER */
 footer{
-  padding:40px;
   text-align:center;
+  padding:35px;
   border-top:1px solid rgba(255,255,255,0.15);
   color:#94a3b8;
   font-size:14px;
 }
+
 footer a{
   color:#60a5fa;
   text-decoration:none;
-  margin:0 6px;
 }
 
 /* MOBILE */
 @media(max-width:600px){
-  .logo{font-size:38px}
-  .section h2{font-size:28px}
+  header h1{font-size:32px}
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div>
-    <div class="logo">RU Browser</div>
+<header>
+  <h1>Help & FAQ</h1>
+  <p>RU Browser Support Center</p>
+</header>
 
-    <p>
-      Fast, lightweight and privacy-focused browser for Android & Windows.
-      Designed for speed, security and a clean modern experience.
-    </p>
-
-    <!-- DOWNLOAD BUTTONS -->
-    <div class="download-area">
-
-      <!-- ANDROID (OFFICIAL PLAY STORE BADGE) -->
-      <a href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
-        <img
-          src="google-play-badge.png"
-          alt="Get it on Google Play"
-          style="height:60px">
-      </a>
-
-      <!-- WINDOWS -->
-      <a class="win-btn" href="#" title="Coming Soon">
-        <svg width="22" height="22" viewBox="0 0 448 512" fill="currentColor">
-          <path d="M0 93.7l183.6-25.1.1 176.4L0 245.1V93.7zm0 324.6l183.6 25.1V268.1L0 268.9v149.4zm203.8 27.9L448 480V268.4l-244.2-.3v177.5zm244.2-410.2L203.8 65.8v179.4l244.2-.3V36z"/>
-        </svg>
-        Download for Windows
-      </a>
-
-    </div>
-
-    <div class="quick-links">
-      <a href="help.html">Help & FAQ</a> |
-      <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
 <section class="section">
-  <h2>Why RU Browser</h2>
 
-  <div class="features">
-    <div class="card">
-      <h3>🚀 Fast Performance</h3>
-      <p>Optimized browsing engine for quick page loading.</p>
-    </div>
-    <div class="card">
-      <h3>📱 Lightweight</h3>
-      <p>Low RAM and storage usage.</p>
-    </div>
-    <div class="card">
-      <h3>🔐 Privacy Focused</h3>
-      <p>Protects your data and browsing activity.</p>
-    </div>
-    <div class="card">
-      <h3>🎨 Modern UI</h3>
-      <p>Clean and distraction-free interface.</p>
-    </div>
-    <div class="card">
-      <h3>🗂 Smart Tabs</h3>
-      <p>Easy and smooth tab management.</p>
-    </div>
-    <div class="card">
-      <h3>🎬 Media Optimized</h3>
-      <p>Smooth video and media playback.</p>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  © 2025 RU Browser ·
-  <a href="help.html">Help & FAQ</a> ·
-  <a href="privacy.html">Privacy Policy</a> ·
-  <a href="mailto:myjawla@gmail.com">Support</a>
-</footer>
-
-</body>
-</html>
+  <!-- HELP -->
+  <div class="card">
+    <h2>Help & Support</h2>
+    <p>
+      Welcome to RU Browser Help Center.  
+      RU Browser is a fast, lightweight, and privacy-focused browser
+      for Android and Windows.
+    </p>
+    <p>
+      If you face any issue rela
