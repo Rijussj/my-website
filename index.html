@@ -5,19 +5,32 @@
 <title>RU Browser – Fast & Secure Browser</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- PREMIUM FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Inter', system-ui, -apple-system, sans-serif;
   background:#020617;
   color:#ffffff;
+  overflow-x:hidden;
 }
 
-/* HERO SECTION */
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all 0.9s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* HERO */
 .hero{
   min-height:100vh;
   display:flex;
@@ -25,105 +38,134 @@ body{
   justify-content:center;
   text-align:center;
   padding:40px 20px;
-  background:radial-gradient(circle at top, #1e3a8a, #020617);
+  background:
+    radial-gradient(circle at top, #1e40af, #020617 65%);
 }
 
-.hero h1{
-  font-size:42px;
-  margin-bottom:15px;
-  color:#ffffff;
+/* LOGO TEXT */
+.logo{
+  font-size:52px;
+  font-weight:900;
+  letter-spacing:-1.5px;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,#60a5fa,#2563eb,#38bdf8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
 .hero p{
-  max-width:700px;
-  margin:0 auto 30px;
+  max-width:760px;
+  margin:0 auto 36px;
   font-size:18px;
-  color:#e5e7eb;
+  line-height:1.6;
+  color:#cbd5f5;
+  font-weight:400;
 }
 
 /* BUTTONS */
 .buttons a{
-  display:inline-block;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
   margin:8px;
-  padding:14px 28px;
-  border-radius:10px;
-  font-weight:bold;
+  padding:15px 34px;
+  border-radius:16px;
+  font-weight:600;
   text-decoration:none;
+  font-size:15px;
+  transition:0.35s ease;
 }
 
 .btn-primary{
-  background:#2563eb;
-  color:#ffffff;
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
+  color:white;
+  box-shadow:0 20px 45px rgba(37,99,235,.45);
+}
+.btn-primary:hover{
+  transform:translateY(-6px);
 }
 
 .btn-secondary{
-  border:1px solid #475569;
-  color:#ffffff;
+  backdrop-filter:blur(16px);
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.2);
+  color:white;
 }
 
 /* SECTIONS */
 .section{
-  padding:80px 20px;
-  background:#020617;
+  padding:100px 20px;
 }
 
 .section h2{
   text-align:center;
-  font-size:32px;
-  margin-bottom:40px;
-  color:#ffffff;
+  font-size:36px;
+  font-weight:800;
+  letter-spacing:-1px;
+  margin-bottom:60px;
 }
 
-/* FEATURES GRID */
+/* FEATURES */
 .features{
-  max-width:1100px;
+  max-width:1180px;
   margin:auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:26px;
 }
 
+/* GLASS CARD */
 .card{
-  background:#020617;
-  border:1px solid #1e293b;
-  border-radius:16px;
-  padding:25px;
+  padding:32px;
+  border-radius:22px;
+  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  transition:0.4s ease;
+}
+
+.card:hover{
+  transform:translateY(-12px) scale(1.03);
+  background:rgba(255,255,255,0.1);
 }
 
 .card h3{
-  margin-top:0;
-  color:#ffffff;
+  margin:0 0 10px;
+  font-size:18px;
+  font-weight:700;
 }
 
 .card p{
-  color:#cbd5f5;
+  color:#c7d2fe;
+  line-height:1.6;
+  font-size:15px;
 }
 
-/* PRIVACY BOX */
+/* PRIVACY */
 .privacy{
-  max-width:900px;
+  max-width:920px;
   margin:auto;
-  border:1px solid #1e293b;
-  border-radius:16px;
-  padding:40px;
+  padding:60px;
+  border-radius:28px;
+  backdrop-filter:blur(20px);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
   text-align:center;
 }
 
-.privacy h2{
-  color:#ffffff;
-}
-
 .privacy p{
-  color:#cbd5f5;
+  font-size:17px;
+  line-height:1.7;
+  color:#c7d2fe;
 }
 
 /* FOOTER */
 footer{
-  padding:30px;
+  padding:40px;
   text-align:center;
-  background:#020617;
-  border-top:1px solid #1e293b;
+  border-top:1px solid rgba(255,255,255,0.15);
   color:#94a3b8;
+  font-size:14px;
 }
 
 footer a{
@@ -133,9 +175,9 @@ footer a{
 
 /* MOBILE */
 @media(max-width:600px){
-  .hero h1{
-    font-size:32px;
-  }
+  .logo{font-size:38px}
+  .section h2{font-size:28px}
+  .privacy{padding:36px}
 }
 </style>
 </head>
@@ -144,11 +186,12 @@ footer a{
 
 <!-- HERO -->
 <section class="hero">
-  <div>
-    <h1>RU Browser</h1>
+  <div class="reveal">
+    <div class="logo">RU Browser</div>
+
     <p>
       Fast, lightweight and privacy-focused browser for Android & Windows.
-      Designed for speed, security, and a clean browsing experience.
+      Designed with modern performance, security and a clean UI.
     </p>
 
     <div class="buttons">
@@ -164,58 +207,70 @@ footer a{
 
 <!-- FEATURES -->
 <section class="section">
-  <h2>Powerful Features</h2>
+  <h2 class="reveal">Why RU Browser</h2>
 
   <div class="features">
-    <div class="card">
+    <div class="card reveal">
       <h3>🚀 Fast Performance</h3>
-      <p>Load pages quickly with an optimized browsing engine.</p>
+      <p>Optimized engine for lightning-fast browsing and smooth navigation.</p>
     </div>
 
-    <div class="card">
-      <h3>📱 Lightweight & Efficient</h3>
-      <p>Low storage and RAM usage for maximum device speed.</p>
+    <div class="card reveal">
+      <h3>📱 Lightweight</h3>
+      <p>Minimal RAM and storage usage for better device efficiency.</p>
     </div>
 
-    <div class="card">
+    <div class="card reveal">
       <h3>🔐 Enhanced Privacy</h3>
-      <p>Built-in protections to help keep your browsing safe and secure.</p>
+      <p>Privacy-first features to protect your online activity.</p>
     </div>
 
-    <div class="card">
-      <h3>🗂 Smart Tab Management</h3>
-      <p>Switch between tabs easily without lag.</p>
+    <div class="card reveal">
+      <h3>🗂 Smart Tabs</h3>
+      <p>Seamless tab switching without lag.</p>
     </div>
 
-    <div class="card">
-      <h3>🎨 Clean, Modern UI</h3>
-      <p>Simple and intuitive design for distraction-free browsing.</p>
+    <div class="card reveal">
+      <h3>🎨 Modern UI</h3>
+      <p>Clean, minimal and distraction-free design.</p>
     </div>
 
-    <div class="card">
-      <h3>🎬 Smooth Video & Media Playback</h3>
-      <p>Optimized for streaming and online content.</p>
+    <div class="card reveal">
+      <h3>🎬 Media Optimized</h3>
+      <p>Smooth video streaming and content playback.</p>
     </div>
   </div>
 </section>
 
 <!-- PRIVACY -->
 <section class="section">
-  <div class="privacy">
+  <div class="privacy reveal">
     <h2>🔒 Privacy You Can Trust</h2>
     <p>
-      RU Browser minimizes unnecessary permissions and offers
-      privacy-focused settings to help protect your data online.
+      RU Browser minimizes unnecessary permissions and focuses on
+      secure, private and transparent browsing.
     </p>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  © 2025 RU Browser  
-  <br>
-  Support: <a href="mailto:myjawla@gmail.com">myjawla@gmail.com</a>
+<footer class="reveal">
+  © 2025 RU Browser · Support:
+  <a href="mailto:myjawla@gmail.com">myjawla@gmail.com</a>
 </footer>
+
+<script>
+const reveals=document.querySelectorAll('.reveal');
+function revealOnScroll(){
+  const h=window.innerHeight;
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top<h-100){
+      el.classList.add('active');
+    }
+  });
+}
+window.addEventListener('scroll',revealOnScroll);
+window.addEventListener('load',revealOnScroll);
+</script>
 
 </body>
 </html>
