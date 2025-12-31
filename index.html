@@ -5,7 +5,6 @@
 <title>RU Browser – Fast & Secure Browser</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- PREMIUM FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
@@ -16,18 +15,6 @@ body{
   font-family:'Inter',system-ui,sans-serif;
   background:#020617;
   color:#ffffff;
-  overflow-x:hidden;
-}
-
-/* REVEAL ANIMATION */
-.reveal{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 0.9s ease;
-}
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
 }
 
 /* HERO */
@@ -43,7 +30,7 @@ body{
 
 /* LOGO */
 .logo{
-  font-size:52px;
+  font-size:50px;
   font-weight:900;
   letter-spacing:-1.5px;
   margin-bottom:12px;
@@ -54,7 +41,7 @@ body{
 
 .hero p{
   max-width:760px;
-  margin:0 auto 34px;
+  margin:0 auto 30px;
   font-size:18px;
   line-height:1.6;
   color:#c7d2fe;
@@ -62,121 +49,44 @@ body{
 
 /* BUTTONS */
 .buttons a{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+  display:inline-block;
   margin:8px;
-  padding:15px 34px;
+  padding:14px 32px;
   border-radius:16px;
   font-weight:600;
   text-decoration:none;
-  font-size:15px;
-  transition:0.35s ease;
 }
 
 .btn-primary{
-  background:linear-gradient(135deg,#2563eb,#3b82f6);
+  background:#2563eb;
   color:white;
-  box-shadow:0 20px 45px rgba(37,99,235,.45);
-}
-.btn-primary:hover{
-  transform:translateY(-6px);
 }
 
 .btn-secondary{
-  backdrop-filter:blur(16px);
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.2);
+  border:1px solid #475569;
   color:white;
 }
 
-/* HELP LINK */
-.help-link{
-  margin-top:26px;
+/* QUICK LINKS */
+.quick-links{
+  margin-top:22px;
 }
-.help-link a{
+.quick-links a{
   color:#93c5fd;
   text-decoration:none;
-  font-weight:500;
+  margin:0 10px;
   font-size:14px;
-}
-
-/* SECTION */
-.section{
-  padding:100px 20px;
-}
-
-.section h2{
-  text-align:center;
-  font-size:36px;
-  font-weight:800;
-  letter-spacing:-1px;
-  margin-bottom:60px;
-}
-
-/* FEATURES */
-.features{
-  max-width:1180px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:26px;
-}
-
-/* GLASS CARD */
-.card{
-  padding:32px;
-  border-radius:22px;
-  backdrop-filter:blur(18px);
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-  transition:0.4s ease;
-}
-
-.card:hover{
-  transform:translateY(-12px) scale(1.03);
-  background:rgba(255,255,255,0.1);
-}
-
-.card h3{
-  margin:0 0 10px;
-  font-size:18px;
-  font-weight:700;
-}
-
-.card p{
-  color:#c7d2fe;
-  line-height:1.6;
-  font-size:15px;
-}
-
-/* PRIVACY */
-.privacy{
-  max-width:920px;
-  margin:auto;
-  padding:60px;
-  border-radius:28px;
-  backdrop-filter:blur(20px);
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-  text-align:center;
-}
-
-.privacy p{
-  font-size:17px;
-  line-height:1.7;
-  color:#c7d2fe;
+  font-weight:500;
 }
 
 /* FOOTER */
 footer{
-  padding:40px;
+  padding:35px;
   text-align:center;
   border-top:1px solid rgba(255,255,255,0.15);
   color:#94a3b8;
   font-size:14px;
 }
-
 footer a{
   color:#60a5fa;
   text-decoration:none;
@@ -185,9 +95,7 @@ footer a{
 
 /* MOBILE */
 @media(max-width:600px){
-  .logo{font-size:38px}
-  .section h2{font-size:28px}
-  .privacy{padding:36px}
+  .logo{font-size:36px}
 }
 </style>
 </head>
@@ -196,12 +104,12 @@ footer a{
 
 <!-- HERO -->
 <section class="hero">
-  <div class="reveal">
+  <div>
     <div class="logo">RU Browser</div>
 
     <p>
       Fast, lightweight and privacy-focused browser for Android & Windows.
-      Designed with modern performance, security and a clean UI.
+      Designed for speed, security and a clean modern experience.
     </p>
 
     <div class="buttons">
@@ -209,85 +117,25 @@ footer a{
         Download on Play Store
       </a>
       <a class="btn-secondary" href="mailto:myjawla@gmail.com">
-        Download For Windows
+        Contact Support
       </a>
     </div>
 
-    <!-- HELP LINK -->
-    <div class="help-link">
-      <a href="help.html">Help & FAQ →</a>
+    <!-- IMPORTANT LINKS -->
+    <div class="quick-links">
+      <a href="help.html">Help & FAQ</a> |
+      <a href="privacy.html">Privacy Policy</a>
     </div>
-  </div>
-</section>
-
-<!-- FEATURES -->
-<section class="section">
-  <h2 class="reveal">Why RU Browser</h2>
-
-  <div class="features">
-    <div class="card reveal">
-      <h3>🚀 Fast Performance</h3>
-      <p>Optimized engine for lightning-fast browsing.</p>
-    </div>
-
-    <div class="card reveal">
-      <h3>📱 Lightweight</h3>
-      <p>Minimal RAM and storage usage.</p>
-    </div>
-
-    <div class="card reveal">
-      <h3>🔐 Enhanced Privacy</h3>
-      <p>Privacy-first design to protect your data.</p>
-    </div>
-
-    <div class="card reveal">
-      <h3>🗂 Smart Tabs</h3>
-      <p>Seamless tab switching without lag.</p>
-    </div>
-
-    <div class="card reveal">
-      <h3>🎨 Modern UI</h3>
-      <p>Clean and distraction-free interface.</p>
-    </div>
-
-    <div class="card reveal">
-      <h3>🎬 Media Optimized</h3>
-      <p>Smooth video and content playback.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PRIVACY -->
-<section class="section">
-  <div class="privacy reveal">
-    <h2>🔒 Privacy You Can Trust</h2>
-    <p>
-      RU Browser minimizes unnecessary permissions and focuses on
-      secure, private and transparent browsing.
-    </p>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="reveal">
+<footer>
   © 2025 RU Browser ·
   <a href="help.html">Help & FAQ</a> ·
+  <a href="privacy.html">Privacy Policy</a> ·
   <a href="mailto:myjawla@gmail.com">Support</a>
 </footer>
-
-<script>
-const reveals=document.querySelectorAll('.reveal');
-function revealOnScroll(){
-  const h=window.innerHeight;
-  reveals.forEach(el=>{
-    if(el.getBoundingClientRect().top<h-100){
-      el.classList.add('active');
-    }
-  });
-}
-window.addEventListener('scroll',revealOnScroll);
-window.addEventListener('load',revealOnScroll);
-</script>
 
 </body>
 </html>
