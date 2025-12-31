@@ -5,10 +5,10 @@
 <title>RU Apps – Official App Hub</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<a href="./rubrowser.html">View App</a>
-
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
 <meta name="description" content="Official RU Apps hub. Download RU Browser, RU Gallery, RU Calendar and RU Calculator. Fast, lightweight and modern apps.">
+<meta name="author" content="RU Apps">
 
 <style>
 *{box-sizing:border-box}
@@ -25,20 +25,26 @@ body{
 
 /* HEADER */
 header{
-  padding:80px 20px;
+  padding:90px 20px 60px;
   text-align:center;
 }
 header h1{
-  font-size:46px;
-  font-weight:800;
+  font-size:48px;
+  font-weight:900;
+  letter-spacing:-1.5px;
   margin-bottom:10px;
+  background:linear-gradient(90deg,#60a5fa,#38bdf8,#2563eb);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 header p{
   font-size:17px;
   color:#c7d2fe;
+  max-width:700px;
+  margin:auto;
 }
 
-/* APPS GRID */
+/* APPS SECTION */
 .apps-section{
   padding:80px 20px;
 }
@@ -75,7 +81,7 @@ header p{
   align-items:center;
   justify-content:center;
   font-size:30px;
-  margin-bottom:16px;
+  margin-bottom:18px;
   background:linear-gradient(135deg,#2563eb,#38bdf8);
 }
 
@@ -114,6 +120,12 @@ footer{
   font-size:14px;
 }
 
+footer a{
+  color:#60a5fa;
+  text-decoration:none;
+  margin:0 6px;
+}
+
 /* MOBILE */
 @media(max-width:600px){
   header h1{font-size:34px}
@@ -138,9 +150,7 @@ footer{
       <p>
         Fast, lightweight and privacy-focused browser for Android & Windows.
       </p>
-      <a href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
-        View App
-      </a>
+      <a href="./rubrowser.html">View App</a>
     </div>
 
     <!-- RU Gallery -->
@@ -150,9 +160,7 @@ footer{
       <p>
         Simple and fast photo gallery app with clean modern design.
       </p>
-      <a href="#">
-        View App
-      </a>
+      <a href="#">Coming Soon</a>
     </div>
 
     <!-- RU Calendar -->
@@ -160,11 +168,9 @@ footer{
       <div class="app-icon">📅</div>
       <h3>RU Calendar</h3>
       <p>
-        Lightweight calendar app to manage your daily events easily.
+        Lightweight calendar app to manage daily events easily.
       </p>
-      <a href="#">
-        View App
-      </a>
+      <a href="#">Coming Soon</a>
     </div>
 
     <!-- RU Calculator -->
@@ -174,16 +180,17 @@ footer{
       <p>
         Clean, fast and accurate calculator for everyday calculations.
       </p>
-      <a href="#">
-        View App
-      </a>
+      <a href="#">Coming Soon</a>
     </div>
 
   </div>
 </section>
 
 <footer>
-  © 2025 RU Apps · All rights reserved
+  © 2025 RU Apps ·
+  <a href="./privacy.html">Privacy Policy</a> ·
+  <a href="./terms.html">Terms</a> ·
+  <a href="./help.html">Help & FAQ</a>
 </footer>
 
 </body>
