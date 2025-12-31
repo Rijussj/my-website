@@ -6,15 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Inter, Arial, sans-serif;
-  background:#0b1220;
-  color:#e5e7eb;
+*{
+  box-sizing:border-box;
 }
 
-/* HERO */
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#020617;
+  color:#ffffff;
+}
+
+/* HERO SECTION */
 .hero{
   min-height:100vh;
   display:flex;
@@ -22,29 +25,197 @@ body{
   justify-content:center;
   text-align:center;
   padding:40px 20px;
-  background:radial-gradient(circle at top,#1e3a8a,#020617);
+  background:radial-gradient(circle at top, #1e3a8a, #020617);
 }
+
 .hero h1{
-  font-size:48px;
+  font-size:42px;
   margin-bottom:15px;
+  color:#ffffff;
 }
+
 .hero p{
   max-width:700px;
   margin:0 auto 30px;
-  color:#cbd5f5;
   font-size:18px;
+  color:#e5e7eb;
 }
+
+/* BUTTONS */
 .buttons a{
   display:inline-block;
   margin:8px;
   padding:14px 28px;
   border-radius:10px;
-  font-weight:600;
+  font-weight:bold;
   text-decoration:none;
 }
+
 .btn-primary{
   background:#2563eb;
-  color:white;
+  color:#ffffff;
 }
+
 .btn-secondary{
-  border:1px solid #3341
+  border:1px solid #475569;
+  color:#ffffff;
+}
+
+/* SECTIONS */
+.section{
+  padding:80px 20px;
+  background:#020617;
+}
+
+.section h2{
+  text-align:center;
+  font-size:32px;
+  margin-bottom:40px;
+  color:#ffffff;
+}
+
+/* FEATURES GRID */
+.features{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:#020617;
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:25px;
+}
+
+.card h3{
+  margin-top:0;
+  color:#ffffff;
+}
+
+.card p{
+  color:#cbd5f5;
+}
+
+/* PRIVACY BOX */
+.privacy{
+  max-width:900px;
+  margin:auto;
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:40px;
+  text-align:center;
+}
+
+.privacy h2{
+  color:#ffffff;
+}
+
+.privacy p{
+  color:#cbd5f5;
+}
+
+/* FOOTER */
+footer{
+  padding:30px;
+  text-align:center;
+  background:#020617;
+  border-top:1px solid #1e293b;
+  color:#94a3b8;
+}
+
+footer a{
+  color:#60a5fa;
+  text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .hero h1{
+    font-size:32px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>RU Browser</h1>
+    <p>
+      Fast, lightweight and privacy-focused browser for Android & Windows.
+      Designed for speed, security, and a clean browsing experience.
+    </p>
+
+    <div class="buttons">
+      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
+        Download on Play Store
+      </a>
+      <a class="btn-secondary" href="mailto:myjawla@gmail.com">
+        Contact Support
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section">
+  <h2>Powerful Features</h2>
+
+  <div class="features">
+    <div class="card">
+      <h3>🚀 Fast Performance</h3>
+      <p>Load pages quickly with an optimized browsing engine.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Lightweight & Efficient</h3>
+      <p>Low storage and RAM usage for maximum device speed.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔐 Enhanced Privacy</h3>
+      <p>Built-in protections to help keep your browsing safe and secure.</p>
+    </div>
+
+    <div class="card">
+      <h3>🗂 Smart Tab Management</h3>
+      <p>Switch between tabs easily without lag.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎨 Clean, Modern UI</h3>
+      <p>Simple and intuitive design for distraction-free browsing.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎬 Smooth Video & Media Playback</h3>
+      <p>Optimized for streaming and online content.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PRIVACY -->
+<section class="section">
+  <div class="privacy">
+    <h2>🔒 Privacy You Can Trust</h2>
+    <p>
+      RU Browser minimizes unnecessary permissions and offers
+      privacy-focused settings to help protect your data online.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  © 2025 RU Browser  
+  <br>
+  Support: <a href="mailto:myjawla@gmail.com">myjawla@gmail.com</a>
+</footer>
+
+</body>
+</html>
