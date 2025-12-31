@@ -13,13 +13,13 @@
 
 body{
   margin:0;
-  font-family:'Inter', system-ui, -apple-system, sans-serif;
+  font-family:'Inter',system-ui,sans-serif;
   background:#020617;
   color:#ffffff;
   overflow-x:hidden;
 }
 
-/* REVEAL */
+/* REVEAL ANIMATION */
 .reveal{
   opacity:0;
   transform:translateY(40px);
@@ -38,16 +38,15 @@ body{
   justify-content:center;
   text-align:center;
   padding:40px 20px;
-  background:
-    radial-gradient(circle at top, #1e40af, #020617 65%);
+  background:radial-gradient(circle at top,#1e40af,#020617 65%);
 }
 
-/* LOGO TEXT */
+/* LOGO */
 .logo{
   font-size:52px;
   font-weight:900;
   letter-spacing:-1.5px;
-  margin-bottom:10px;
+  margin-bottom:12px;
   background:linear-gradient(90deg,#60a5fa,#2563eb,#38bdf8);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -55,11 +54,10 @@ body{
 
 .hero p{
   max-width:760px;
-  margin:0 auto 36px;
+  margin:0 auto 34px;
   font-size:18px;
   line-height:1.6;
-  color:#cbd5f5;
-  font-weight:400;
+  color:#c7d2fe;
 }
 
 /* BUTTONS */
@@ -92,7 +90,18 @@ body{
   color:white;
 }
 
-/* SECTIONS */
+/* HELP LINK */
+.help-link{
+  margin-top:26px;
+}
+.help-link a{
+  color:#93c5fd;
+  text-decoration:none;
+  font-weight:500;
+  font-size:14px;
+}
+
+/* SECTION */
 .section{
   padding:100px 20px;
 }
@@ -171,6 +180,7 @@ footer{
 footer a{
   color:#60a5fa;
   text-decoration:none;
+  margin:0 6px;
 }
 
 /* MOBILE */
@@ -199,8 +209,13 @@ footer a{
         Download on Play Store
       </a>
       <a class="btn-secondary" href="mailto:myjawla@gmail.com">
-        Contact Support
+        Download For Windows
       </a>
+    </div>
+
+    <!-- HELP LINK -->
+    <div class="help-link">
+      <a href="help.html">Help & FAQ →</a>
     </div>
   </div>
 </section>
@@ -212,17 +227,17 @@ footer a{
   <div class="features">
     <div class="card reveal">
       <h3>🚀 Fast Performance</h3>
-      <p>Optimized engine for lightning-fast browsing and smooth navigation.</p>
+      <p>Optimized engine for lightning-fast browsing.</p>
     </div>
 
     <div class="card reveal">
       <h3>📱 Lightweight</h3>
-      <p>Minimal RAM and storage usage for better device efficiency.</p>
+      <p>Minimal RAM and storage usage.</p>
     </div>
 
     <div class="card reveal">
       <h3>🔐 Enhanced Privacy</h3>
-      <p>Privacy-first features to protect your online activity.</p>
+      <p>Privacy-first design to protect your data.</p>
     </div>
 
     <div class="card reveal">
@@ -232,12 +247,12 @@ footer a{
 
     <div class="card reveal">
       <h3>🎨 Modern UI</h3>
-      <p>Clean, minimal and distraction-free design.</p>
+      <p>Clean and distraction-free interface.</p>
     </div>
 
     <div class="card reveal">
       <h3>🎬 Media Optimized</h3>
-      <p>Smooth video streaming and content playback.</p>
+      <p>Smooth video and content playback.</p>
     </div>
   </div>
 </section>
@@ -253,9 +268,11 @@ footer a{
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="reveal">
-  © 2025 RU Browser · Support:
-  <a href="mailto:myjawla@gmail.com">myjawla@gmail.com</a>
+  © 2025 RU Browser ·
+  <a href="help.html">Help & FAQ</a> ·
+  <a href="mailto:myjawla@gmail.com">Support</a>
 </footer>
 
 <script>
