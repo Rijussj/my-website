@@ -33,7 +33,7 @@ body{
   font-size:52px;
   font-weight:900;
   letter-spacing:-1.5px;
-  margin-bottom:12px;
+  margin-bottom:14px;
   background:linear-gradient(90deg,#60a5fa,#2563eb,#38bdf8);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
@@ -41,35 +41,51 @@ body{
 
 .hero p{
   max-width:760px;
-  margin:0 auto 32px;
+  margin:0 auto 34px;
   font-size:18px;
   line-height:1.6;
   color:#c7d2fe;
 }
 
-/* BUTTONS */
-.buttons a{
-  display:inline-block;
-  margin:8px;
-  padding:14px 34px;
+/* DOWNLOAD BUTTONS */
+.download-buttons{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
+
+.download-btn{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:14px 26px;
   border-radius:16px;
   font-weight:600;
+  font-size:15px;
   text-decoration:none;
+  color:white;
+  backdrop-filter:blur(14px);
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.18);
+  transition:0.3s ease;
 }
 
-.btn-primary{
-  background:linear-gradient(135deg,#2563eb,#3b82f6);
-  color:white;
+.download-btn:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,0.14);
 }
 
-.btn-secondary{
-  border:1px solid #475569;
-  color:white;
+/* ICON */
+.icon{
+  width:22px;
+  height:22px;
+  display:inline-flex;
 }
 
 /* QUICK LINKS */
 .quick-links{
-  margin-top:22px;
+  margin-top:24px;
 }
 .quick-links a{
   color:#93c5fd;
@@ -89,35 +105,6 @@ body{
   font-size:36px;
   font-weight:800;
   margin-bottom:60px;
-}
-
-/* DOWNLOAD */
-.download-grid{
-  max-width:900px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-}
-
-.download-card{
-  padding:36px;
-  border-radius:24px;
-  text-align:center;
-  backdrop-filter:blur(16px);
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-}
-
-.download-card h3{
-  margin-top:0;
-  font-size:22px;
-}
-
-.download-card p{
-  color:#c7d2fe;
-  font-size:15px;
-  margin-bottom:20px;
 }
 
 /* FEATURES */
@@ -184,41 +171,38 @@ footer a{
       Designed for speed, security and a clean modern experience.
     </p>
 
-    <div class="buttons">
-      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
+    <!-- DOWNLOAD BUTTONS -->
+    <div class="download-buttons">
+
+      <!-- ANDROID -->
+      <a class="download-btn" href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
+        <span class="icon">
+          <!-- Play Store Icon -->
+          <svg viewBox="0 0 512 512" fill="currentColor">
+            <path d="M325.3 234.3L104.6 13.7C95.2 4.3 80 10.8 80 24v464c0 13.2 15.2 19.7 24.6 10.3l220.7-220.6c6.3-6.3 6.3-16.5 0-22.8z"/>
+            <path d="M392.6 305.7l-61.5-61.5-74.7 74.7 61.5 61.5c8.9 8.9 23.4 8.9 32.3 0l42.4-42.4c8.9-8.9 8.9-23.4 0-32.3z"/>
+            <path d="M392.6 206.3c8.9-8.9 8.9-23.4 0-32.3l-42.4-42.4c-8.9-8.9-23.4-8.9-32.3 0l-61.5 61.5 74.7 74.7 61.5-61.5z"/>
+          </svg>
+        </span>
         Download for Android
       </a>
-      <a class="btn-secondary" href="#download">
+
+      <!-- WINDOWS -->
+      <a class="download-btn" href="#" title="Coming Soon">
+        <span class="icon">
+          <!-- Windows Icon -->
+          <svg viewBox="0 0 448 512" fill="currentColor">
+            <path d="M0 93.7l183.6-25.1.1 176.4L0 245.1V93.7zm0 324.6l183.6 25.1V268.1L0 268.9v149.4zm203.8 27.9L448 480V268.4l-244.2-.3v177.5zm244.2-410.2L203.8 65.8v179.4l244.2-.3V36z"/>
+          </svg>
+        </span>
         Download for Windows
       </a>
+
     </div>
 
     <div class="quick-links">
       <a href="help.html">Help & FAQ</a> |
       <a href="privacy.html">Privacy Policy</a>
-    </div>
-  </div>
-</section>
-
-<!-- DOWNLOAD SECTION -->
-<section class="section" id="download">
-  <h2>Download RU Browser</h2>
-
-  <div class="download-grid">
-    <div class="download-card">
-      <h3>📱 Android</h3>
-      <p>Get RU Browser from Google Play Store for fast and secure browsing.</p>
-      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
-        Download on Play Store
-      </a>
-    </div>
-
-    <div class="download-card">
-      <h3>💻 Windows</h3>
-      <p>Download RU Browser for Windows desktop experience.</p>
-      <a class="btn-secondary" href="#" title="Coming Soon">
-        Windows Version (Coming Soon)
-      </a>
     </div>
   </div>
 </section>
@@ -232,27 +216,22 @@ footer a{
       <h3>🚀 Fast Performance</h3>
       <p>Optimized browsing engine for quick page loading.</p>
     </div>
-
     <div class="card">
       <h3>📱 Lightweight</h3>
       <p>Low RAM and storage usage.</p>
     </div>
-
     <div class="card">
       <h3>🔐 Privacy Focused</h3>
       <p>Protects your data and browsing activity.</p>
     </div>
-
-    <div class="card">
-      <h3>🗂 Smart Tabs</h3>
-      <p>Easy and smooth tab management.</p>
-    </div>
-
     <div class="card">
       <h3>🎨 Modern UI</h3>
       <p>Clean and distraction-free interface.</p>
     </div>
-
+    <div class="card">
+      <h3>🗂 Smart Tabs</h3>
+      <p>Easy and smooth tab management.</p>
+    </div>
     <div class="card">
       <h3>🎬 Media Optimized</h3>
       <p>Smooth video and media playback.</p>
