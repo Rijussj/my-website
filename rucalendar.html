@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RU Calendar – Simple & Smart Calendar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- SEO -->
+<meta name="description" content="RU Calendar is a lightweight and easy-to-use calendar app for Android.">
+<meta name="keywords" content="RU Calendar, calendar app, android calendar, lightweight calendar">
+<meta name="author" content="RU Apps">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  color:#ffffff;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #7c2d12 0%, transparent 60%),
+    radial-gradient(1000px 500px at 90% 10%, #f97316 0%, transparent 55%),
+    #020617;
+}
+
+/* HEADER */
+header{
+  padding:90px 20px;
+  text-align:center;
+}
+header h1{
+  font-size:52px;
+  font-weight:900;
+  letter-spacing:-1.5px;
+  margin-bottom:12px;
+  background:linear-gradient(90deg,#fb923c,#fdba74,#f97316);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+header p{
+  max-width:760px;
+  margin:auto;
+  font-size:18px;
+  line-height:1.6;
+  color:#fed7aa;
+}
+
+/* ACTIONS */
+.actions{
+  margin-top:34px;
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+/* SECTION */
+.section{
+  padding:110px 20px;
+}
+.section h2{
+  text-align:center;
+  font-size:38px;
+  font-weight:800;
+  margin-bottom:60px;
+}
+
+/* FEATURES */
+.features{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.card{
+  padding:34px;
+  border-radius:24px;
+  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+.card h3{
+  margin:0 0 10px;
+  font-size:18px;
+  font-weight:700;
+}
+.card p{
+  font-size:15px;
+  line-height:1.6;
+  color:#fed7aa;
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.15);
+  color:#fdba74;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  header h1{font-size:38px}
+  .section h2{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>RU Calendar</h1>
+  <p>
+    RU Calendar is a simple, lightweight and smart calendar app
+    designed to help you manage events, dates and reminders easily.
+  </p>
+
+  <div class="actions">
+    <!-- PLAY STORE (ADD LINK WHEN READY) -->
+    <a href="#" style="
+      padding:16px 30px;
+      border-radius:18px;
+      font-weight:600;
+      font-size:15px;
+      color:white;
+      text-decoration:none;
+      backdrop-filter:blur(16px);
+      background:rgba(255,255,255,0.08);
+      border:1px solid rgba(255,255,255,0.18);
+    ">
+      📅 Available on Play Store (Soon)
+    </a>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Why Choose RU Calendar</h2>
+
+  <div class="features">
+    <div class="card">
+      <h3>📆 Simple Calendar</h3>
+      <p>Clean and easy-to-use calendar layout.</p>
+    </div>
+
+    <div class="card">
+      <h3>⚡ Lightweight</h3>
+      <p>Minimal storage and RAM usage.</p>
+    </div>
+
+    <div class="card">
+      <h3>⏰ Event Reminders</h3>
+      <p>Never miss important events and dates.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎨 Clean UI</h3>
+      <p>Modern and distraction-free interface.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔐 Privacy Friendly</h3>
+      <p>No unnecessary permissions or background tracking.</p>
+    </div>
+
+    <div class="card">
+      <h3>📱 Offline Support</h3>
+      <p>Works without internet for daily use.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 RU Calendar ·
+  <a href="./index.html" style="color:#f97316;text-decoration:none">
+    All Apps
+  </a>
+</footer>
+
+</body>
+</html>
