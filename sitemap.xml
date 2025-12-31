@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://myruhi.in/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://myruhi.in/rubrowser.html</loc>
+  </url>
+
+  <url>
+    <loc>https://myruhi.in/rugallery.html</loc>
+  </url>
+
+  <url>
+    <loc>https://myruhi.in/rucalendar.html</loc>
+  </url>
+
+  <url>
+    <loc>https://myruhi.in/rucalculator.html</loc>
+  </url>
+
+</urlset>
