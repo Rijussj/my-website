@@ -91,6 +91,35 @@ body{
   margin-bottom:60px;
 }
 
+/* DOWNLOAD */
+.download-grid{
+  max-width:900px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.download-card{
+  padding:36px;
+  border-radius:24px;
+  text-align:center;
+  backdrop-filter:blur(16px);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+.download-card h3{
+  margin-top:0;
+  font-size:22px;
+}
+
+.download-card p{
+  color:#c7d2fe;
+  font-size:15px;
+  margin-bottom:20px;
+}
+
 /* FEATURES */
 .features{
   max-width:1200px;
@@ -106,12 +135,6 @@ body{
   backdrop-filter:blur(16px);
   background:rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.15);
-  transition:0.3s;
-}
-
-.card:hover{
-  transform:translateY(-8px);
-  background:rgba(255,255,255,0.1);
 }
 
 .card h3{
@@ -163,10 +186,10 @@ footer a{
 
     <div class="buttons">
       <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
-        Download on Play Store
+        Download for Android
       </a>
-      <a class="btn-secondary" href="mailto:myjawla@gmail.com">
-        Contact Support
+      <a class="btn-secondary" href="#download">
+        Download for Windows
       </a>
     </div>
 
@@ -177,7 +200,30 @@ footer a{
   </div>
 </section>
 
-<!-- FEATURES SECTION -->
+<!-- DOWNLOAD SECTION -->
+<section class="section" id="download">
+  <h2>Download RU Browser</h2>
+
+  <div class="download-grid">
+    <div class="download-card">
+      <h3>📱 Android</h3>
+      <p>Get RU Browser from Google Play Store for fast and secure browsing.</p>
+      <a class="btn-primary" href="https://play.google.com/store/apps/details?id=com.rubrowser.app" target="_blank">
+        Download on Play Store
+      </a>
+    </div>
+
+    <div class="download-card">
+      <h3>💻 Windows</h3>
+      <p>Download RU Browser for Windows desktop experience.</p>
+      <a class="btn-secondary" href="#" title="Coming Soon">
+        Windows Version (Coming Soon)
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
 <section class="section">
   <h2>Why RU Browser</h2>
 
@@ -188,28 +234,28 @@ footer a{
     </div>
 
     <div class="card">
-      <h3>📱 Lightweight & Efficient</h3>
-      <p>Low RAM and storage usage for smooth performance.</p>
+      <h3>📱 Lightweight</h3>
+      <p>Low RAM and storage usage.</p>
     </div>
 
     <div class="card">
-      <h3>🔐 Enhanced Privacy</h3>
-      <p>Privacy-focused features to help protect your data.</p>
+      <h3>🔐 Privacy Focused</h3>
+      <p>Protects your data and browsing activity.</p>
     </div>
 
     <div class="card">
-      <h3>🗂 Smart Tab Management</h3>
-      <p>Switch between tabs easily without lag.</p>
+      <h3>🗂 Smart Tabs</h3>
+      <p>Easy and smooth tab management.</p>
     </div>
 
     <div class="card">
-      <h3>🎨 Clean Modern UI</h3>
-      <p>Simple and distraction-free browsing experience.</p>
+      <h3>🎨 Modern UI</h3>
+      <p>Clean and distraction-free interface.</p>
     </div>
 
     <div class="card">
-      <h3>🎬 Smooth Media Playback</h3>
-      <p>Optimized for video streaming and online content.</p>
+      <h3>🎬 Media Optimized</h3>
+      <p>Smooth video and media playback.</p>
     </div>
   </div>
 </section>
