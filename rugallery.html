@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RU Gallery – Fast & Clean Photo Gallery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- SEO -->
+<meta name="description" content="RU Gallery is a fast, lightweight and clean photo gallery app for Android.">
+<meta name="keywords" content="RU Gallery, photo gallery app, android gallery, lightweight gallery">
+<meta name="author" content="RU Apps">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  color:#ffffff;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #0f766e 0%, transparent 60%),
+    radial-gradient(1000px 500px at 90% 10%, #22c55e 0%, transparent 55%),
+    #020617;
+}
+
+/* HEADER */
+header{
+  padding:90px 20px;
+  text-align:center;
+}
+header h1{
+  font-size:52px;
+  font-weight:900;
+  letter-spacing:-1.5px;
+  margin-bottom:12px;
+  background:linear-gradient(90deg,#22c55e,#86efac,#16a34a);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+header p{
+  max-width:760px;
+  margin:auto;
+  font-size:18px;
+  line-height:1.6;
+  color:#bbf7d0;
+}
+
+/* ACTIONS */
+.actions{
+  margin-top:34px;
+  display:flex;
+  justify-content:center;
+  gap:22px;
+  flex-wrap:wrap;
+}
+
+.action-btn{
+  padding:16px 30px;
+  border-radius:18px;
+  font-weight:600;
+  font-size:15px;
+  color:white;
+  text-decoration:none;
+  backdrop-filter:blur(16px);
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.18);
+}
+
+/* SECTION */
+.section{
+  padding:110px 20px;
+}
+.section h2{
+  text-align:center;
+  font-size:38px;
+  font-weight:800;
+  margin-bottom:60px;
+}
+
+/* FEATURES */
+.features{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.card{
+  padding:34px;
+  border-radius:24px;
+  backdrop-filter:blur(18px);
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+}
+
+.card h3{
+  margin:0 0 10px;
+  font-size:18px;
+  font-weight:700;
+}
+.card p{
+  font-size:15px;
+  line-height:1.6;
+  color:#bbf7d0;
+}
+
+/* FOOTER */
+footer{
+  padding:40px;
+  text-align:center;
+  border-top:1px solid rgba(255,255,255,0.15);
+  color:#a7f3d0;
+  font-size:14px;
+}
+footer a{
+  color:#22c55e;
+  text-decoration:none;
+  margin:0 6px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  header h1{font-size:38px}
+  .section h2{font-size:28px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>RU Gallery</h1>
+  <p>
+    RU Gallery is a fast, lightweight and clean photo gallery app
+    designed for smooth image viewing and simple media management.
+  </p>
+
+  <div class="actions">
+    <!-- PLAY STORE (ADD LINK WHEN READY) -->
+    <a class="action-btn" href="#" title="Coming Soon">
+      📱 Available on Play Store (Soon)
+    </a>
+  </div>
+</header>
+
+<section class="section">
+  <h2>Why Choose RU Gallery</h2>
+
+  <div class="features">
+    <div class="card">
+      <h3>⚡ Fast Performance</h3>
+      <p>Quickly load and browse your photos without lag.</p>
+    </div>
+
+    <div class="card">
+      <h3>🪶 Lightweight</h3>
+      <p>Uses minimal storage and RAM for smooth performance.</p>
+    </div>
+
+    <div class="card">
+      <h3>🖼️ Clean Interface</h3>
+      <p>Simple and modern UI for distraction-free viewing.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔍 Easy Navigation</h3>
+      <p>Quick access to albums, images and folders.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔐 Privacy Friendly</h3>
+      <p>No unnecessary permissions or background activity.</p>
+    </div>
+
+    <div class="card">
+      <h3>📂 Smart Media Handling</h3>
+      <p>Organize photos and media effortlessly.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 RU Gallery ·
+  <a href="./index.html">All Apps</a> ·
+  <a href="./privacy.html">Privacy Policy</a> ·
+  <a href="./terms.html">Terms</a>
+</footer>
+
+</body>
+</html>
