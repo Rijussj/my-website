@@ -111,13 +111,25 @@ header p{
   background:linear-gradient(135deg,#2563eb,#3b82f6);
 }
 
-/* FOOTER (CLEAN) */
+/* FOOTER */
 footer{
-  padding:36px;
+  padding:40px 20px;
   text-align:center;
   border-top:1px solid rgba(255,255,255,0.15);
   color:#94a3b8;
   font-size:14px;
+}
+
+.footer-links{
+  margin-top:10px;
+}
+.footer-links a{
+  color:#60a5fa;
+  text-decoration:none;
+  margin:0 10px;
+}
+.footer-links a:hover{
+  text-decoration:underline;
 }
 
 /* MOBILE */
@@ -182,6 +194,11 @@ footer{
 
 <footer>
   © 2025 RU Apps
+  <div class="footer-links">
+    <a href="./privacy.html">Privacy Policy</a>
+    |
+    <a href="./terms.html">Terms & Conditions</a>
+  </div>
 </footer>
 
 </body>
