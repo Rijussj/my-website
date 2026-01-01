@@ -45,16 +45,27 @@ header p{
   color:#c7d2fe;
 }
 
-/* ACTION BUTTONS */
+/* ACTIONS */
 .actions{
   margin-top:40px;
   display:flex;
   justify-content:center;
-  gap:22px;
+  gap:26px;
   flex-wrap:wrap;
+  align-items:center;
 }
 
-.action-btn{
+/* PLAY STORE BADGE */
+.play-badge img{
+  height:60px;
+  transition:0.2s;
+}
+.play-badge img:hover{
+  transform:scale(1.03);
+}
+
+/* WINDOWS BUTTON */
+.win-btn{
   padding:16px 30px;
   border-radius:20px;
   font-weight:600;
@@ -66,7 +77,7 @@ header p{
   border:1px solid rgba(255,255,255,0.18);
   transition:0.2s;
 }
-.action-btn:hover{
+.win-btn:hover{
   transform:translateY(-2px);
   background:rgba(255,255,255,0.12);
 }
@@ -128,6 +139,7 @@ footer a{
 @media(max-width:600px){
   header h1{font-size:36px}
   .section h2{font-size:28px}
+  .play-badge img{height:52px}
 }
 </style>
 </head>
@@ -142,18 +154,23 @@ footer a{
   </p>
 
   <div class="actions">
-    <!-- ANDROID -->
-    <a class="action-btn"
+
+    <!-- ANDROID: OFFICIAL GOOGLE PLAY BADGE -->
+    <a class="play-badge"
        href="https://play.google.com/store/apps/details?id=com.rubrowser.app"
-       target="_blank">
-      📱 Get it on Google Play
+       target="_blank"
+       aria-label="Get it on Google Play">
+      <img
+        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+        alt="Get it on Google Play">
     </a>
 
-    <!-- WINDOWS (DIRECT DOWNLOAD) -->
-    <a class="action-btn"
+    <!-- WINDOWS: DIRECT EXE DOWNLOAD -->
+    <a class="win-btn"
        href="https://github.com/Rijussj/my-website/releases/download/v1.2.0/RUBrowserSetup.exe">
-      💻 Download for Windows
+       💻 Download for Windows
     </a>
+
   </div>
 </header>
 
