@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>RU Calculator – Fast & Simple Calculator App</title>
+<title>RU Browser – Fast & Secure Browser</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
 <meta name="description"
-content="RU Calculator is a fast, lightweight and accurate calculator app designed for everyday use.">
+content="RU Browser is a fast, lightweight and privacy-focused browser for Android and Windows.">
 
-<link rel="canonical" href="https://myruhi.in/rucalculator.html">
+<link rel="canonical" href="https://myruhi.in/rubrowser.html">
 
 <style>
 *{box-sizing:border-box}
@@ -31,54 +31,88 @@ header{
   text-align:center;
 }
 header h1{
-  font-size:46px;
+  font-size:52px;
   font-weight:900;
-  margin-bottom:12px;
+  margin-bottom:14px;
   background:linear-gradient(90deg,#60a5fa,#38bdf8,#2563eb);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
 header p{
-  max-width:700px;
+  max-width:760px;
   margin:auto;
-  font-size:17px;
+  font-size:18px;
   line-height:1.6;
   color:#c7d2fe;
 }
 
+/* ACTIONS */
+.actions{
+  margin-top:40px;
+  display:flex;
+  justify-content:center;
+  gap:26px;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+/* PLAY STORE BADGE */
+.play-badge img{
+  height:60px;
+  transition:0.2s;
+}
+.play-badge img:hover{
+  transform:scale(1.03);
+}
+
+/* WINDOWS BUTTON */
+.win-btn{
+  padding:16px 30px;
+  border-radius:20px;
+  font-weight:600;
+  font-size:15px;
+  color:white;
+  text-decoration:none;
+  backdrop-filter:blur(16px);
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.18);
+  transition:0.2s;
+}
+.win-btn:hover{
+  transform:translateY(-2px);
+  background:rgba(255,255,255,0.12);
+}
+
 /* SECTION */
 .section{
-  padding:90px 20px;
-  max-width:900px;
-  margin:auto;
+  padding:110px 20px;
 }
 .section h2{
-  font-size:30px;
+  text-align:center;
+  font-size:38px;
   font-weight:800;
-  margin-bottom:20px;
-}
-.section p{
-  font-size:16px;
-  line-height:1.7;
-  color:#c7d2fe;
+  margin-bottom:60px;
 }
 
 /* FEATURES */
 .features{
-  margin-top:40px;
+  max-width:1200px;
+  margin:auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:24px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
 }
+
 .card{
-  padding:26px;
-  border-radius:22px;
+  padding:34px;
+  border-radius:26px;
   backdrop-filter:blur(18px);
   background:rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.15);
 }
+
 .card h3{
-  margin:0 0 8px;
+  margin:0 0 10px;
   font-size:18px;
   font-weight:700;
 }
@@ -96,21 +130,17 @@ footer{
   color:#94a3b8;
   font-size:14px;
 }
-.footer-links{
-  margin-top:10px;
-}
-.footer-links a{
+footer a{
   color:#60a5fa;
   text-decoration:none;
-  margin:0 10px;
-}
-.footer-links a:hover{
-  text-decoration:underline;
+  margin:0 6px;
 }
 
 /* MOBILE */
 @media(max-width:600px){
-  header h1{font-size:34px}
+  header h1{font-size:36px}
+  .section h2{font-size:28px}
+  .play-badge img{height:52px}
 }
 </style>
 </head>
@@ -118,25 +148,40 @@ footer{
 <body>
 
 <header>
-  <h1>RU Calculator</h1>
+  <h1>RU Browser</h1>
   <p>
-    RU Calculator is a fast, lightweight and accurate calculator app
-    designed for everyday calculations with a clean and simple interface.
+    RU Browser is a fast, lightweight and privacy-focused browser
+    designed for smooth browsing on Android and Windows.
   </p>
+
+  <div class="actions">
+
+    <!-- ANDROID: GOOGLE PLAY BADGE (LOCAL IMAGE) -->
+    <a class="play-badge"
+       href="https://play.google.com/store/apps/details?id=com.rubrowser.app"
+       target="_blank"
+       aria-label="Get it on Google Play">
+      <img
+        src="./assets/google-play-badge.png"
+        alt="Get it on Google Play">
+    </a>
+
+    <!-- WINDOWS: DIRECT EXE DOWNLOAD -->
+    <a class="win-btn"
+       href="https://github.com/Rijussj/my-website/releases/download/v1.2.0/RUBrowserSetup.exe">
+       💻 Download for Windows
+    </a>
+
+  </div>
 </header>
 
 <section class="section">
-  <h2>Why Use RU Calculator</h2>
-  <p>
-    RU Calculator focuses on speed, simplicity and accuracy.
-    It works smoothly even on low-end devices and does not require
-    unnecessary permissions or internet access.
-  </p>
+  <h2>Why Choose RU Browser</h2>
 
   <div class="features">
     <div class="card">
-      <h3>⚡ Fast & Accurate</h3>
-      <p>Instant calculations with reliable results.</p>
+      <h3>⚡ Fast Performance</h3>
+      <p>Optimized for quick page loading and smooth browsing.</p>
     </div>
 
     <div class="card">
@@ -145,26 +190,32 @@ footer{
     </div>
 
     <div class="card">
-      <h3>🔒 Privacy Friendly</h3>
-      <p>No login, no tracking, and no personal data collection.</p>
+      <h3>🔐 Enhanced Privacy</h3>
+      <p>No login, no tracking, and minimal permissions.</p>
     </div>
 
     <div class="card">
-      <h3>🎨 Clean Interface</h3>
-      <p>Simple design for distraction-free calculations.</p>
+      <h3>🎨 Clean UI</h3>
+      <p>Modern, simple and distraction-free interface.</p>
+    </div>
+
+    <div class="card">
+      <h3>🗂️ Smart Tabs</h3>
+      <p>Switch tabs smoothly without lag.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎬 Media Optimized</h3>
+      <p>Smooth video and media playback experience.</p>
     </div>
   </div>
 </section>
 
 <footer>
-  © 2025 RU Calculator
-  <div class="footer-links">
-    <a href="./privacy.html">Privacy Policy</a>
-    |
-    <a href="./terms.html">Terms & Conditions</a>
-    |
-    <a href="./index.html">Back to Home</a>
-  </div>
+  © 2025 RU Browser ·
+  <a href="./privacy.html">Privacy Policy</a> ·
+  <a href="./terms.html">Terms</a> ·
+  <a href="./index.html">All Apps</a>
 </footer>
 
 </body>
