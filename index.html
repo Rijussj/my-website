@@ -7,8 +7,10 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-<meta name="description" content="Official RU Apps hub. Download RU Browser, RU Gallery, RU Calendar and RU Calculator.">
-<meta name="author" content="RU Apps">
+<meta name="description"
+content="Official RU Apps hub. Download RU Browser, RU Gallery, RU Calendar and RU Calculator. Fast, lightweight and privacy-focused apps.">
+
+<link rel="canonical" href="https://myruhi.in/">
 
 <style>
 *{box-sizing:border-box}
@@ -111,6 +113,24 @@ header p{
   background:linear-gradient(135deg,#2563eb,#3b82f6);
 }
 
+/* ABOUT SECTION */
+.about-section{
+  padding:90px 20px;
+  max-width:900px;
+  margin:auto;
+  text-align:center;
+}
+.about-section h2{
+  font-size:34px;
+  font-weight:800;
+  margin-bottom:16px;
+}
+.about-section p{
+  font-size:16px;
+  line-height:1.7;
+  color:#c7d2fe;
+}
+
 /* FOOTER */
 footer{
   padding:40px 20px;
@@ -119,7 +139,6 @@ footer{
   color:#94a3b8;
   font-size:14px;
 }
-
 .footer-links{
   margin-top:10px;
 }
@@ -135,6 +154,7 @@ footer{
 /* MOBILE */
 @media(max-width:600px){
   header h1{font-size:34px}
+  .about-section h2{font-size:26px}
 }
 </style>
 </head>
@@ -143,7 +163,7 @@ footer{
 
 <header>
   <h1>RU Apps</h1>
-  <p>Fast, Lightweight & Modern Apps for Everyday Use</p>
+  <p>Fast, Lightweight & Privacy-Focused Apps for Everyday Use</p>
 </header>
 
 <section class="apps-section">
@@ -192,11 +212,22 @@ footer{
   </div>
 </section>
 
+<!-- ABOUT RU APPS -->
+<section class="about-section" id="about">
+  <h2>About RU Apps</h2>
+  <p>
+    RU Apps is an independent software brand focused on building fast,
+    lightweight and privacy-respecting applications for Android and Windows.
+    Our goal is to deliver clean, reliable and efficient apps that work smoothly
+    even on low-end devices.
+  </p>
+</section>
+
 <footer>
   © 2025 RU Apps
   <div class="footer-links">
-    <a href="./privacy.html">Privacy Policy</a>
-    |
+    <a href="./about.html">About</a> |
+    <a href="./privacy.html">Privacy Policy</a> |
     <a href="./terms.html">Terms & Conditions</a>
   </div>
 </footer>
