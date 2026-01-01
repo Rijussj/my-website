@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>RU Browser – Update</title>
+<title>RU Browser – Windows Update</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<meta name="description" content="RU Browser update page for Windows. Download the latest version securely.">
+<meta name="description" content="RU Browser Windows update page. Download the latest version securely.">
+<meta name="author" content="RU Browser">
 
 <style>
 *{box-sizing:border-box}
@@ -22,7 +23,7 @@ body{
   color:#ffffff;
 }
 
-/* CENTER LAYOUT */
+/* CENTER */
 .wrapper{
   min-height:100vh;
   display:flex;
@@ -31,11 +32,12 @@ body{
   padding:20px;
 }
 
+/* CARD */
 .card{
-  max-width:520px;
+  max-width:540px;
   width:100%;
-  padding:42px;
-  border-radius:26px;
+  padding:44px;
+  border-radius:28px;
   background:rgba(255,255,255,0.06);
   backdrop-filter:blur(18px);
   border:1px solid rgba(255,255,255,0.15);
@@ -44,22 +46,22 @@ body{
 
 /* ICON */
 .icon{
-  width:72px;
-  height:72px;
-  margin:0 auto 18px;
-  border-radius:20px;
+  width:76px;
+  height:76px;
+  margin:0 auto 20px;
+  border-radius:22px;
   background:#0f172a;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:34px;
+  font-size:36px;
 }
 
 /* TEXT */
 h1{
-  font-size:26px;
+  font-size:28px;
   font-weight:800;
-  margin:0 0 10px;
+  margin:0 0 12px;
 }
 p{
   font-size:15px;
@@ -67,31 +69,36 @@ p{
   color:#c7d2fe;
 }
 
-/* VERSION BOX */
+/* VERSION */
 .version{
-  margin:18px 0;
-  padding:12px 16px;
-  border-radius:14px;
+  margin:20px 0;
+  padding:14px 18px;
+  border-radius:16px;
   background:rgba(255,255,255,0.08);
   font-size:14px;
+  line-height:1.6;
 }
 
 /* BUTTON */
 .update-btn{
-  margin-top:24px;
+  margin-top:26px;
   display:inline-flex;
   align-items:center;
   gap:10px;
-  padding:16px 32px;
-  border-radius:18px;
+  padding:16px 34px;
+  border-radius:20px;
   font-weight:600;
   font-size:15px;
   color:white;
   text-decoration:none;
   background:linear-gradient(135deg,#2563eb,#3b82f6);
+  transition:0.2s;
+}
+.update-btn:hover{
+  transform:translateY(-2px);
 }
 
-/* FOOTER NOTE */
+/* NOTE */
 .note{
   margin-top:22px;
   font-size:13px;
@@ -116,18 +123,18 @@ p{
 
     <div class="version">
      
-      Latest version: <b>1.1.0</b>
+      Latest version: <b>1.2.0</b>
     </div>
 
-    <!-- UPDATE BUTTON -->
-    <!-- FUTURE ME YAHAN EXE LINK DAALO -->
-    <a class="update-btn" href="https://google.com">
-      ⬇ Update RU Browser
+    <!-- ✅ DIRECT DOWNLOAD BUTTON -->
+    <a class="update-btn"
+       href="https://github.com/Rijussj/my-website/releases/download/v1.2.0/RUBrowserSetup.exe">
+       ⬇ Update RU Browser
     </a>
 
     <div class="note">
       Windows 10 / 11 · 64-bit<br>
-      This update is official and safe.
+      Official RU Browser update · Secure download
     </div>
 
   </div>
