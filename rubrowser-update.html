@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>RU Browser – Update</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<meta name="description" content="RU Browser update page for Windows. Download the latest version securely.">
+
+<style>
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #020617 0%, transparent 60%),
+    radial-gradient(1000px 500px at 90% 10%, #1e40af 0%, transparent 55%),
+    #020617;
+  color:#ffffff;
+}
+
+/* CENTER LAYOUT */
+.wrapper{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.card{
+  max-width:520px;
+  width:100%;
+  padding:42px;
+  border-radius:26px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,0.15);
+  text-align:center;
+}
+
+/* ICON */
+.icon{
+  width:72px;
+  height:72px;
+  margin:0 auto 18px;
+  border-radius:20px;
+  background:#0f172a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+}
+
+/* TEXT */
+h1{
+  font-size:26px;
+  font-weight:800;
+  margin:0 0 10px;
+}
+p{
+  font-size:15px;
+  line-height:1.6;
+  color:#c7d2fe;
+}
+
+/* VERSION BOX */
+.version{
+  margin:18px 0;
+  padding:12px 16px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.08);
+  font-size:14px;
+}
+
+/* BUTTON */
+.update-btn{
+  margin-top:24px;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:16px 32px;
+  border-radius:18px;
+  font-weight:600;
+  font-size:15px;
+  color:white;
+  text-decoration:none;
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
+}
+
+/* FOOTER NOTE */
+.note{
+  margin-top:22px;
+  font-size:13px;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+  <div class="card">
+
+    <div class="icon">🌐</div>
+
+    <h1>RU Browser Update</h1>
+
+    <p>
+      A new version of RU Browser for Windows is available.
+      Updating ensures better performance, security and stability.
+    </p>
+
+    <div class="version">
+      Current version: <b>1.0.0</b><br>
+      Latest version: <b>1.1.0</b>
+    </div>
+
+    <!-- UPDATE BUTTON -->
+    <!-- FUTURE ME YAHAN EXE LINK DAALO -->
+    <a class="update-btn" href="#">
+      ⬇ Update RU Browser
+    </a>
+
+    <div class="note">
+      Windows 10 / 11 · 64-bit<br>
+      This update is official and safe.
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
