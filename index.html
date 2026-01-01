@@ -1,55 +1,33 @@
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "RU Apps",
-  "url": "https://myruhi.in/",
-  "logo": "https://myruhi.in/favicon.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "customer support",
-    "email": "myjawla@gmail.com"
-  }
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "RU Apps",
-  "url": "https://myruhi.in/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://myruhi.in/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>RU Apps – Official App Hub | RU Browser, Gallery, Calendar, Calculator</title>
+
+<!-- MUST FOR MOBILE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RU Apps – Official App Hub</title>
 
 <meta name="description"
-content="RU Apps official website. Download RU Browser, RU Gallery, RU Calendar and RU Calculator. Fast, lightweight and privacy-focused apps for Android and Windows.">
+content="RU Apps official website. Download RU Browser, RU Gallery, RU Calendar and RU Calculator. Fast, lightweight and privacy-focused apps.">
 
-<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://myruhi.in/">
-
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-<meta name="description"
-content="Official RU Apps hub. Download RU Browser, RU Gallery, RU Calendar and RU Calculator. Fast, lightweight and privacy-focused apps.">
-
-<link rel="canonical" href="https://myruhi.in/">
-
 <style>
-*{box-sizing:border-box}
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  margin:0;
+  padding:0;
+  width:100%;
+  overflow-x:hidden; /* 🔴 FIXES DESKTOP WIDTH ISSUE */
+}
 
 body{
-  margin:0;
   font-family:'Inter',system-ui,sans-serif;
   background:
     radial-gradient(1200px 600px at 10% -10%, #1e3a8a 0%, transparent 60%),
@@ -60,61 +38,64 @@ body{
 
 /* HEADER */
 header{
-  padding:90px 20px 60px;
+  padding:80px 16px 50px;
   text-align:center;
 }
+
 header h1{
-  font-size:48px;
+  font-size:42px;
   font-weight:900;
-  letter-spacing:-1.5px;
   margin-bottom:10px;
   background:linear-gradient(90deg,#60a5fa,#38bdf8,#2563eb);
   -webkit-background-clip:text;
   -webkit-text-fill-color:transparent;
 }
+
 header p{
-  font-size:17px;
+  font-size:16px;
   color:#c7d2fe;
   max-width:720px;
   margin:auto;
 }
 
-/* APPS */
+/* APPS SECTION */
 .apps-section{
-  padding:80px 20px;
+  padding:60px 16px;
 }
+
 .apps-grid{
   max-width:1200px;
   margin:auto;
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:24px;
 }
 
-/* CARD */
+/* APP CARD */
 .app-card{
-  padding:34px;
-  border-radius:24px;
-  backdrop-filter:blur(18px);
+  padding:28px;
+  border-radius:22px;
+  text-align:center;
   background:rgba(255,255,255,0.06);
   border:1px solid rgba(255,255,255,0.15);
-  transition:0.3s;
-  text-align:center;
+  backdrop-filter:blur(16px);
+  transition:0.25s;
 }
+
 .app-card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-6px);
   background:rgba(255,255,255,0.1);
 }
 
 /* ICON */
 .app-icon{
-  width:72px;
-  height:72px;
-  border-radius:18px;
-  margin:0 auto 18px;
+  width:68px;
+  height:68px;
+  margin:0 auto 16px;
+  border-radius:16px;
   overflow:hidden;
-  background:#0f172a;
 }
+
 .app-icon img{
   width:100%;
   height:100%;
@@ -123,22 +104,23 @@ header p{
 
 /* TEXT */
 .app-card h3{
-  margin:0 0 8px;
-  font-size:20px;
+  margin:0 0 6px;
+  font-size:18px;
   font-weight:700;
 }
+
 .app-card p{
-  font-size:15px;
+  font-size:14px;
   line-height:1.6;
   color:#c7d2fe;
-  margin-bottom:18px;
+  margin-bottom:16px;
 }
 
 /* BUTTON */
 .app-card a{
   display:inline-block;
-  padding:12px 22px;
-  border-radius:14px;
+  padding:10px 18px;
+  border-radius:12px;
   text-decoration:none;
   font-size:14px;
   font-weight:600;
@@ -146,48 +128,58 @@ header p{
   background:linear-gradient(135deg,#2563eb,#3b82f6);
 }
 
-/* ABOUT SECTION */
+/* ABOUT */
 .about-section{
-  padding:90px 20px;
+  padding:70px 16px;
   max-width:900px;
   margin:auto;
   text-align:center;
 }
+
 .about-section h2{
-  font-size:34px;
+  font-size:30px;
   font-weight:800;
-  margin-bottom:16px;
+  margin-bottom:12px;
 }
+
 .about-section p{
-  font-size:16px;
+  font-size:15px;
   line-height:1.7;
   color:#c7d2fe;
 }
 
 /* FOOTER */
 footer{
-  padding:40px 20px;
+  padding:30px 16px;
   text-align:center;
   border-top:1px solid rgba(255,255,255,0.15);
-  color:#94a3b8;
   font-size:14px;
+  color:#94a3b8;
 }
+
 .footer-links{
-  margin-top:10px;
+  margin-top:8px;
 }
+
 .footer-links a{
   color:#60a5fa;
   text-decoration:none;
-  margin:0 10px;
-}
-.footer-links a:hover{
-  text-decoration:underline;
+  margin:0 8px;
 }
 
-/* MOBILE */
-@media(max-width:600px){
-  header h1{font-size:34px}
-  .about-section h2{font-size:26px}
+/* MOBILE TUNING */
+@media (max-width:480px){
+  header h1{
+    font-size:32px;
+  }
+
+  header p{
+    font-size:15px;
+  }
+
+  .about-section h2{
+    font-size:24px;
+  }
 }
 </style>
 </head>
@@ -202,57 +194,54 @@ footer{
 <section class="apps-section">
   <div class="apps-grid">
 
-    <!-- RU Browser -->
     <div class="app-card">
       <div class="app-icon">
-        <img src="https://play-lh.googleusercontent.com/ewD5UT7dpVco45qW-WPmaUlx641YLDmtgN17mMJBVqvgLf0_26sf6q6_4x67-vFKvO9X3r3p5iInVvnptyopdaE=s256-rw" alt="RU Browser">
+        <img src="https://play-lh.googleusercontent.com/ewD5UT7dpVco45qW-WPmaUlx641YLDmtgN17mMJBVqvgLf0_26sf6q6_4x67-vFKvO9X3r3p5iInVvnptyopdaE=s256-rw"
+             alt="RU Browser" width="68" height="68" loading="lazy">
       </div>
       <h3>RU Browser</h3>
-      <p>Fast, lightweight and privacy-focused browser.</p>
+      <p>Fast and privacy-focused browser.</p>
       <a href="./rubrowser.html">View App</a>
     </div>
 
-    <!-- RU Gallery -->
     <div class="app-card">
       <div class="app-icon">
-        <img src="https://play-lh.googleusercontent.com/LTKZvUuRcgE0BuOB0KokhxXJL2gy0zzOnwiii4NhFfi8On3djn-df-84033i0V2Bony-Soe38Fiqm1LoTFX3eg=s256-rw" alt="RU Gallery">
+        <img src="https://play-lh.googleusercontent.com/LTKZvUuRcgE0BuOB0KokhxXJL2gy0zzOnwiii4NhFfi8On3djn-df-84033i0V2Bony-Soe38Fiqm1LoTFX3eg=s256-rw"
+             alt="RU Gallery" width="68" height="68" loading="lazy">
       </div>
       <h3>RU Gallery</h3>
-      <p>Simple and fast photo gallery app.</p>
+      <p>Simple & fast photo gallery.</p>
       <a href="./rugallery.html">View App</a>
     </div>
 
-    <!-- RU Calendar -->
     <div class="app-card">
       <div class="app-icon">
-        <img src="https://play-lh.googleusercontent.com/0dowMQsRgMBr_j0bAZ8NOTKUGdsY1PhrjAr-b-hfCGDiUzPHjqMh1bjY-cF8hA0ffgidp3Eh6V3PlB2GLGsZew=s256-rw" alt="RU Calendar">
+        <img src="https://play-lh.googleusercontent.com/0dowMQsRgMBr_j0bAZ8NOTKUGdsY1PhrjAr-b-hfCGDiUzPHjqMh1bjY-cF8hA0ffgidp3Eh6V3PlB2GLGsZew=s256-rw"
+             alt="RU Calendar" width="68" height="68" loading="lazy">
       </div>
       <h3>RU Calendar</h3>
-      <p>Lightweight calendar app with reminders.</p>
+      <p>Lightweight calendar with holidays.</p>
       <a href="./rucalendar.html">View App</a>
     </div>
 
-    <!-- RU Calculator -->
     <div class="app-card">
       <div class="app-icon">
-        <img src="https://play-lh.googleusercontent.com/ST0md1hkDqCqhodX0x-CDAziPNCzCZjLjVT-ODICAHC24k8IolSDQubIanQylzcezEE3GbBpew1RYVdALAAMOA=s256-rw" alt="RU Calculator">
+        <img src="https://play-lh.googleusercontent.com/ST0md1hkDqCqhodX0x-CDAziPNCzCZjLjVT-ODICAHC24k8IolSDQubIanQylzcezEE3GbBpew1RYVdALAAMOA=s256-rw"
+             alt="RU Calculator" width="68" height="68" loading="lazy">
       </div>
       <h3>RU Calculator</h3>
-      <p>Fast and accurate calculator for daily use.</p>
+      <p>Fast & accurate calculator.</p>
       <a href="./rucalculator.html">View App</a>
     </div>
 
   </div>
 </section>
 
-<!-- ABOUT RU APPS -->
-<section class="about-section" id="about">
+<section class="about-section">
   <h2>About RU Apps</h2>
   <p>
-    RU Apps is an independent software brand focused on building fast,
-    lightweight and privacy-respecting applications for Android and Windows.
-    Our goal is to deliver clean, reliable and efficient apps that work smoothly
-    even on low-end devices.
+    RU Apps builds fast, lightweight and privacy-respecting applications
+    for Android and Windows, designed to work smoothly even on low-end devices.
   </p>
 </section>
 
@@ -260,8 +249,8 @@ footer{
   © 2025 RU Apps
   <div class="footer-links">
     <a href="./about.html">About</a> |
-    <a href="./privacy.html">Privacy Policy</a> |
-    <a href="./terms.html">Terms & Conditions</a>
+    <a href="./privacy.html">Privacy</a> |
+    <a href="./terms.html">Terms</a>
   </div>
 </footer>
 
