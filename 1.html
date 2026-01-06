@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RU Browser – Extension Download</title>
+<title>RU Browser Extensions</title>
 
 <meta name="description"
-content="Download and install the AdBlock extension for RU Browser on Windows.">
+content="Browse and install recommended extensions for RU Browser on Windows.">
 
 <style>
 *{
@@ -17,48 +17,92 @@ content="Download and install the AdBlock extension for RU Browser on Windows.">
 body{
   margin:0;
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
-  background:linear-gradient(135deg,#020617,#020617 40%,#0f172a);
+  background:
+    radial-gradient(900px 500px at 10% -10%, #1e3a8a 0%, transparent 60%),
+    radial-gradient(700px 400px at 90% 10%, #0ea5e9 0%, transparent 55%),
+    #020617;
   color:#ffffff;
   min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
+  padding:24px;
 }
 
-.card{
-  max-width:520px;
-  width:100%;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-  border-radius:20px;
-  padding:36px;
+header{
+  max-width:1100px;
+  margin:auto;
+  padding:30px 0 40px;
   text-align:center;
-  backdrop-filter:blur(16px);
 }
 
-h1{
+header h1{
+  font-size:36px;
+  font-weight:900;
   margin:0 0 10px;
-  font-size:26px;
-  font-weight:800;
+  background:linear-gradient(90deg,#60a5fa,#38bdf8,#2563eb);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-p{
-  margin:0 0 24px;
-  font-size:15px;
-  line-height:1.6;
+header p{
+  font-size:16px;
   color:#c7d2fe;
 }
 
-button{
-  width:100%;
-  padding:14px 18px;
+.extensions{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+/* CARD */
+.card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:22px;
+  padding:26px;
+  backdrop-filter:blur(16px);
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* ICON */
+.icon{
+  width:56px;
+  height:56px;
   border-radius:14px;
-  border:none;
-  cursor:pointer;
-  font-size:15px;
+  background:#0f172a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+}
+
+/* TEXT */
+.card h3{
+  margin:0;
+  font-size:18px;
   font-weight:700;
-  color:#ffffff;
+}
+
+.card p{
+  margin:0;
+  font-size:14px;
+  line-height:1.6;
+  color:#c7d2fe;
+  flex-grow:1;
+}
+
+/* BUTTON */
+button{
+  border:none;
+  border-radius:14px;
+  padding:12px 16px;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  color:white;
   background:linear-gradient(135deg,#2563eb,#3b82f6);
 }
 
@@ -66,8 +110,9 @@ button:hover{
   opacity:0.95;
 }
 
-.note{
-  margin-top:16px;
+footer{
+  text-align:center;
+  margin-top:50px;
   font-size:13px;
   color:#94a3b8;
 }
@@ -76,37 +121,61 @@ button:hover{
 
 <body>
 
-<div class="card">
-  <h1>Install AdBlock Extension</h1>
-  <p>
-    This page will download and install the AdBlock extension
-    for RU Browser on Windows.
-  </p>
+<header>
+  <h1>RU Browser Extensions</h1>
+  <p>Recommended extensions to enhance your browsing experience</p>
+</header>
 
-  <button onclick="downloadExtension()">
-    Download & Install Extension
-  </button>
+<section class="extensions">
 
-  <div class="note">
-    If installation does not start automatically, the file will download manually.
+  <!-- AdBlock Extension -->
+  <div class="card">
+    <div class="icon">🛡️</div>
+    <h3>AdBlock</h3>
+    <p>
+      Block intrusive ads, pop-ups and trackers for a cleaner
+      and faster browsing experience.
+    </p>
+    <button onclick="installAdBlock()">
+      Install Extension
+    </button>
   </div>
-</div>
+
+  <!-- Future Extension Placeholder -->
+  <div class="card">
+    <div class="icon">🧩</div>
+    <h3>More Extensions</h3>
+    <p>
+      More useful extensions will be available here in future
+      updates of RU Browser.
+    </p>
+    <button disabled style="opacity:0.5;cursor:not-allowed;">
+      Coming Soon
+    </button>
+  </div>
+
+</section>
+
+<footer>
+  © 2025 RU Browser · Extensions
+</footer>
 
 <script>
-const EXTENSION_URL =
+const ADBLOCK_URL =
   "https://code.getadblock.com/releases/AdBlock-Chrome-v4.7.1.zip";
 
-function downloadExtension() {
+function installAdBlock(){
 
   // ✅ ELECTRON MODE
-  if (window.electronAPI && typeof window.electronAPI.installExtension === "function") {
-    window.electronAPI.installExtension(EXTENSION_URL);
+  if (window.electronAPI &&
+      typeof window.electronAPI.installExtension === "function") {
+    window.electronAPI.installExtension(ADBLOCK_URL);
     return;
   }
 
-  // ✅ BROWSER FALLBACK (DIRECT DOWNLOAD)
+  // ✅ NORMAL BROWSER FALLBACK
   const a = document.createElement("a");
-  a.href = EXTENSION_URL;
+  a.href = ADBLOCK_URL;
   a.download = "";
   document.body.appendChild(a);
   a.click();
