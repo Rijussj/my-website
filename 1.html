@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>RU Browser – Extension Download</title>
+
+<meta name="description"
+content="Download and install the AdBlock extension for RU Browser on Windows.">
+
+<style>
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu;
+  background:linear-gradient(135deg,#020617,#020617 40%,#0f172a);
+  color:#ffffff;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+}
+
+.card{
+  max-width:520px;
+  width:100%;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:20px;
+  padding:36px;
+  text-align:center;
+  backdrop-filter:blur(16px);
+}
+
+h1{
+  margin:0 0 10px;
+  font-size:26px;
+  font-weight:800;
+}
+
+p{
+  margin:0 0 24px;
+  font-size:15px;
+  line-height:1.6;
+  color:#c7d2fe;
+}
+
+button{
+  width:100%;
+  padding:14px 18px;
+  border-radius:14px;
+  border:none;
+  cursor:pointer;
+  font-size:15px;
+  font-weight:700;
+  color:#ffffff;
+  background:linear-gradient(135deg,#2563eb,#3b82f6);
+}
+
+button:hover{
+  opacity:0.95;
+}
+
+.note{
+  margin-top:16px;
+  font-size:13px;
+  color:#94a3b8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>Install AdBlock Extension</h1>
+  <p>
+    This page will download and install the AdBlock extension
+    for RU Browser on Windows.
+  </p>
+
+  <button onclick="downloadExtension()">
+    Download & Install Extension
+  </button>
+
+  <div class="note">
+    If installation does not start automatically, the file will download manually.
+  </div>
+</div>
+
+<script>
+const EXTENSION_URL =
+  "https://code.getadblock.com/releases/AdBlock-Chrome-v4.7.1.zip";
+
+function downloadExtension() {
+
+  // ✅ ELECTRON MODE
+  if (window.electronAPI && typeof window.electronAPI.installExtension === "function") {
+    window.electronAPI.installExtension(EXTENSION_URL);
+    return;
+  }
+
+  // ✅ BROWSER FALLBACK (DIRECT DOWNLOAD)
+  const a = document.createElement("a");
+  a.href = EXTENSION_URL;
+  a.download = "";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+</script>
+
+</body>
+</html>
