@@ -10,9 +10,7 @@
 content="Browse and install recommended extensions for RU Browser on Windows.">
 
 <style>
-*{
-  box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 body{
   margin:0;
@@ -106,9 +104,7 @@ button{
   background:linear-gradient(135deg,#2563eb,#3b82f6);
 }
 
-button:hover{
-  opacity:0.95;
-}
+button:hover{opacity:0.95}
 
 footer{
   text-align:center;
@@ -128,7 +124,7 @@ footer{
 
 <section class="extensions">
 
-  <!-- AdBlock Extension -->
+  <!-- AdBlock -->
   <div class="card">
     <div class="icon">🛡️</div>
     <h3>AdBlock</h3>
@@ -141,13 +137,26 @@ footer{
     </button>
   </div>
 
-  <!-- Future Extension Placeholder -->
+  <!-- uBlock Origin -->
+  <div class="card">
+    <div class="icon">🚫</div>
+    <h3>uBlock Origin</h3>
+    <p>
+      A fast, efficient and lightweight content blocker
+      for a secure and distraction-free web.
+    </p>
+    <button onclick="installUBlock()">
+      Install Extension
+    </button>
+  </div>
+
+  <!-- Future -->
   <div class="card">
     <div class="icon">🧩</div>
     <h3>More Extensions</h3>
     <p>
-      More useful extensions will be available here in future
-      updates of RU Browser.
+      More useful extensions will be available here
+      in future updates of RU Browser.
     </p>
     <button disabled style="opacity:0.5;cursor:not-allowed;">
       Coming Soon
@@ -164,18 +173,30 @@ footer{
 const ADBLOCK_URL =
   "https://code.getadblock.com/releases/AdBlock-Chrome-v4.7.1.zip";
 
-function installAdBlock(){
+const UBLOCK_URL =
+  "https://github.com/gorhill/uBlock/releases/download/1.68.1rc1/uBlock0_1.68.1rc1.chromium.zip";
 
-  // ✅ ELECTRON MODE
+function installAdBlock(){
   if (window.electronAPI &&
       typeof window.electronAPI.installExtension === "function") {
     window.electronAPI.installExtension(ADBLOCK_URL);
     return;
   }
+  downloadFallback(ADBLOCK_URL);
+}
 
-  // ✅ NORMAL BROWSER FALLBACK
+function installUBlock(){
+  if (window.electronAPI &&
+      typeof window.electronAPI.installExtension === "function") {
+    window.electronAPI.installExtension(UBLOCK_URL);
+    return;
+  }
+  downloadFallback(UBLOCK_URL);
+}
+
+function downloadFallback(url){
   const a = document.createElement("a");
-  a.href = ADBLOCK_URL;
+  a.href = url;
   a.download = "";
   document.body.appendChild(a);
   a.click();
