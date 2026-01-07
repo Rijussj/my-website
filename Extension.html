@@ -128,33 +128,40 @@ footer{
   <div class="card">
     <div class="icon">🛡️</div>
     <h3>AdBlock</h3>
-    <p>
-      Block intrusive ads, pop-ups and trackers for a cleaner
-      and faster browsing experience.
-    </p>
-    <button onclick="installAdBlock()">Install Extension</button>
+    <p>Block intrusive ads, pop-ups and trackers.</p>
+    <button onclick="installExtension(ADBLOCK_URL)">Install Extension</button>
   </div>
 
   <!-- uBlock Origin -->
   <div class="card">
     <div class="icon">🚫</div>
     <h3>uBlock Origin</h3>
-    <p>
-      A fast, efficient and lightweight content blocker
-      for a secure and distraction-free web.
-    </p>
-    <button onclick="installUBlock()">Install Extension</button>
+    <p>Fast, efficient and lightweight content blocker.</p>
+    <button onclick="installExtension(UBLOCK_URL)">Install Extension</button>
   </div>
 
   <!-- GitHub Boxcutter -->
   <div class="card">
     <div class="icon">🐙</div>
     <h3>GitHub Boxcutter</h3>
-    <p>
-      Adds helpful links and shortcuts to GitHub repositories
-      for faster developer workflows.
-    </p>
-    <button onclick="installBoxcutter()">Install Extension</button>
+    <p>Useful shortcuts and tools for GitHub repositories.</p>
+    <button onclick="installExtension(BOXCUTTER_URL)">Install Extension</button>
+  </div>
+
+  <!-- GitHub Gmail -->
+  <div class="card">
+    <div class="icon">📧</div>
+    <h3>GitHub Gmail</h3>
+    <p>Improves GitHub notification emails in Gmail.</p>
+    <button onclick="installExtension(GITHUB_GMAIL_URL)">Install Extension</button>
+  </div>
+
+  <!-- Dark Reader -->
+  <div class="card">
+    <div class="icon">🌙</div>
+    <h3>Dark Reader</h3>
+    <p>Enable dark mode for every website to reduce eye strain.</p>
+    <button onclick="installExtension(DARKREADER_URL)">Install Extension</button>
   </div>
 
 </section>
@@ -173,20 +180,14 @@ const UBLOCK_URL =
 const BOXCUTTER_URL =
   "https://github.com/mike-north/chrome-github-boxcutter/archive/refs/tags/v5.zip";
 
-function installAdBlock(){
-  installExtension(ADBLOCK_URL);
-}
+const GITHUB_GMAIL_URL =
+  "https://github.com/muan/github-gmail/archive/refs/tags/0.8.1.zip";
 
-function installUBlock(){
-  installExtension(UBLOCK_URL);
-}
-
-function installBoxcutter(){
-  installExtension(BOXCUTTER_URL);
-}
+const DARKREADER_URL =
+  "https://github.com/darkreader/darkreader/releases/download/v4.9.118/darkreader-chrome-mv3.zip";
 
 function installExtension(url){
-  // ✅ Electron
+  // ✅ Electron mode
   if (window.electronAPI &&
       typeof window.electronAPI.installExtension === "function") {
     window.electronAPI.installExtension(url);
