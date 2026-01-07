@@ -132,9 +132,7 @@ footer{
       Block intrusive ads, pop-ups and trackers for a cleaner
       and faster browsing experience.
     </p>
-    <button onclick="installAdBlock()">
-      Install Extension
-    </button>
+    <button onclick="installAdBlock()">Install Extension</button>
   </div>
 
   <!-- uBlock Origin -->
@@ -145,22 +143,18 @@ footer{
       A fast, efficient and lightweight content blocker
       for a secure and distraction-free web.
     </p>
-    <button onclick="installUBlock()">
-      Install Extension
-    </button>
+    <button onclick="installUBlock()">Install Extension</button>
   </div>
 
-  <!-- Future -->
+  <!-- GitHub Boxcutter -->
   <div class="card">
-    <div class="icon">🧩</div>
-    <h3>More Extensions</h3>
+    <div class="icon">🐙</div>
+    <h3>GitHub Boxcutter</h3>
     <p>
-      More useful extensions will be available here
-      in future updates of RU Browser.
+      Adds helpful links and shortcuts to GitHub repositories
+      for faster developer workflows.
     </p>
-    <button disabled style="opacity:0.5;cursor:not-allowed;">
-      Coming Soon
-    </button>
+    <button onclick="installBoxcutter()">Install Extension</button>
   </div>
 
 </section>
@@ -176,25 +170,30 @@ const ADBLOCK_URL =
 const UBLOCK_URL =
   "https://github.com/gorhill/uBlock/releases/download/1.68.1rc1/uBlock0_1.68.1rc1.chromium.zip";
 
+const BOXCUTTER_URL =
+  "https://github.com/mike-north/chrome-github-boxcutter/archive/refs/tags/v5.zip";
+
 function installAdBlock(){
-  if (window.electronAPI &&
-      typeof window.electronAPI.installExtension === "function") {
-    window.electronAPI.installExtension(ADBLOCK_URL);
-    return;
-  }
-  downloadFallback(ADBLOCK_URL);
+  installExtension(ADBLOCK_URL);
 }
 
 function installUBlock(){
-  if (window.electronAPI &&
-      typeof window.electronAPI.installExtension === "function") {
-    window.electronAPI.installExtension(UBLOCK_URL);
-    return;
-  }
-  downloadFallback(UBLOCK_URL);
+  installExtension(UBLOCK_URL);
 }
 
-function downloadFallback(url){
+function installBoxcutter(){
+  installExtension(BOXCUTTER_URL);
+}
+
+function installExtension(url){
+  // ✅ Electron
+  if (window.electronAPI &&
+      typeof window.electronAPI.installExtension === "function") {
+    window.electronAPI.installExtension(url);
+    return;
+  }
+
+  // ✅ Browser fallback
   const a = document.createElement("a");
   a.href = url;
   a.download = "";
