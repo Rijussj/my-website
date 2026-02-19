@@ -2,224 +2,207 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>DukanBook – Customer Credit Manager</title>
+  <title>DukanBook – Smart Customer Credit Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-family: "Poppins", sans-serif;
     }
 
     body {
-      background: #f4f6fb;
-      color: #111827;
-      line-height: 1.6;
+      background: #0f172a;
+      color: #e5e7eb;
       overflow-x: hidden;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1100px;
       margin: auto;
       padding: 20px;
-      animation: fadeUp 1s ease;
     }
 
-    /* ===== HEADER ===== */
-    .header {
-      background: linear-gradient(135deg, #2563eb, #1e40af);
-      color: white;
+    /* ===== HERO ===== */
+    .hero {
       text-align: center;
-      padding: 70px 20px;
-      animation: fadeDown 1s ease;
+      padding: 90px 20px 70px;
+      background: radial-gradient(circle at top, #1e3a8a, #020617);
+      animation: fadeIn 1s ease;
     }
 
-    .header h1 {
-      font-size: 2.6rem;
-      margin-bottom: 10px;
-      letter-spacing: 1px;
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #60a5fa, #22d3ee);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .header p {
-      opacity: 0.9;
+    .hero p {
+      margin-top: 15px;
       font-size: 1.1rem;
+      opacity: 0.85;
     }
 
-    /* ===== BUTTON ===== */
     .btn {
       display: inline-block;
-      margin-top: 22px;
-      padding: 13px 26px;
-      background: white;
-      color: #1e40af;
-      border-radius: 10px;
+      margin-top: 25px;
+      padding: 14px 30px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: white;
       text-decoration: none;
       font-weight: 600;
-      transition: all 0.25s ease;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
     }
 
     .btn:hover {
-      transform: translateY(-3px) scale(1.05);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+      transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
     }
 
-    /* ===== SECTION ===== */
-    section {
-      margin-top: 45px;
-      animation: fadeUp 1s ease;
-    }
-
+    /* ===== SECTION TITLE ===== */
     h2 {
-      margin-bottom: 15px;
-      font-size: 1.9rem;
+      text-align: center;
+      font-size: 2rem;
+      margin: 70px 0 25px;
     }
 
-    /* ===== FEATURES GRID ===== */
+    /* ===== FEATURES ===== */
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 22px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
     }
 
     .card {
-      background: white;
-      padding: 22px;
-      border-radius: 14px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-      transition: all 0.25s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    /* classy glow effect */
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(120deg, transparent, rgba(37,99,235,0.15), transparent);
-      opacity: 0;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(14px);
+      padding: 24px;
+      border-radius: 18px;
       transition: 0.3s;
-    }
-
-    .card:hover::before {
-      opacity: 1;
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .card:hover {
-      transform: translateY(-6px) scale(1.02);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+      transform: translateY(-8px);
+      border-color: #3b82f6;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     }
 
     .card h3 {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       font-size: 1.2rem;
     }
 
     .card p {
-      color: #555;
       font-size: 0.95rem;
+      opacity: 0.8;
+    }
+
+    /* ===== SCREENSHOTS ===== */
+    .screens {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .shot {
+      height: 300px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #1e293b, #020617);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      transition: 0.3s;
+    }
+
+    .shot:hover {
+      transform: scale(1.05);
+      opacity: 1;
     }
 
     /* ===== FOOTER ===== */
     .footer {
-      margin-top: 70px;
-      padding: 25px;
       text-align: center;
-      color: #6b7280;
-      font-size: 0.9rem;
-      animation: fadeUp 1.2s ease;
+      margin-top: 80px;
+      padding: 30px;
+      font-size: 0.85rem;
+      opacity: 0.6;
     }
 
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes fadeDown {
-      from {
-        opacity: 0;
-        transform: translateY(-30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    /* ===== ANIMATION ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     /* ===== MOBILE ===== */
     @media (max-width: 600px) {
-      .header h1 {
-        font-size: 2.1rem;
-      }
+      .hero h1 { font-size: 2.2rem; }
     }
   </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<div class="header">
+<!-- HERO -->
+<section class="hero">
   <h1>DukanBook</h1>
-  <p>Simple Customer Credit & Business Record Manager</p>
-  <a class="btn" href="#" target="_blank">View on Google Play</a>
-</div>
+  <p>Smart way to manage customer credit & shop records</p>
+  <a class="btn" href="#" target="_blank">Get it on Google Play</a>
+</section>
 
 <div class="container">
 
-  <!-- ABOUT -->
-  <section>
-    <h2>About DukanBook</h2>
-    <p>
-      DukanBook helps shop owners manage customer credit, track payments,
-      and maintain daily business records digitally with a clean and simple interface.
-    </p>
-  </section>
-
   <!-- FEATURES -->
-  <section>
-    <h2>Key Features</h2>
-
-    <div class="features">
-
-      <div class="card">
-        <h3>➕ Add Customers</h3>
-        <p>Create and manage unlimited customer credit accounts easily.</p>
-      </div>
-
-      <div class="card">
-        <h3>💰 Track Payments</h3>
-        <p>Record payments and calculate remaining balance automatically.</p>
-      </div>
-
-      <div class="card">
-        <h3>📊 Clean Dashboard</h3>
-        <p>Simple interface designed for fast daily business use.</p>
-      </div>
-
-      <div class="card">
-        <h3>📱 Lightweight App</h3>
-        <p>Smooth performance on all Android devices with low storage usage.</p>
-      </div>
-
+  <h2>Powerful Features</h2>
+  <div class="features">
+    <div class="card">
+      <h3>Customer Credit Tracking</h3>
+      <p>Add customers and manage their credit balance digitally.</p>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>Payment Records</h3>
+      <p>Track received payments and remaining dues easily.</p>
+    </div>
+
+    <div class="card">
+      <h3>Clean Dashboard</h3>
+      <p>Minimal UI designed for fast daily shop usage.</p>
+    </div>
+
+    <div class="card">
+      <h3>Lightweight & Fast</h3>
+      <p>Runs smoothly on all Android phones.</p>
+    </div>
+  </div>
+
+  <!-- SCREENSHOTS -->
+  <h2>App Screens</h2>
+  <div class="screens">
+    <div class="shot">Screenshot 1</div>
+    <div class="shot">Screenshot 2</div>
+    <div class="shot">Screenshot 3</div>
+    <div class="shot">Screenshot 4</div>
+  </div>
 
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2025 RU Apps · All rights reserved
+  © 2025 RU Apps · Crafted with simplicity
 </div>
 
 </body>
