@@ -1,49 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>DukanBook – RU Apps</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="DukanBook – Simple customer credit and business record app">
+  <meta charset="UTF-8" />
+  <title>DukanBook – Customer Credit Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="DukanBook – Simple app to manage customer credit, payments, and business records." />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f6fb;
+      color: #111827;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, #2563eb, #1e40af);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #ffffff;
+      color: #1e40af;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* SECTION */
+    section {
+      margin-top: 40px;
+    }
+
+    h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+
+    /* FEATURES GRID */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+      transition: 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* FOOTER */
+    .footer {
+      margin-top: 60px;
+      padding: 25px;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; margin: 0; background: #f5f5f5;">
+
+<body>
 
 <!-- HEADER -->
-<div style="background:#2563eb; color:white; padding:20px; text-align:center;">
-  <h1 style="margin:0;">DukanBook</h1>
-  <p style="margin:5px 0 0;">Simple Customer Credit & Business Record App</p>
+<div class="header">
+  <h1>DukanBook</h1>
+  <p>Simple Customer Credit & Business Record Manager</p>
+  <a class="btn" href="#" target="_blank">View on Google Play</a>
 </div>
 
-<!-- CONTENT -->
-<div style="max-width:800px; margin:30px auto; background:white; padding:25px; border-radius:10px;">
+<div class="container">
 
-  <h2>About DukanBook</h2>
-  <p>
-    DukanBook is a simple and powerful app to manage customer credit,
-    track payments, and maintain business records easily from your mobile.
-  </p>
+  <!-- ABOUT -->
+  <section>
+    <h2>About DukanBook</h2>
+    <p>
+      DukanBook is a powerful yet simple mobile app designed to help shop owners
+      manage customer credit, track payments, and maintain daily business records
+      with ease. It removes the need for paper notebooks and keeps everything
+      organized digitally.
+    </p>
+  </section>
 
-  <h3>Key Features</h3>
-  <ul>
-    <li>➕ Add customers and credit entries</li>
-    <li>💰 Track payments and balances</li>
-    <li>📊 Simple and clean interface</li>
-    <li>📱 Lightweight and fast performance</li>
-  </ul>
+  <!-- FEATURES -->
+  <section>
+    <h2>Key Features</h2>
 
-  <br>
+    <div class="features">
 
-  <!-- PLAY STORE BUTTON (EDIT LINK IF NEEDED) -->
-  <a href="#"
-     style="display:inline-block; padding:12px 20px; background:#2563eb; color:white; text-decoration:none; border-radius:8px;">
-     View on Google Play
-  </a>
+      <div class="card">
+        <h3>➕ Add Customers</h3>
+        <p>Create and manage unlimited customer credit accounts بسهولة.</p>
+      </div>
+
+      <div class="card">
+        <h3>💰 Track Payments</h3>
+        <p>Record payments and automatically calculate remaining balance.</p>
+      </div>
+
+      <div class="card">
+        <h3>📊 Clean Dashboard</h3>
+        <p>Simple interface designed for fast daily business use.</p>
+      </div>
+
+      <div class="card">
+        <h3>📱 Lightweight App</h3>
+        <p>Runs smoothly on all Android devices with low storage usage.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY USE -->
+  <section>
+    <h2>Why Choose DukanBook?</h2>
+    <p>
+      DukanBook helps small shop owners replace traditional credit notebooks
+      with a secure and easy digital solution. Manage your business smarter,
+      reduce mistakes, and keep accurate financial records anytime.
+    </p>
+  </section>
 
 </div>
 
 <!-- FOOTER -->
-<div style="text-align:center; padding:20px; color:#666;">
-  © 2025 RU Apps
+<div class="footer">
+  © 2025 RU Apps · All rights reserved
 </div>
 
 </body>
