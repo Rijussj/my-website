@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>DukanBook – Customer Credit Manager</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="DukanBook – Simple app to manage customer credit, payments, and business records." />
 
   <style>
     * {
@@ -18,25 +17,29 @@
       background: #f4f6fb;
       color: #111827;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 20px;
+      animation: fadeUp 1s ease;
     }
 
-    /* HEADER */
+    /* ===== HEADER ===== */
     .header {
       background: linear-gradient(135deg, #2563eb, #1e40af);
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px;
+      animation: fadeDown 1s ease;
     }
 
     .header h1 {
-      font-size: 2.5rem;
+      font-size: 2.6rem;
       margin-bottom: 10px;
+      letter-spacing: 1px;
     }
 
     .header p {
@@ -44,53 +47,71 @@
       font-size: 1.1rem;
     }
 
-    /* BUTTON */
+    /* ===== BUTTON ===== */
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      padding: 12px 22px;
-      background: #ffffff;
+      margin-top: 22px;
+      padding: 13px 26px;
+      background: white;
       color: #1e40af;
-      border-radius: 8px;
+      border-radius: 10px;
       text-decoration: none;
       font-weight: 600;
-      transition: 0.2s;
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
+      transition: all 0.25s ease;
       box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
-    /* SECTION */
+    .btn:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+
+    /* ===== SECTION ===== */
     section {
-      margin-top: 40px;
+      margin-top: 45px;
+      animation: fadeUp 1s ease;
     }
 
     h2 {
       margin-bottom: 15px;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
     }
 
-    /* FEATURES GRID */
+    /* ===== FEATURES GRID ===== */
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
       margin-top: 20px;
     }
 
     .card {
-      background: #ffffff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-      transition: 0.2s;
+      background: white;
+      padding: 22px;
+      border-radius: 14px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      transition: all 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* classy glow effect */
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(37,99,235,0.15), transparent);
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .card:hover::before {
+      opacity: 1;
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.12);
     }
 
     .card h3 {
@@ -103,19 +124,43 @@
       font-size: 0.95rem;
     }
 
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     .footer {
-      margin-top: 60px;
+      margin-top: 70px;
       padding: 25px;
       text-align: center;
       color: #6b7280;
       font-size: 0.9rem;
+      animation: fadeUp 1.2s ease;
     }
 
-    /* MOBILE */
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== MOBILE ===== */
     @media (max-width: 600px) {
       .header h1 {
-        font-size: 2rem;
+        font-size: 2.1rem;
       }
     }
   </style>
@@ -136,10 +181,8 @@
   <section>
     <h2>About DukanBook</h2>
     <p>
-      DukanBook is a powerful yet simple mobile app designed to help shop owners
-      manage customer credit, track payments, and maintain daily business records
-      with ease. It removes the need for paper notebooks and keeps everything
-      organized digitally.
+      DukanBook helps shop owners manage customer credit, track payments,
+      and maintain daily business records digitally with a clean and simple interface.
     </p>
   </section>
 
@@ -151,12 +194,12 @@
 
       <div class="card">
         <h3>➕ Add Customers</h3>
-        <p>Create and manage unlimited customer credit accounts بسهولة.</p>
+        <p>Create and manage unlimited customer credit accounts easily.</p>
       </div>
 
       <div class="card">
         <h3>💰 Track Payments</h3>
-        <p>Record payments and automatically calculate remaining balance.</p>
+        <p>Record payments and calculate remaining balance automatically.</p>
       </div>
 
       <div class="card">
@@ -166,20 +209,10 @@
 
       <div class="card">
         <h3>📱 Lightweight App</h3>
-        <p>Runs smoothly on all Android devices with low storage usage.</p>
+        <p>Smooth performance on all Android devices with low storage usage.</p>
       </div>
 
     </div>
-  </section>
-
-  <!-- WHY USE -->
-  <section>
-    <h2>Why Choose DukanBook?</h2>
-    <p>
-      DukanBook helps small shop owners replace traditional credit notebooks
-      with a secure and easy digital solution. Manage your business smarter,
-      reduce mistakes, and keep accurate financial records anytime.
-    </p>
   </section>
 
 </div>
