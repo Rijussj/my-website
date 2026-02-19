@@ -28,7 +28,7 @@
       padding: 20px;
     }
 
-    /* ===== HERO ===== */
+    /* HERO */
     .hero {
       text-align: center;
       padding: 90px 20px 70px;
@@ -52,7 +52,7 @@
 
     .btn {
       display: inline-block;
-      margin-top: 25px;
+      margin-top: 18px;
       padding: 14px 30px;
       border-radius: 12px;
       background: linear-gradient(135deg, #3b82f6, #06b6d4);
@@ -68,14 +68,24 @@
       box-shadow: 0 15px 35px rgba(0,0,0,0.6);
     }
 
-    /* ===== SECTION TITLE ===== */
+    .btn-outline {
+      background: transparent;
+      border: 1px solid #9ca3af;
+      color: #e5e7eb;
+    }
+
+    .btn-outline:hover {
+      background: #111827;
+    }
+
+    /* SECTION TITLE */
     h2 {
       text-align: center;
       font-size: 2rem;
       margin: 70px 0 25px;
     }
 
-    /* ===== FEATURES ===== */
+    /* FEATURES */
     .features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -107,7 +117,7 @@
       opacity: 0.8;
     }
 
-    /* ===== SCREENSHOTS ===== */
+    /* SCREENSHOTS */
     .screens {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
@@ -132,7 +142,7 @@
       opacity: 1;
     }
 
-    /* ===== FOOTER ===== */
+    /* FOOTER */
     .footer {
       text-align: center;
       margin-top: 80px;
@@ -141,13 +151,23 @@
       opacity: 0.6;
     }
 
-    /* ===== ANIMATION ===== */
+    .footer a {
+      color: #9ca3af;
+      text-decoration: none;
+      margin-left: 6px;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ANIMATION */
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ===== MOBILE ===== */
+    /* MOBILE */
     @media (max-width: 600px) {
       .hero h1 { font-size: 2.2rem; }
     }
@@ -160,7 +180,12 @@
 <section class="hero">
   <h1>DukanBook</h1>
   <p>Smart way to manage customer credit & shop records</p>
-  <a class="btn" href="#" target="_blank">Get it on Google Play</a>
+
+  <a class="btn" href="#" target="_blank">Get it on Google Play</a><br>
+
+  <a class="btn btn-outline" href="dukan-book-privacy-policy.html" target="_blank">
+    Privacy Policy
+  </a>
 </section>
 
 <div class="container">
@@ -202,7 +227,8 @@
 
 <!-- FOOTER -->
 <div class="footer">
-  © 2025 RU Apps · Crafted with simplicity
+  © 2026 RU Apps ·
+  <a href="dukan-book-privacy-policy.html">Privacy Policy</a>
 </div>
 
 </body>
