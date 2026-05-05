@@ -1,106 +1,193 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Privacy Policy for RU Movies Info</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Privacy Policy for RU Movies/RU Movies Info" />
+<meta charset="UTF-8">
+<title>Privacy Policy – RU Movies Info</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: #f4f6fb;
-      margin: 0;
-      padding: 0;
-      line-height: 1.7;
-      color: #111827;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-    .container {
-      max-width: 900px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 32px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    }
+<meta name="description"
+content="Privacy Policy for RU Movies Info app. Learn how we handle user data, third-party services, and privacy protection.">
 
-    h1 {
-      margin-bottom: 6px;
-      font-size: 2rem;
-    }
+<link rel="canonical" href="https://myruhi.in/privacy.html">
 
-    h2 {
-      margin-top: 28px;
-      margin-bottom: 10px;
-      font-size: 1.25rem;
-    }
+<style>
+*{box-sizing:border-box}
 
-    p {
-      margin-bottom: 10px;
-      color: #374151;
-    }
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  color:#ffffff;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #1e3a8a 0%, transparent 60%),
+    radial-gradient(1000px 500px at 90% 10%, #0ea5e9 0%, transparent 55%),
+    #020617;
+}
 
-    ul {
-      margin: 10px 0 10px 20px;
-      color: #374151;
-    }
+.wrapper{
+  max-width:900px;
+  margin:auto;
+  padding:100px 20px;
+}
 
-    strong {
-      color: #111827;
-    }
+h1{
+  font-size:44px;
+  font-weight:900;
+  margin-bottom:10px;
+  background:linear-gradient(90deg,#60a5fa,#38bdf8,#2563eb);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
 
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.85rem;
-      color: #6b7280;
-    }
+.date{
+  color:#94a3b8;
+  font-size:14px;
+  margin-bottom:30px;
+}
 
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
+h2{
+  font-size:24px;
+  font-weight:800;
+  margin-top:50px;
+  margin-bottom:12px;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+p{
+  font-size:16px;
+  line-height:1.8;
+  color:#c7d2fe;
+}
+
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:10px;
+  color:#c7d2fe;
+}
+
+.box{
+  margin-top:18px;
+  padding:26px;
+  border-radius:22px;
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  transition:0.3s ease;
+}
+
+.box:hover{
+  transform:translateY(-4px);
+}
+
+footer{
+  margin-top:80px;
+  padding-top:30px;
+  border-top:1px solid rgba(255,255,255,0.15);
+  text-align:center;
+  font-size:14px;
+  color:#94a3b8;
+}
+
+footer a{
+  color:#60a5fa;
+  text-decoration:none;
+}
+
+@media(max-width:600px){
+  h1{font-size:32px}
+}
+</style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="wrapper">
 
- Privacy Policy for RU Movies Info
+<h1>Privacy Policy</h1>
+<div class="date">Last Updated: May 5, 2026</div>
 
-Last Updated: May 5, 2026
+<div class="box">
+<h2>Introduction</h2>
+<p>
+Welcome to <b>RU Movies Info</b>. Your privacy is important to us.
+This Privacy Policy explains how we handle your information when using our application.
+</p>
+</div>
 
-1. Introduction
-Welcome to RU Movies Info. Your privacy is important to us. This Privacy Policy explains how we handle your information when you use our application.
+<div class="box">
+<h2>Data Collection and Usage</h2>
+<p>
+RU Movies Info does <b>not collect, store, or share</b> any personal data or personally identifiable information (PII).
+</p>
+<p>
+You are not required to create an account, log in, or provide personal information to use the app.
+</p>
+</div>
 
-2. Data Collection and Usage
-RU Movies Info does not collect, store, or share any personal data or personally identifiable information (PII). We do not require you to create an account, log in, or provide any personal details to use the app.
+<div class="box">
+<h2>Local Storage</h2>
+<p>The app stores limited data locally on your device:</p>
+<ul>
+<li><b>Favorites:</b> Movies and TV shows saved by you</li>
+<li><b>Preferences:</b> Theme settings and region preferences</li>
+</ul>
+<p>
+This data remains on your device and is never transmitted to our servers.
+</p>
+</div>
 
-3. Local Storage
-The application stores certain data locally on your device to improve your experience:
-- Favorites: Movies and TV shows you mark as favorites are saved in a local database on your device.
-- Preferences: Your settings, such as your preferred theme (Dark/Light mode) and watch provider region, are stored locally.
-This data never leaves your device and is not sent to any external servers by us.
+<div class="box">
+<h2>Third-Party Services</h2>
+<p>
+This app uses the TMDB API provided by 
+:contentReference[oaicite:0]{index=0}
+to fetch movie and TV data.
+</p>
+<p>
+When using the app, network requests are made to TMDB servers. TMDB may collect standard
+technical data such as IP address as part of normal internet usage.
+</p>
+<p>
+You can review their policy here:
+<a href="https://www.themoviedb.org/privacy-policy" target="_blank">
+TMDB Privacy Policy
+</a>
+</p>
+</div>
 
-4. Third-Party Services
-Our application uses the TMDB (The Movie Database) API to display movie and television data, images, and watch provider information. 
-- When the app fetches data, it makes network requests to TMDB's servers. 
-- Please note that TMDB may collect standard network information (like IP addresses) as part of normal internet operations. You can review TMDB's privacy policy on their official website (https://www.themoviedb.org/privacy-policy) for more details.
+<div class="box">
+<h2>Children's Privacy</h2>
+<p>
+RU Movies Info does not knowingly collect any personal information from children under 13.
+</p>
+</div>
 
-5. Changes to This Privacy Policy
-We may update our Privacy Policy from time to time. Since we do not collect contact information, we cannot notify you directly of changes. Any updates will be reflected in this document within the app.
+<div class="box">
+<h2>Changes to This Policy</h2>
+<p>
+We may update this Privacy Policy occasionally.
+Any changes will be posted within the app or on this page.
+</p>
+</div>
 
-6. Contact Us
-If you have any questions or suggestions about our Privacy Policy, please feel free to reach out to the developer at:
-- srzapps@gmail.com
-- myjawla@gmail.com
-  </p>
+<div class="box">
+<h2>Contact Us</h2>
+<p>
+If you have any questions, contact us at:
+<br><br>
+<b>Email:</b><br>
+<a href="mailto:srzapps@gmail.com">srzapps@gmail.com</a><br>
+<a href="mailto:myjawla@gmail.com">myjawla@gmail.com</a>
+</p>
+</div>
 
-  <h2>9. Changes t
+<footer>
+© 2026 RU Apps · <a href="./index.html">Back to Home</a>
+</footer>
+
+</div>
+
+</body>
+</html>
