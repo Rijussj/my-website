@@ -1,236 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Privacy Policy – RU Apps(Excluding DukanBook App) </title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<meta name="description"
-content="Privacy Policy for RU Apps including RU Browser, RU Gallery, RU Calendar and RU Calculator((Excluding DukanBook App) .">
-
-<link rel="canonical" href="https://myruhi.in/privacy.html">
-
-<style>
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:'Inter',system-ui,sans-serif;
-  color:#ffffff;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, #1e3a8a 0%, transparent 60%),
-    radial-gradient(1000px 500px at 90% 10%, #0ea5e9 0%, transparent 55%),
-    #020617;
-}
-
-/* LAYOUT */
-.wrapper{
-  max-width:900px;
-  margin:auto;
-  padding:100px 20px;
-}
-
-/* HEADINGS */
-h1{
-  font-size:44px;
-  font-weight:900;
-  margin-bottom:20px;
-  background:linear-gradient(90deg,#60a5fa,#38bdf8,#2563eb);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-h2{
-  font-size:24px;
-  font-weight:800;
-  margin-top:50px;
-  margin-bottom:12px;
-}
-p{
-  font-size:16px;
-  line-height:1.7;
-  color:#c7d2fe;
-}
-
-/* LIST */
-ul{
-  padding-left:20px;
-}
-li{
-  margin-bottom:10px;
-  color:#c7d2fe;
-}
-
-/* BOX */
-.box{
-  margin-top:18px;
-  padding:26px;
-  border-radius:22px;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-}
-
-/* FOOTER */
-footer{
-  margin-top:80px;
-  padding-top:30px;
-  border-top:1px solid rgba(255,255,255,0.15);
-  text-align:center;
-  font-size:14px;
-  color:#94a3b8;
-}
-footer a{
-  color:#60a5fa;
-  text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  h1{font-size:32px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — RUHI Applications</title>
+  <meta name="description" content="RUHI Applications privacy policy. We collect no personal data. Read how we protect your privacy across all our apps.">
+  <meta name="author" content="RUHI Applications">
+  <link rel="canonical" href="https://myruhi.in/privacy">
+  <link rel="stylesheet" href="bento.css">
 </head>
-
 <body>
 
-<div class="wrapper">
+  <nav class="ru-nav" id="ruNav">
+    <a href="index.html" class="ru-nav-logo">RUHI <span>Applications</span></a>
+    <div class="ru-nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="help.html">Support</a>
+      <a href="index.html" class="ru-nav-cta ru-nav-links">Get Apps</a>
+    </div>
+    <button class="ru-mobile-btn" id="mobileBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="ru-drawer" id="mobileDrawer">
+    <button class="ru-drawer-close" id="drawerClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="help.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
 
-<h1>Privacy Policy</h1>
+<main class="page-wrap">
+  <div class="bento">
 
-<p>
-This Privacy Policy applies to all applications developed and published under
-the <b>RU Apps</b> brand, including RU Browser, RU Gallery, RU Calendar and
-RU Calculator, exclude DukanBook app.
-</p>
+    <div class="tile tile-dark aurora-glow col-12 row-3">
+      <div class="tile-pad" style="justify-content:flex-end;position:relative;z-index:1;">
+        <div class="sec-tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">Legal</div>
+        <h1 class="display-title" style="color:#fff;margin-top:12px;margin-bottom:10px;">Privacy <span class="grad">Policy</span></h1>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.95rem;">Last updated: May 2026 · Applies to all RUHI Applications applications</p>
+      </div>
+    </div>
 
-<p>
-We respect your privacy and are committed to protecting it. This policy explains
-what information we collect, how it is used, and how we keep it safe.
-</p>
+    <div class="tile col-8 row-auto tile-pad reveal" style="grid-row:span 12;">
+      <div class="policy-section">
+        <h2>1. Overview</h2>
+        <p>RUHI Applications ("we", "our", "us") is committed to protecting your privacy. This policy explains what information our apps collect (or rather, do not collect) and how your data is handled.</p>
+      </div>
+      <div class="policy-section">
+        <h2>2. Data We Do Not Collect</h2>
+        <p>None of our apps collect, transmit, or store any of the following:</p>
+        <ul>
+          <li>Personal identification information (name, email, phone number)</li>
+          <li>Location data</li>
+          <li>Browsing history or app usage analytics</li>
+          <li>Device identifiers or advertising IDs</li>
+          <li>Photos, files, or media from your device</li>
+        </ul>
+      </div>
+      <div class="policy-section">
+        <h2>3. Local Data Storage</h2>
+        <p>Some apps (like DukanBook) store data you enter directly on your device's local storage. This data never leaves your device unless you explicitly use an optional backup feature. We have no access to this data.</p>
+      </div>
+      <div class="policy-section">
+        <h2>4. Third-Party Services</h2>
+        <p>Our apps do not integrate any third-party advertising SDKs, analytics platforms, or social media tracking pixels.</p>
+      </div>
+      <div class="policy-section">
+        <h2>5. Permissions</h2>
+        <p>Each app only requests permissions that are strictly necessary for its function. For example, RU Gallery only requests storage access to display your photos. RU Calculator requests zero permissions.</p>
+      </div>
+      <div class="policy-section">
+        <h2>6. Children's Privacy</h2>
+        <p>Our apps are suitable for all ages. We do not knowingly collect any data from children under 13.</p>
+      </div>
+      <div class="policy-section">
+        <h2>7. Changes to This Policy</h2>
+        <p>We may update this policy occasionally. Continued use of our apps after changes are posted constitutes acceptance of the updated policy.</p>
+      </div>
+      <div class="policy-section">
+        <h2>8. Contact</h2>
+        <p>Questions? Email us at <a href="mailto:support@myruhi.in" style="color:var(--brand);">support@myruhi.in</a></p>
+      </div>
+    </div>
 
-<div class="box">
-<h2>Information Collection</h2>
-<p>
-RU Apps (exclude DukanBook) do <b>not</b> collect personally identifiable information such as:
-</p>
-<ul>
-  <li>Name</li>
-  <li>Email address</li>
-  <li>Phone number</li>
-  <li>Precise location</li>
-</ul>
-</div>
+    <div class="tile col-4 row-auto tile-pad reveal" style="grid-row:span 6;background:#f0fdf4;align-self:start;">
+      <div class="feat-icon-box" style="background:#bbf7d0;">🛡️</div>
+      <h2 style="font-family:var(--font-h);font-size:1.1rem;font-weight:800;margin-bottom:10px;">Privacy at a Glance</h2>
+      <div style="display:flex;flex-direction:column;gap:10px;margin-top:10px;">
+        <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-mid);">✅ No personal data collected</div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-mid);">✅ No third-party trackers</div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-mid);">✅ No advertising IDs</div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-mid);">✅ Local data stays local</div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-mid);">✅ Minimal permissions only</div>
+        <div style="display:flex;align-items:center;gap:10px;font-size:0.88rem;color:var(--text-mid);">✅ Safe for all ages</div>
+      </div>
+    </div>
 
-<div class="box">
-<h2>App-Specific Information</h2>
-<ul>
-  <li>
-    <b>RU Browser</b> requires internet access to load websites.
-    Browsing data remains on the user’s device and is not collected by us.
-  </li>
-  <li>
-    <b>RU Calendar</b> may access publicly available system holiday information
-    from online sources to display holiday lists. This does not involve personal
-    user data.
-  </li>
-  <li>
-    <b>RU Gallery</b> and <b>RU Calculator</b> work fully offline and do not
-    require internet access.
-   For DukanBook App Privacy Policy login https://myruhi.in/dukan-book-privacy-policy
-  </li>
-</ul>
-</div>
+  </div>
+</main>
 
-<div class="box">
-<h2>Analytics</h2>
-<p>
-Some RU Apps may use <b>Firebase Analytics</b> to understand general app usage
-patterns such as app launches, device type, and performance metrics.
-</p>
-<p>
-This data is collected in an aggregated and anonymous form and does not identify
-individual users.
-</p>
-<p>
-Our apps may also include open-source libraries provided by Google, which do not
-collect personal user data.
-</p>
-</div>
+  <footer class="ru-footer">
+    <div class="footer-inner">
+      <div>
+        <a href="index.html" class="footer-logo">RUHI <span>Applications</span></a>
+        <p class="footer-desc">Fast, lightweight, privacy-first apps for Android &amp; Windows.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Apps</h4>
+          <ul>
+            <li><a href="dukanbook.html">DukanBook</a></li>
+            <li><a href="rubrowser.html">RU Browser</a></li>
+            <li><a href="rugallery.html">RU Gallery</a></li>
+            <li><a href="rucalendar.html">RU Calendar</a></li>
+            <li><a href="rucalculator.html">RU Calculator</a></li>
+            <li><a href="openhub.html">OpenHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="help.html">Help &amp; FAQ</a></li>
+            <li><a href="dukanbookhelp.html">DukanBook Help</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="dukan-book-privacy-policy.html">DukanBook Privacy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RUHI Applications. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
 
-<div class="box">
-<h2>Advertisements</h2>
-<p>
-Currently, RU Apps do <b>not</b> display advertisements.
-</p>
-<p>
-If advertisements are added in the future, this Privacy Policy will be updated
-accordingly.
-</p>
-</div>
-
-<div class="box">
-<h2>Accounts & Login</h2>
-<p>
-RU Apps do not require user registration, login, or account creation (exclude DukanBook App).
-</p>
-</div>
-
-<div class="box">
-<h2>Data Sharing</h2>
-<p>
-We do <b>not</b> sell, trade, or share user data with third parties.
-</p>
-</div>
-
-<div class="box">
-<h2>Children’s Privacy</h2>
-<p>
-RU Apps are designed to be suitable for a general audience, including children.
-We do not knowingly collect personal information from children under the age of 13.
-</p>
-</div>
-
-<div class="box">
-<h2>Security</h2>
-<p>
-We take reasonable measures to protect our applications and ensure that user
-information remains secure.
-    For DukanBook App Privacy Policy login https://myruhi.in/dukan-book-privacy-policy
-</p>
-</div>
-
-<div class="box">
-<h2>Changes to This Policy</h2>
-<p>
-This Privacy Policy may be updated from time to time. Any changes will be posted
-on this page.
-</p>
-</div>
-
-<div class="box">
-<h2>Contact Us</h2>
-<p>
-If you have any questions about this Privacy Policy, please contact us at:
-<br><br>
-<b>Email:</b> <a href="mailto:support@myruhi.in
-">support@myruhi.in
-  <br><br>
-
-  <br><br>
-<b>Email:</b> <a href="mailto:srzapps@gmail.com
-">srzapps@gmail.com
-  <br><br>
-
-</a>
-</p>
-</div>
-
-<footer>
-© 2025 RU Apps · <a href="./index.html">Back to Home</a>
-</footer>
-
-</div>
-
+  <script>
+    const btn = document.getElementById('mobileBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    const cls = document.getElementById('drawerClose');
+    btn.addEventListener('click', () => drawer.classList.add('open'));
+    cls.addEventListener('click', () => drawer.classList.remove('open'));
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+    // Reveal
+    const els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(el => obs.observe(el));
+    } else { els.forEach(el => el.classList.add('visible')); }
+    // FAQ
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!open) item.classList.add('open');
+      });
+    });
+  </script>
 </body>
 </html>

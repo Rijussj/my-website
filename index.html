@@ -1,268 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-
-<!-- MUST FOR MOBILE -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>RU Apps – Official App Hub</title>
-
-<meta name="description"
-content="RU Apps official website. Download DukanBook,RU Browser, RU Gallery, RU Calendar and RU Calculator. Fast, lightweight and privacy-focused apps.">
-
-<link rel="canonical" href="https://myruhi.in/">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-
-<style>
-*{
-  box-sizing:border-box;
-}
-
-html, body{
-  margin:0;
-  padding:0;
-  width:100%;
-  overflow-x:hidden; /* 🔴 FIXES DESKTOP WIDTH ISSUE */
-}
-
-body{
-  font-family:'Inter',system-ui,sans-serif;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, #1e3a8a 0%, transparent 60%),
-    radial-gradient(1000px 500px at 90% 10%, #0ea5e9 0%, transparent 55%),
-    #020617;
-  color:#ffffff;
-}
-
-/* HEADER */
-header{
-  padding:80px 16px 50px;
-  text-align:center;
-}
-
-header h1{
-  font-size:42px;
-  font-weight:900;
-  margin-bottom:10px;
-  background:linear-gradient(90deg,#60a5fa,#38bdf8,#2563eb);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-header p{
-  font-size:16px;
-  color:#c7d2fe;
-  max-width:720px;
-  margin:auto;
-}
-
-/* APPS SECTION */
-.apps-section{
-  padding:60px 16px;
-}
-
-.apps-grid{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:24px;
-}
-
-/* APP CARD */
-.app-card{
-  padding:28px;
-  border-radius:22px;
-  text-align:center;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-  backdrop-filter:blur(16px);
-  transition:0.25s;
-}
-
-.app-card:hover{
-  transform:translateY(-6px);
-  background:rgba(255,255,255,0.1);
-}
-
-/* ICON */
-.app-icon{
-  width:68px;
-  height:68px;
-  margin:0 auto 16px;
-  border-radius:16px;
-  overflow:hidden;
-}
-
-.app-icon img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
-
-/* TEXT */
-.app-card h3{
-  margin:0 0 6px;
-  font-size:18px;
-  font-weight:700;
-}
-
-.app-card p{
-  font-size:14px;
-  line-height:1.6;
-  color:#c7d2fe;
-  margin-bottom:16px;
-}
-
-/* BUTTON */
-.app-card a{
-  display:inline-block;
-  padding:10px 18px;
-  border-radius:12px;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:600;
-  color:white;
-  background:linear-gradient(135deg,#2563eb,#3b82f6);
-}
-
-/* ABOUT */
-.about-section{
-  padding:70px 16px;
-  max-width:900px;
-  margin:auto;
-  text-align:center;
-}
-
-.about-section h2{
-  font-size:30px;
-  font-weight:800;
-  margin-bottom:12px;
-}
-
-.about-section p{
-  font-size:15px;
-  line-height:1.7;
-  color:#c7d2fe;
-}
-
-/* FOOTER */
-footer{
-  padding:30px 16px;
-  text-align:center;
-  border-top:1px solid rgba(255,255,255,0.15);
-  font-size:14px;
-  color:#94a3b8;
-}
-
-.footer-links{
-  margin-top:8px;
-}
-
-.footer-links a{
-  color:#60a5fa;
-  text-decoration:none;
-  margin:0 8px;
-}
-
-/* MOBILE TUNING */
-@media (max-width:480px){
-  header h1{
-    font-size:32px;
-  }
-
-  header p{
-    font-size:15px;
-  }
-
-  .about-section h2{
-    font-size:24px;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUHI Applications — Fast, Lightweight &amp; Privacy-Focused Mobile Apps</title>
+  <meta name="description" content="RUHI Applications develops lightweight, fast, and privacy-focused applications. Download DukanBook, RU Browser, RU Gallery, RU Calendar, and RU Calculator.">
+  <meta name="keywords" content="RUHI Applications, DukanBook, RU Browser, RU Gallery, RU Calendar, RU Calculator, privacy apps, lightweight apps">
+  <meta name="author" content="RUHI Applications">
+  <link rel="canonical" href="https://myruhi.in/">
+  <link rel="stylesheet" href="bento.css">
 </head>
-
 <body>
 
-<header>
-  <h1>RU Apps</h1>
-  <p>Fast, Lightweight & Privacy-Focused Apps for Everyday Use</p>
-</header>
+  <!-- NAV -->
+  <nav class="ru-nav" id="ruNav">
+    <a href="index.html" class="ru-nav-logo">RUHI <span>Applications</span></a>
+    <div class="ru-nav-links">
+      <a href="#apps">Apps</a>
+      <a href="about.html">About</a>
+      <a href="help.html">Support</a>
+      <a href="#apps" class="ru-nav-cta">Get Apps</a>
+    </div>
+    <button class="ru-mobile-btn" id="mobileBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<section class="apps-section">
-  <div class="apps-grid">
+  <!-- Mobile Drawer -->
+  <div class="ru-drawer" id="mobileDrawer">
+    <button class="ru-drawer-close" id="drawerClose">&#10005;</button>
+    <a href="index.html">Home</a>
+    <a href="#apps">Apps</a>
+    <a href="about.html">About</a>
+    <a href="help.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
 
-    <div class="app-card">
-      <div class="app-icon">
+  <!-- MAIN BENTO GRID -->
+  <main class="page-wrap" id="apps">
+    <div class="bento">
+
+      <!-- ══ HERO TILE ══ -->
+      <div class="tile tile-dark aurora-glow col-7 row-5">
+        <div class="tile-pad" style="justify-content:flex-end;position:relative;z-index:1;">
+          <div class="sec-tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);margin-bottom:18px;">100% Privacy-Respecting</div>
+          <h1 class="display-title" style="color:#fff;margin-bottom:16px;">
+            Smart Apps Built for<br><span class="grad">Speed &amp; Privacy</span>
+          </h1>
+          <p style="color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.65;margin-bottom:28px;max-width:400px;">
+            Fast, lightweight Android and Windows utilities. No trackers. No ads. Just clean, reliable tools.
+          </p>
+          <div class="btns-row">
+            <a href="#apps" class="btn-white">Browse Apps</a>
+            <a href="about.html" class="btn-ghost">Our Story</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ STAT: 5 Apps + 1 Store ══ -->
+      <div class="tile col-5 row-2 tile-pad" style="justify-content:center;">
+        <div style="display: flex; align-items: baseline; gap: 8px;">
+          <div class="tile-stat-num">5</div>
+          <div style="font-size: 1.5rem; font-weight: 800; color: var(--text-light); font-family: var(--font-h);">+</div>
+          <div class="tile-stat-num" style="background: linear-gradient(135deg, #8b5cf6, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">1</div>
+        </div>
+        <div style="color:var(--text-mid);font-size:0.88rem;font-weight:600;margin-top:8px;line-height:1.4;">
+          5 Lightweight Apps<br>
+          <span style="color: var(--c-openhub); font-size: 0.78rem; font-weight: 500;">1 Web &amp; Windows Apps Store</span>
+        </div>
+      </div>
+
+      <!-- ══ STAT: Free ══ -->
+      <div class="tile tile-light-purple col-5 row-3 tile-pad" style="justify-content:center;">
+        <div class="tile-stat-num" style="background:linear-gradient(135deg,#6c47ff,#db2777);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Free</div>
+        <div style="color:var(--text-mid);font-size:0.92rem;font-weight:500;margin-top:8px;">Always &amp; forever</div>
+      </div>
+
+      <!-- ══ TAGLINE ══ -->
+      <div class="tile tile-brand col-5 row-2 tile-pad" style="justify-content:center;">
+        <h2 style="font-family:var(--font-h);font-size:1.5rem;font-weight:800;color:#fff;line-height:1.25;margin-bottom:8px;">Zero Trackers.<br>Zero Bloat.</h2>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;">Built for real users, real devices.</p>
+      </div>
+
+      <!-- ══ DUKANBOOK — Wide Tile ══ -->
+      <div class="tile accent-dukanbook col-7 row-4 tile-pad reveal" style="flex-direction:row;align-items:center;gap:28px;flex-wrap:wrap;">
         <img src="https://play-lh.googleusercontent.com/CTE5B7JjRjwbIJXdNtncp_hNOwL0gefHlmTaJeo95M2iX4ItdXzCSqTjufZzqek6a8ilp7BPji-AAJlxndI0JA=w240-h480-rw"
-             alt="DukanBook" width="68" height="68" loading="lazy">
+          alt="DukanBook icon"
+          style="width:100px;height:100px;border-radius:22px;box-shadow:0 8px 24px rgba(0,0,0,0.12);flex-shrink:0;">
+        <div style="flex:1;">
+          <div class="sec-tag" style="color:var(--c-dukanbook);background:#e0f2fe;">Business Utility</div>
+          <h2 style="font-family:var(--font-h);font-size:1.6rem;font-weight:800;margin:10px 0 8px;">DukanBook</h2>
+          <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.6;margin-bottom:16px;">Digital khata — manage customer credit, track payments, and keep shop records offline.</p>
+          <a href="dukanbook.html" class="arrow-link" style="color:var(--c-dukanbook);padding-top:0;margin-top:0;">View Details</a>
+        </div>
       </div>
-      <h3>DukanBook</h3>
-      <p>Smart way to manage customer credit & shop records.</p>
-      <a href="dukanbook.html">View App</a>
-    </div>
 
-    <div class="app-card">
-      <div class="app-icon">
-        <img src="https://play-lh.googleusercontent.com/ewD5UT7dpVco45qW-WPmaUlx641YLDmtgN17mMJBVqvgLf0_26sf6q6_4x67-vFKvO9X3r3p5iInVvnptyopdaE=s256-rw"
-             alt="RU Browser" width="68" height="68" loading="lazy">
+      <!-- ══ RU BROWSER ══ -->
+      <div class="tile accent-rubrowser col-5 row-4 tile-pad reveal">
+        <div class="app-chip">
+          <div class="app-chip-icon">
+            <img src="https://play-lh.googleusercontent.com/ewD5UT7dpVco45qW-WPmaUlx641YLDmtgN17mMJBVqvgLf0_26sf6q6_4x67-vFKvO9X3r3p5iInVvnptyopdaE=s256-rw" alt="RU Browser">
+          </div>
+          <div>
+            <div class="app-chip-name">RU Browser</div>
+            <div class="app-chip-cat">Browser · Android &amp; Windows</div>
+          </div>
+        </div>
+        <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.6;flex-grow:1;">Fast, privacy-first browser with built-in tracker blocking. No forced sign-in.</p>
+        <a href="rubrowser.html" class="arrow-link" style="color:var(--c-rubrowser);">View Details</a>
       </div>
-      <h3>RU Browser</h3>
-      <p>Fast and privacy-focused browser.</p>
-      <a href="./rubrowser.html">View App</a>
-    </div>
 
-    <div class="app-card">
-      <div class="app-icon">
-        <img src="https://play-lh.googleusercontent.com/LTKZvUuRcgE0BuOB0KokhxXJL2gy0zzOnwiii4NhFfi8On3djn-df-84033i0V2Bony-Soe38Fiqm1LoTFX3eg=s256-rw"
-             alt="RU Gallery" width="68" height="68" loading="lazy">
+      <!-- ══ RU GALLERY ══ -->
+      <div class="tile accent-rugallery col-3 row-4 tile-pad reveal">
+        <div class="app-chip">
+          <div class="app-chip-icon">
+            <img src="https://play-lh.googleusercontent.com/LTKZvUuRcgE0BuOB0KokhxXJL2gy0zzOnwiii4NhFfi8On3djn-df-84033i0V2Bony-Soe38Fiqm1LoTFX3eg=s256-rw" alt="RU Gallery">
+          </div>
+          <div>
+            <div class="app-chip-name">RU Gallery</div>
+            <div class="app-chip-cat">Gallery · Android</div>
+          </div>
+        </div>
+        <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.6;flex-grow:1;">Clean offline photo viewer. No internet, no data collected, ever.</p>
+        <a href="rugallery.html" class="arrow-link" style="color:var(--c-rugallery);">View Details</a>
       </div>
-      <h3>RU Gallery</h3>
-      <p>Simple & fast photo gallery.</p>
-      <a href="./rugallery.html">View App</a>
-    </div>
 
-    <div class="app-card">
-      <div class="app-icon">
-        <img src="https://play-lh.googleusercontent.com/0dowMQsRgMBr_j0bAZ8NOTKUGdsY1PhrjAr-b-hfCGDiUzPHjqMh1bjY-cF8hA0ffgidp3Eh6V3PlB2GLGsZew=s256-rw"
-             alt="RU Calendar" width="68" height="68" loading="lazy">
+      <!-- ══ RU CALENDAR ══ -->
+      <div class="tile accent-rucalendar col-3 row-4 tile-pad reveal">
+        <div class="app-chip">
+          <div class="app-chip-icon">
+            <img src="https://play-lh.googleusercontent.com/0dowMQsRgMBr_j0bAZ8NOTKUGdsY1PhrjAr-b-hfCGDiUzPHjqMh1bjY-cF8hA0ffgidp3Eh6V3PlB2GLGsZew=s256-rw" alt="RU Calendar">
+          </div>
+          <div>
+            <div class="app-chip-name">RU Calendar</div>
+            <div class="app-chip-cat">Productivity · Android</div>
+          </div>
+        </div>
+        <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.6;flex-grow:1;">Lightweight calendar with Indian holidays. Zero background battery drain.</p>
+        <a href="rucalendar.html" class="arrow-link" style="color:var(--c-rucalendar);">View Details</a>
       </div>
-      <h3>RU Calendar</h3>
-      <p>Lightweight calendar with holidays.</p>
-      <a href="./rucalendar.html">View App</a>
-    </div>
 
-    <div class="app-card">
-      <div class="app-icon">
-        <img src="https://play-lh.googleusercontent.com/ST0md1hkDqCqhodX0x-CDAziPNCzCZjLjVT-ODICAHC24k8IolSDQubIanQylzcezEE3GbBpew1RYVdALAAMOA=s256-rw"
-             alt="RU Calculator" width="68" height="68" loading="lazy">
+      <!-- ══ RU CALCULATOR ══ -->
+      <div class="tile accent-rucalculator col-3 row-4 tile-pad reveal">
+        <div class="app-chip">
+          <div class="app-chip-icon">
+            <img src="https://play-lh.googleusercontent.com/ST0md1hkDqCqhodX0x-CDAziPNCzCZjLjVT-ODICAHC24k8IolSDQubIanQylzcezEE3GbBpew1RYVdALAAMOA=s256-rw" alt="RU Calculator">
+          </div>
+          <div>
+            <div class="app-chip-name">RU Calculator</div>
+            <div class="app-chip-cat">Utility · Android</div>
+          </div>
+        </div>
+        <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.6;flex-grow:1;">Instant, accurate calculator. Zero permissions. Works fully offline.</p>
+        <a href="rucalculator.html" class="arrow-link" style="color:var(--c-rucalculator);">View Details</a>
       </div>
-      <h3>RU Calculator</h3>
-      <p>Fast & accurate calculator.</p>
-      <a href="./rucalculator.html">View App</a>
+
+      <!-- ══ OPENHUB ══ -->
+      <div class="tile accent-openhub col-3 row-4 tile-pad reveal">
+        <div class="app-chip">
+          <div class="app-chip-icon" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: flex; align-items: center; justify-content: center; padding: 11px;">
+            <svg viewBox="0 0 24 24" style="width: 100%; height: 100%; fill: #ffffff;">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="app-chip-name">OpenHub</div>
+            <div class="app-chip-cat">App Store · Web &amp; Desktop</div>
+          </div>
+        </div>
+        <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.6;flex-grow:1;">Premium open source app store. Verified downloads, no trackers.</p>
+        <a href="openhub.html" class="arrow-link" style="color:var(--c-openhub);">View Details</a>
+      </div>
+
+      <!-- ══ FEATURE: Speed ══ -->
+      <div class="tile col-3 row-3 tile-pad reveal col-half-m">
+        <div class="feat-icon-box">⚡</div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1rem;margin-bottom:6px;">Instant Load</div>
+        <p style="font-size:0.85rem;color:var(--text-mid);line-height:1.55;">Apps start in milliseconds, even on low-end devices.</p>
+      </div>
+
+      <!-- ══ FEATURE: Privacy ══ -->
+      <div class="tile tile-light-green col-3 row-3 tile-pad reveal col-half-m">
+        <div class="feat-icon-box" style="background:#dcfce7;">🔒</div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1rem;margin-bottom:6px;">No Tracking</div>
+        <p style="font-size:0.85rem;color:var(--text-mid);line-height:1.55;">Zero analytics. Your data never leaves your device.</p>
+      </div>
+
+      <!-- ══ FEATURE: Offline ══ -->
+      <div class="tile tile-light-orange col-3 row-3 tile-pad reveal col-half-m">
+        <div class="feat-icon-box" style="background:#ffedd5;">📶</div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1rem;margin-bottom:6px;">Works Offline</div>
+        <p style="font-size:0.85rem;color:var(--text-mid);line-height:1.55;">Core features work without internet connection.</p>
+      </div>
+
+      <!-- ══ FEATURE: Free ══ -->
+      <div class="tile tile-light-pink col-3 row-3 tile-pad reveal col-half-m">
+        <div class="feat-icon-box" style="background:#fae8ff;">🎁</div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1rem;margin-bottom:6px;">Always Free</div>
+        <p style="font-size:0.85rem;color:var(--text-mid);line-height:1.55;">No Ads, no subscriptions, no paywalls. Download and use forever.</p>
+      </div>
+
+      <!-- ══ PRIVACY TILE ══ -->
+      <div class="tile tile-dark col-6 row-3 tile-pad reveal">
+        <div style="font-size:2.2rem;margin-bottom:14px;">🛡️</div>
+        <h2 style="font-family:var(--font-h);font-size:1.4rem;font-weight:800;color:#fff;margin-bottom:10px;">Privacy at the Core</h2>
+        <p style="font-size:0.88rem;color:rgba(255,255,255,0.55);line-height:1.65;">Our apps request only essential permissions and store no personal data on servers. What stays on your device, stays private.</p>
+      </div>
+
+      <!-- ══ PLATFORMS TILE ══ -->
+      <div class="tile col-6 row-3 tile-pad reveal">
+        <h2 style="font-family:var(--font-h);font-size:1.3rem;font-weight:800;margin-bottom:4px;">Available On</h2>
+        <p style="font-size:0.85rem;color:var(--text-mid);margin-bottom:16px;">Works across Android, Windows, and Web platforms.</p>
+        <div class="platform-pills">
+          <div class="platform-pill">
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:#3DDC84;flex-shrink:0;">
+              <path d="M17.5 10c.8 0 1.5-.7 1.5-1.5S18.3 7 17.5 7 16 7.7 16 8.5s.7 1.5 1.5 1.5zm-11 0C7.3 10 8 9.3 8 8.5S7.3 7 6.5 7 5 7.7 5 8.5s.7 1.5 1.5 1.5zm11.8-4.7l1.4-2.4c.2-.3.1-.7-.2-.9-.3-.2-.7-.1-.9.2L17.2 4.6C15.8 3.9 14 3.5 12 3.5c-2 0-3.8.4-5.2 1.1L5.4 2.2c-.2-.3-.6-.4-.9-.2-.3.2-.4.6-.2.9l1.4 2.4C3.1 6.8 1.2 9.7 1 13h22c-.2-3.3-2.1-6.2-4.7-7.7z"/>
+            </svg>
+            Android
+          </div>
+          <div class="platform-pill">
+            <svg viewBox="0 0 24 24" style="width:14px;height:14px;fill:#0078D4;flex-shrink:0;">
+              <path d="M0 0h11.2v11.2H0zm12.8 0H24v11.2H12.8zM0 12.8h11.2V24H0zm12.8 0H24V24H12.8z"/>
+            </svg>
+            Windows
+          </div>
+          <div class="platform-pill">
+            <svg viewBox="0 0 24 24" style="width:16px;height:16px;fill:none;stroke:#0891b2;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0;">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            Web
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ CTA TILE ══ -->
+      <div class="tile tile-gradient col-12 row-3 tile-pad reveal" style="flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+        <div>
+          <h2 style="font-family:var(--font-h);font-size:1.8rem;font-weight:800;color:#fff;margin-bottom:8px;">Ready to switch to smarter apps?</h2>
+          <p style="color:rgba(255,255,255,0.7);font-size:0.92rem;">Free to download. No sign-up needed for most apps.</p>
+        </div>
+        <div class="btns-row">
+          <a href="#apps" class="btn-white">Browse All Apps</a>
+          <a href="about.html" class="btn-ghost">About RUHI Applications</a>
+        </div>
+      </div>
+
     </div>
+  </main>
 
-  </div>
-</section>
+  <!-- FOOTER -->
+  <footer class="ru-footer">
+    <div class="footer-inner">
+      <div>
+        <a href="index.html" class="footer-logo">RUHI <span>Applications</span></a>
+        <p class="footer-desc">Fast, lightweight, privacy-first apps for Android &amp; Windows.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Apps</h4>
+          <ul>
+            <li><a href="dukanbook.html">DukanBook</a></li>
+            <li><a href="rubrowser.html">RU Browser</a></li>
+            <li><a href="rugallery.html">RU Gallery</a></li>
+            <li><a href="rucalendar.html">RU Calendar</a></li>
+            <li><a href="rucalculator.html">RU Calculator</a></li>
+            <li><a href="openhub.html">OpenHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="help.html">Help &amp; FAQ</a></li>
+            <li><a href="dukanbookhelp.html">DukanBook Help</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="dukan-book-privacy-policy.html">DukanBook Privacy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RUHI Applications. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
 
-<section class="about-section">
-  <h2>About RU Apps</h2>
-  <p>
-    RU Apps builds fast, lightweight and privacy-respecting applications
-    for Android and Windows, designed to work smoothly even on low-end devices.
-  </p>
-</section>
+  <script>
+    // Mobile nav drawer
+    const btn = document.getElementById('mobileBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    const cls = document.getElementById('drawerClose');
+    if (btn && drawer && cls) {
+      btn.addEventListener('click', () => drawer.classList.add('open'));
+      cls.addEventListener('click', () => drawer.classList.remove('open'));
+      drawer.querySelectorAll('a').forEach(a =>
+        a.addEventListener('click', () => drawer.classList.remove('open'))
+      );
+    }
 
-<footer>
-  © 2025 RU Apps
-  <div class="footer-links">
-    <a href="./about.html">About</a> |
-    <a href="./privacy.html">Privacy</a> |
-    <a href="./terms.html">Terms</a>
-  </div>
-</footer>
-
+    // Scroll reveal
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+        });
+      }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    }
+  </script>
 </body>
 </html>

@@ -1,242 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": "RU Browser",
-  "operatingSystem": "Android, Windows",
-  "applicationCategory": "BrowserApplication",
-  "description": "RU Browser is a fast, lightweight and privacy-focused web browser for Android and Windows.",
-  "url": "https://myruhi.in/rubrowser.html",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "USD"
-  },
-  "downloadUrl": [
-    "https://play.google.com/store/apps/details?id=com.rubrowser.app",
-    "https://github.com/Rijussj/my-website/releases/download/v1.2.0/RUBrowserSetup.exe"
-  ]
-}
-</script>
 <head>
-<meta charset="UTF-8">
-<title>RU Browser – Fast & Secure Browser</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-
-<meta name="description" content="RU Browser is a fast, lightweight and privacy-focused browser for Android and Windows.">
-<meta name="author" content="RU Browser">
-
-<style>
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:'Inter',system-ui,sans-serif;
-  color:#ffffff;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, #1e3a8a 0%, transparent 60%),
-    radial-gradient(1000px 500px at 90% 10%, #0ea5e9 0%, transparent 55%),
-    #020617;
-}
-
-/* HEADER */
-header{
-  padding:100px 20px 80px;
-  text-align:center;
-}
-header h1{
-  font-size:52px;
-  font-weight:900;
-  letter-spacing:-1.5px;
-  margin-bottom:14px;
-  background:linear-gradient(90deg,#60a5fa,#38bdf8,#2563eb);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-header p{
-  max-width:760px;
-  margin:auto;
-  font-size:18px;
-  line-height:1.6;
-  color:#c7d2fe;
-}
-
-/* ACTIONS */
-.actions{
-  margin-top:40px;
-  display:flex;
-  justify-content:center;
-  gap:26px;
-  flex-wrap:wrap;
-  align-items:center;
-}
-
-/* PLAY STORE BADGE */
-.play-badge img{
-  height:60px;
-  transition:0.2s;
-}
-.play-badge img:hover{
-  transform:scale(1.03);
-}
-
-/* WINDOWS BUTTON */
-.win-btn{
-  padding:16px 30px;
-  border-radius:20px;
-  font-weight:600;
-  font-size:15px;
-  color:white;
-  text-decoration:none;
-  backdrop-filter:blur(16px);
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.18);
-  transition:0.2s;
-}
-.win-btn:hover{
-  transform:translateY(-2px);
-  background:rgba(255,255,255,0.12);
-}
-
-/* SECTION */
-.section{
-  padding:110px 20px;
-}
-.section h2{
-  text-align:center;
-  font-size:38px;
-  font-weight:800;
-  margin-bottom:60px;
-}
-
-/* FEATURES */
-.features{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:28px;
-}
-
-.card{
-  padding:34px;
-  border-radius:26px;
-  backdrop-filter:blur(18px);
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-}
-
-.card h3{
-  margin:0 0 10px;
-  font-size:18px;
-  font-weight:700;
-}
-.card p{
-  font-size:15px;
-  line-height:1.6;
-  color:#c7d2fe;
-}
-
-/* FOOTER */
-footer{
-  padding:40px;
-  text-align:center;
-  border-top:1px solid rgba(255,255,255,0.15);
-  color:#94a3b8;
-  font-size:14px;
-}
-footer a{
-  color:#60a5fa;
-  text-decoration:none;
-  margin:0 6px;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  header h1{font-size:36px}
-  .section h2{font-size:28px}
-  .play-badge img{height:52px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RU Browser — Fast & Private Web Browser | RUHI Applications</title>
+  <meta name="description" content="RU Browser is a fast, lightweight and privacy-focused web browser for Android and Windows. No trackers, no bloat.">
+  <meta name="author" content="RUHI Applications">
+  <link rel="canonical" href="https://myruhi.in/rubrowser">
+  <link rel="stylesheet" href="bento.css">
 </head>
-
 <body>
 
-<header>
-  <h1>RU Browser</h1>
-  <p>
-    RU Browser is a fast, lightweight and privacy-focused browser
-    designed for smooth browsing on Android and Windows.
-  </p>
+  <nav class="ru-nav" id="ruNav">
+    <a href="index.html" class="ru-nav-logo">RUHI <span>Applications</span></a>
+    <div class="ru-nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="help.html">Support</a>
+      <a href="index.html" class="ru-nav-cta ru-nav-links">Get Apps</a>
+    </div>
+    <button class="ru-mobile-btn" id="mobileBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="ru-drawer" id="mobileDrawer">
+    <button class="ru-drawer-close" id="drawerClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="help.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </div>
 
-  <div class="actions">
+<main class="page-wrap">
+  <div class="bento">
 
-    <!-- ANDROID: OFFICIAL GOOGLE PLAY BADGE -->
-    <a class="play-badge"
-       href="https://play.google.com/store/apps/details?id=com.rubrowser.app"
-       target="_blank"
-       aria-label="Get it on Google Play">
-      <img
-        src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-        alt="Get it on Google Play">
-    </a>
+    <div class="tile tile-dark aurora-glow col-7 row-5">
+      <div class="tile-pad" style="justify-content:flex-end;position:relative;z-index:1;">
+        <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.5);margin-bottom:16px;">Browser · Android & Windows</div>
+        <h1 class="display-title" style="color:#fff;margin-bottom:14px;">RU Browser <span class="grad">Browse Freely</span></h1>
+        <p style="color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.65;margin-bottom:28px;max-width:420px;">A lightweight, fast web browser that blocks trackers by default. No data collection. No forced sign-ins. Just the web.</p>
+        <div class="btns-row">
+          <a href="https://play.google.com/store/apps/details?id=com.ruhi.rubrowser" class="btn-white" target="_blank" rel="noopener">↓ Download Free</a>
+          <a href="help.html" class="btn-ghost">Support</a>
+        </div>
+      </div>
+    </div>
 
-    <!-- WINDOWS: DIRECT EXE DOWNLOAD -->
-    <a class="win-btn"
-       href="https://github.com/Rijussj/my-website/releases/download/v1.2.0/RUBrowserSetup.exe">
-       💻 Download for Windows
-    </a>
+    <div class="tile col-5 row-2 tile-pad" style="align-items:center;justify-content:center;flex-direction:row;gap:20px;">
+      <img src="https://play-lh.googleusercontent.com/ewD5UT7dpVco45qW-WPmaUlx641YLDmtgN17mMJBVqvgLf0_26sf6q6_4x67-vFKvO9X3r3p5iInVvnptyopdaE=s256-rw" alt="RU Browser icon" style="width:80px;height:80px;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,0.1);">
+      <div>
+        <div style="font-family:var(--font-h);font-size:1.4rem;font-weight:800;">RU Browser</div>
+        <div style="color:var(--text-mid);font-size:0.9rem;margin-top:4px;">Free · Android & Windows</div>
+      </div>
+    </div>
+
+    <div class="tile tile-light-blue col-5 row-3 tile-pad reveal" style="justify-content:center;">
+      <div class="tile-stat-num" style="background:linear-gradient(135deg,#0891b2,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0</div>
+      <div style="color:var(--text-mid);font-size:0.95rem;font-weight:500;margin-top:8px;">Trackers &amp; Ads Collected</div>
+    </div>
+
+    <div class="tile col-4 row-3 tile-pad reveal" style="justify-content:space-between;">
+      <div class="feat-icon-box">🚀</div>
+      <div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;margin-bottom:8px;">Lightning Fast</div>
+        <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.55;">Pages load noticeably faster because we skip loading third-party tracking scripts.</p>
+      </div>
+    </div>
+
+    <div class="tile col-4 row-3 tile-pad reveal" style="justify-content:space-between;">
+      <div class="feat-icon-box" style="background:#dcfce7;">🚫</div>
+      <div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;margin-bottom:8px;">Ad &amp; Tracker Block</div>
+        <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.55;">Built-in tracker and ad blocker active by default. Browse without surveillance.</p>
+      </div>
+    </div>
+
+    <div class="tile col-4 row-3 tile-pad reveal" style="justify-content:space-between;">
+      <div class="feat-icon-box" style="background:#fff7ed;">🌙</div>
+      <div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;margin-bottom:8px;">Dark Mode</div>
+        <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.55;">Comfortable browsing in any light. Automatic dark mode follows your system preference.</p>
+      </div>
+    </div>
+
+    <div class="tile tile-brand col-12 row-2 tile-pad reveal" style="flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <span style="font-size:2rem;">🛡️</span>
+        <div>
+          <div style="font-family:var(--font-h);font-weight:800;font-size:1.1rem;color:#fff;">No Browsing History Stored on Servers</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.88rem;margin-top:4px;">History stays local. We never see what you browse. Ever.</div>
+        </div>
+      </div>
+      <a href="privacy.html" class="btn-ghost">Privacy Policy →</a>
+    </div>
+
+    <div class="tile tile-gradient col-12 row-3 tile-pad reveal" style="flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+      <div>
+        <div style="font-family:var(--font-h);font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:10px;">Get RU Browser Free</div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.6;">Download on Google Play or Windows. No account needed.</p>
+      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.ruhi.rubrowser" class="btn-white" target="_blank" rel="noopener">↓ Google Play</a>
+    </div>
 
   </div>
-</header>
+</main>
 
-<section class="section">
-  <h2>Why Choose RU Browser</h2>
-
-  <div class="features">
-    <div class="card">
-      <h3>⚡ Fast Performance</h3>
-      <p>Optimized engine for quick page loading and smooth browsing.</p>
+  <footer class="ru-footer">
+    <div class="footer-inner">
+      <div>
+        <a href="index.html" class="footer-logo">RUHI <span>Applications</span></a>
+        <p class="footer-desc">Fast, lightweight, privacy-first apps for Android &amp; Windows.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Apps</h4>
+          <ul>
+            <li><a href="dukanbook.html">DukanBook</a></li>
+            <li><a href="rubrowser.html">RU Browser</a></li>
+            <li><a href="rugallery.html">RU Gallery</a></li>
+            <li><a href="rucalendar.html">RU Calendar</a></li>
+            <li><a href="rucalculator.html">RU Calculator</a></li>
+            <li><a href="openhub.html">OpenHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="help.html">Help &amp; FAQ</a></li>
+            <li><a href="dukanbookhelp.html">DukanBook Help</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="dukan-book-privacy-policy.html">DukanBook Privacy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>🪶 Lightweight</h3>
-      <p>Minimal storage and RAM usage for better device performance.</p>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RUHI Applications. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="about.html">About</a>
+      </div>
     </div>
+  </footer>
 
-    <div class="card">
-      <h3>🔐 Enhanced Privacy</h3>
-      <p>Built-in privacy protections and minimal permissions.</p>
-    </div>
-
-    <div class="card">
-      <h3>🗂️ Smart Tabs</h3>
-      <p>Switch between tabs smoothly without lag.</p>
-    </div>
-
-    <div class="card">
-      <h3>🎨 Clean UI</h3>
-      <p>Modern and distraction-free user interface.</p>
-    </div>
-
-    <div class="card">
-      <h3>🎬 Media Optimized</h3>
-      <p>Smooth video and media playback experience.</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2025 RU Browser ·
-  <a href="./privacy.html">Privacy Policy</a> ·
-  <a href="./terms.html">Terms</a> ·
-  <a href="./help.html">Help & FAQ</a> ·
-  <a href="./index.html">All Apps</a>
-</footer>
-
+  <script>
+    const btn = document.getElementById('mobileBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    const cls = document.getElementById('drawerClose');
+    btn.addEventListener('click', () => drawer.classList.add('open'));
+    cls.addEventListener('click', () => drawer.classList.remove('open'));
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+    // Reveal
+    const els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(el => obs.observe(el));
+    } else { els.forEach(el => el.classList.add('visible')); }
+    // FAQ
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!open) item.classList.add('open');
+      });
+    });
+  </script>
 </body>
 </html>

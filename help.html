@@ -1,253 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>RU Browser – Help & FAQ</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:'Inter',system-ui,sans-serif;
-  background:#020617;
-  color:#ffffff;
-}
-
-/* HEADER */
-header{
-  padding:80px 20px;
-  text-align:center;
-  background:radial-gradient(circle at top,#1e40af,#020617);
-}
-header h1{
-  font-size:42px;
-  margin-bottom:10px;
-  font-weight:800;
-}
-header p{
-  font-size:17px;
-  color:#c7d2fe;
-}
-
-/* CONTENT */
-.section{
-  padding:90px 20px;
-  max-width:900px;
-  margin:auto;
-}
-
-/* GLASS CARD */
-.card{
-  margin-bottom:32px;
-  padding:36px;
-  border-radius:22px;
-  backdrop-filter:blur(18px);
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-}
-.card h2{
-  margin-top:0;
-  font-size:24px;
-  font-weight:700;
-}
-.card p{
-  font-size:16px;
-  line-height:1.7;
-  color:#cbd5f5;
-}
-
-/* FAQ */
-.faq-item{
-  margin-bottom:16px;
-  border-radius:18px;
-  overflow:hidden;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-}
-
-.faq-question{
-  width:100%;
-  padding:22px 26px;
-  background:none;
-  border:none;
-  color:white;
-  font-size:16px;
-  font-weight:600;
-  cursor:pointer;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.faq-question span{
-  font-size:22px;
-  transition:0.3s;
-}
-
-/* ✅ FIXED ANSWER (NO CUT ISSUE) */
-.faq-answer{
-  display:none;
-  padding:16px 26px 26px;
-  color:#cbd5f5;
-  font-size:15px;
-  line-height:1.7;
-  animation:fadeIn 0.25s ease;
-}
-
-@keyframes fadeIn{
-  from{opacity:0;transform:translateY(-5px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-/* FOOTER */
-footer{
-  text-align:center;
-  padding:35px;
-  border-top:1px solid rgba(255,255,255,0.15);
-  color:#94a3b8;
-  font-size:14px;
-}
-footer a{
-  color:#60a5fa;
-  text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  header h1{font-size:32px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help & FAQ — RUHI Applications Support Center</title>
+  <meta name="description" content="Get help with RUHI Applications. Find answers to common questions about DukanBook, RU Browser, RU Gallery, RU Calendar, and RU Calculator.">
+  <meta name="author" content="RUHI Applications">
+  <link rel="canonical" href="https://myruhi.in/help">
+  <link rel="stylesheet" href="bento.css">
 </head>
-
 <body>
 
-<header>
-  <h1>Help & FAQ</h1>
-  <p>RU Browser Support Center</p>
-</header>
-
-<section class="section">
-
-  <!-- HELP -->
-  <div class="card">
-    <h2>Help & Support</h2>
-    <p>
-      Welcome to RU Browser Help Center. RU Browser is a fast, lightweight,
-      and privacy-focused browser for Android and Windows.
-    </p>
-    <p>
-      If you face any issue related to performance, privacy, or features,
-      please check the FAQ below or contact us directly.
-    </p>
-    <p>
-      📧 Support Email: <b>support@myruhi.in
-</b>
-    </p>
+  <nav class="ru-nav" id="ruNav">
+    <a href="index.html" class="ru-nav-logo">RUHI <span>Applications</span></a>
+    <div class="ru-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="help.html" class="active">Support</a>
+      <a href="index.html" class="ru-nav-cta ru-nav-links">Get Apps</a>
+    </div>
+    <button class="ru-mobile-btn" id="mobileBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="ru-drawer" id="mobileDrawer">
+    <button class="ru-drawer-close" id="drawerClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="help.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
   </div>
 
-  <!-- FAQ -->
-  <div class="card">
-    <h2>Frequently Asked Questions</h2>
+<main class="page-wrap">
+  <div class="bento">
 
-    <div class="faq-item">
-      <button class="faq-question">
-        What is RU Browser?
-        <span>+</span>
-      </button>
-      <div class="faq-answer">
-        RU Browser is a fast, lightweight, and privacy-focused web browser
-        designed for Android and Windows users. It focuses on speed,
-        security, and a clean browsing experience.
+    <div class="tile tile-dark aurora-glow col-12 row-3">
+      <div class="tile-pad" style="justify-content:flex-end;position:relative;z-index:1;">
+        <div class="sec-tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">Support Center</div>
+        <h1 class="display-title" style="color:#fff;margin-top:12px;margin-bottom:10px;">How can we <span class="grad">help you?</span></h1>
+        <p style="color:rgba(255,255,255,0.55);font-size:0.95rem;">Find answers to the most common questions about our apps.</p>
       </div>
     </div>
 
-    <div class="faq-item">
-      <button class="faq-question">
-        Is RU Browser safe to use?
-        <span>+</span>
-      </button>
-      <div class="faq-answer">
-        Yes. RU Browser minimizes unnecessary permissions and includes
-        privacy-focused features to help protect your personal data
-        and online activity.
+    <!-- FAQ Tiles per app -->
+    <div class="tile col-6 row-6 tile-pad reveal">
+      <div class="sec-tag">DukanBook</div>
+      <h2 style="font-family:var(--font-h);font-size:1.25rem;font-weight:800;margin:10px 0 20px;">DukanBook FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Is DukanBook free?<div class="faq-icon">+</div></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes — DukanBook is completely free to download and use from the Google Play Store with no subscription required.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Does it work without internet?<div class="faq-icon">+</div></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. All core features — adding customers, recording transactions, and viewing balances — work fully offline. Internet is only needed for optional cloud backup.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How do I back up my data?<div class="faq-icon">+</div></button>
+          <div class="faq-a"><div class="faq-a-inner">Go to Settings → Backup &amp; Restore. You can export your data as a file or use the built-in cloud backup option if you have an account.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Can I share payment details via WhatsApp?<div class="faq-icon">+</div></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. Open any customer's record and tap the Share button to send a payment summary directly via WhatsApp or any messaging app.</div></div>
+        </div>
+      </div>
+      <a href="dukanbookhelp.html" class="arrow-link">Full DukanBook Help</a>
+    </div>
+
+    <div class="tile col-6 row-6 tile-pad reveal">
+      <div class="sec-tag">Other Apps</div>
+      <h2 style="font-family:var(--font-h);font-size:1.25rem;font-weight:800;margin:10px 0 20px;">General FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">Are all RUHI Applications free?<div class="faq-icon">+</div></button>
+          <div class="faq-a"><div class="faq-a-inner">Yes. All apps from RUHI Applications are free to download and use with no in-app purchases or subscriptions.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do the apps collect personal data?<div class="faq-icon">+</div></button>
+          <div class="faq-a"><div class="faq-a-inner">No. We do not collect, store or share any personal information. Apps only request permissions absolutely necessary for their function.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">Do the apps show advertisements?<div class="faq-icon">+</div></button>
+          <div class="faq-a"><div class="faq-a-inner">No. None of our apps contain advertisements of any kind. We believe a clean UI without interruptions leads to a better user experience.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">How do I report a bug?<div class="faq-icon">+</div></button>
+          <div class="faq-a"><div class="faq-a-inner">Email us at support@myruhi.in with the app name, your Android version, and a description of the issue. We respond within 2–3 business days.</div></div>
+        </div>
       </div>
     </div>
 
-    <div class="faq-item">
-      <button class="faq-question">
-        Does RU Browser collect personal data?
-        <span>+</span>
-      </button>
-      <div class="faq-answer">
-        No. RU Browser does not sell or misuse personal browsing data.
-        Limited non-personal technical data may be used only to improve
-        app performance and stability.
+    <!-- Contact CTA -->
+    <div class="tile tile-gradient col-12 row-3 tile-pad reveal" style="flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+      <div>
+        <div style="font-family:var(--font-h);font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:10px;">Still Need Help?</div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.6;">We're happy to help. Send us an email and we will get back to you.</p>
       </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        Is RU Browser available for Windows?
-        <span>+</span>
-      </button>
-      <div class="faq-answer">
-        Yes. RU Browser is available for both Android and Windows platforms.
-      </div>
-    </div>
-
-    <div class="faq-item">
-      <button class="faq-question">
-        How can I contact RU Browser support?
-        <span>+</span>
-      </button>
-      <div class="faq-answer">
-        You can contact our support team anytime via email at
-        <b>support@myruhi.in
-
-      </b>.
-      </div>
+      <a href="mailto:support@myruhi.in" class="btn-white">✉️ Email Support</a>
     </div>
 
   </div>
+</main>
 
-</section>
+  <footer class="ru-footer">
+    <div class="footer-inner">
+      <div>
+        <a href="index.html" class="footer-logo">RUHI <span>Applications</span></a>
+        <p class="footer-desc">Fast, lightweight, privacy-first apps for Android &amp; Windows.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Apps</h4>
+          <ul>
+            <li><a href="dukanbook.html">DukanBook</a></li>
+            <li><a href="rubrowser.html">RU Browser</a></li>
+            <li><a href="rugallery.html">RU Gallery</a></li>
+            <li><a href="rucalendar.html">RU Calendar</a></li>
+            <li><a href="rucalculator.html">RU Calculator</a></li>
+            <li><a href="openhub.html">OpenHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="help.html">Help &amp; FAQ</a></li>
+            <li><a href="dukanbookhelp.html">DukanBook Help</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="dukan-book-privacy-policy.html">DukanBook Privacy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RUHI Applications. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
 
-<footer>
-  © 2025 RU Browser ·
-  <a href="./index.html">Home</a> ·
-  <a href="./privacy.html">Privacy Policy</a>
-</footer>
-
-<!-- ✅ FINAL FAQ SCRIPT (NO BUG) -->
-<script>
-document.querySelectorAll(".faq-question").forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    const answer = btn.nextElementSibling;
-    const icon = btn.querySelector("span");
-
-    // Close other answers
-    document.querySelectorAll(".faq-answer").forEach(a=>{
-      if(a !== answer){
-        a.style.display = "none";
-        a.previousElementSibling.querySelector("span").textContent = "+";
-      }
+  <script>
+    const btn = document.getElementById('mobileBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    const cls = document.getElementById('drawerClose');
+    btn.addEventListener('click', () => drawer.classList.add('open'));
+    cls.addEventListener('click', () => drawer.classList.remove('open'));
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+    // Reveal
+    const els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(el => obs.observe(el));
+    } else { els.forEach(el => el.classList.add('visible')); }
+    // FAQ
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!open) item.classList.add('open');
+      });
     });
-
-    // Toggle current
-    if(answer.style.display === "block"){
-      answer.style.display = "none";
-      icon.textContent = "+";
-    }else{
-      answer.style.display = "block";
-      icon.textContent = "−";
-    }
-  });
-});
-</script>
-
+  </script>
 </body>
 </html>

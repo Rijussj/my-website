@@ -1,164 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>About RU Apps – Official Information</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-<meta name="description"
-content="Learn more about RU Apps – a developer of fast, lightweight and privacy-focused applications for Android and Windows.">
-
-<link rel="canonical" href="https://myruhi.in/about.html">
-
-<style>
-*{box-sizing:border-box}
-
-body{
-  margin:0;
-  font-family:'Inter',system-ui,sans-serif;
-  color:#ffffff;
-  background:
-    radial-gradient(1200px 600px at 10% -10%, #1e3a8a 0%, transparent 60%),
-    radial-gradient(1000px 500px at 90% 10%, #0ea5e9 0%, transparent 55%),
-    #020617;
-}
-
-/* LAYOUT */
-.wrapper{
-  max-width:900px;
-  margin:auto;
-  padding:100px 20px;
-}
-
-/* HEADINGS */
-h1{
-  font-size:44px;
-  font-weight:900;
-  margin-bottom:20px;
-  background:linear-gradient(90deg,#60a5fa,#38bdf8,#2563eb);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-h2{
-  font-size:26px;
-  font-weight:800;
-  margin-top:60px;
-  margin-bottom:14px;
-}
-p{
-  font-size:16px;
-  line-height:1.7;
-  color:#c7d2fe;
-}
-
-/* BOX */
-.box{
-  margin-top:20px;
-  padding:28px;
-  border-radius:22px;
-  background:rgba(255,255,255,0.06);
-  border:1px solid rgba(255,255,255,0.15);
-}
-
-/* LIST */
-ul{
-  padding-left:20px;
-}
-li{
-  margin-bottom:10px;
-  color:#c7d2fe;
-}
-
-/* FOOTER */
-footer{
-  margin-top:80px;
-  padding-top:30px;
-  border-top:1px solid rgba(255,255,255,0.15);
-  text-align:center;
-  font-size:14px;
-  color:#94a3b8;
-}
-footer a{
-  color:#60a5fa;
-  text-decoration:none;
-}
-
-/* MOBILE */
-@media(max-width:600px){
-  h1{font-size:32px}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About RUHI Applications — Our Story & Mission</title>
+  <meta name="description" content="Learn about RUHI Applications — an independent developer making fast, lightweight, privacy-first Android and Windows applications.">
+  <meta name="author" content="RUHI Applications">
+  <link rel="canonical" href="https://myruhi.in/about">
+  <link rel="stylesheet" href="bento.css">
 </head>
-
 <body>
 
-<div class="wrapper">
-
-  <h1>About RU Apps</h1>
-
-  <p>
-    RU Apps is an independent software brand focused on building
-    fast, lightweight and privacy-respecting applications for everyday users.
-    Our goal is to deliver clean, reliable and efficient apps that work smoothly
-    even on low-end devices.
-  </p>
-
-  <div class="box">
-    <h2>What We Build</h2>
-    <ul>
-      <li><b>RU Browser</b> – A fast and privacy-focused web browser for Android and Windows.</li>
-      <li><b>RU Gallery</b> – A simple and lightweight photo gallery app.</li>
-      <li><b>RU Calendar</b> – A minimal calendar app with essential scheduling features.</li>
-      <li><b>RU Calculator</b> – A fast and accurate calculator for daily use.</li>
-    </ul>
+  <nav class="ru-nav" id="ruNav">
+    <a href="index.html" class="ru-nav-logo">RUHI <span>Applications</span></a>
+    <div class="ru-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="help.html">Support</a>
+      <a href="index.html" class="ru-nav-cta ru-nav-links">Get Apps</a>
+    </div>
+    <button class="ru-mobile-btn" id="mobileBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="ru-drawer" id="mobileDrawer">
+    <button class="ru-drawer-close" id="drawerClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="help.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
   </div>
 
-  <div class="box">
-    <h2>Our Core Values</h2>
-    <ul>
-      <li><b>Performance First</b> – Apps optimized for speed and low resource usage.</li>
-      <li><b>Privacy Focused</b> – Minimal permissions and respect for user data.</li>
-      <li><b>Simplicity</b> – Clean design without unnecessary complexity.</li>
-      <li><b>Reliability</b> – Stable apps you can depend on.</li>
-    </ul>
-  </div>
+<main class="page-wrap">
+  <div class="bento">
 
-  <div class="box">
-    <h2>Platforms</h2>
-    <p>
-      RU Apps develops applications primarily for:
-    </p>
-    <ul>
-      <li>Android</li>
-      <li>Windows</li>
-    </ul>
-  </div>
+    <div class="tile tile-dark aurora-glow col-12 row-4">
+      <div class="tile-pad" style="justify-content:flex-end;position:relative;z-index:1;">
+        <div class="sec-tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.8);">Our Story</div>
+        <h1 class="display-title" style="color:#fff;margin-top:12px;margin-bottom:14px;">Building Apps <span class="grad">That Respect You</span></h1>
+        <p style="color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.65;max-width:580px;">RUHI Applications is an independent development brand. We believe software should be a tool — not a surveillance platform.</p>
+      </div>
+    </div>
 
-  <div class="box">
-    <h2>Privacy & Trust</h2>
-    <p>
-      User privacy is a core principle at RU Apps.
-      Our applications avoid unnecessary data collection and request
-      only essential permissions required for functionality.
-    </p>
-  </div>
+    <div class="tile col-4 row-4 tile-pad reveal" style="justify-content:space-between;">
+      <div class="feat-icon-box">🎯</div>
+      <div>
+        <h2 style="font-family:var(--font-h);font-size:1.2rem;font-weight:800;margin-bottom:10px;">Our Mission</h2>
+        <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.7;">Create single-purpose, lightweight apps that solve everyday problems — without tracking, without advertisements, and without complexity. Every app we ship must be genuinely useful.</p>
+      </div>
+    </div>
 
-  <div class="box">
-    <h2>Contact & Support</h2>
-    <p>
-      For support, feedback or inquiries, please contact us at:
-      <br><br>
-      <b>Email:</b> <a href="mailto:myjawla@gmail.com">myjawla@gmail.com</a>
-    </p>
-  </div>
+    <div class="tile col-4 row-4 tile-pad reveal" style="justify-content:space-between;background:#f0edff;">
+      <div class="feat-icon-box" style="background:#ddd6fe;">⚖️</div>
+      <div>
+        <h2 style="font-family:var(--font-h);font-size:1.2rem;font-weight:800;margin-bottom:10px;">Our Values</h2>
+        <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.7;">Privacy is not a feature — it is a right. Speed is not a luxury — it is a standard. We will never sell user data, add hidden trackers, or force unnecessary permissions.</p>
+      </div>
+    </div>
 
-  <footer>
-    © 2025 RU Apps · <a href="./index.html">Back to Home</a>
+    <div class="tile col-4 row-4 tile-pad reveal" style="justify-content:space-between;background:#f0fdf4;">
+      <div class="feat-icon-box" style="background:#bbf7d0;">🌱</div>
+      <div>
+        <h2 style="font-family:var(--font-h);font-size:1.2rem;font-weight:800;margin-bottom:10px;">Independent</h2>
+        <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.7;">RUHI Applications is bootstrapped and independently owned. No investor pressure. We build what users actually need, at our own pace, with our own standards.</p>
+      </div>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="tile tile-brand col-3 row-2 tile-pad reveal" style="justify-content:center;align-items:center;text-align:center;">
+      <div style="font-family:var(--font-h);font-size:2.5rem;font-weight:800;color:#fff;line-height:1.1;">5 + 1</div>
+      <div style="color:rgba(255,255,255,0.85);font-size:0.78rem;margin-top:6px;line-height:1.35;font-weight:500;">5 Apps &amp; 1 Store</div>
+    </div>
+    <div class="tile col-3 row-2 tile-pad reveal" style="justify-content:center;align-items:center;text-align:center;">
+      <div style="font-family:var(--font-h);font-size:3rem;font-weight:800;line-height:1;background:linear-gradient(135deg,var(--brand),#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Free</div>
+      <div style="color:var(--text-mid);font-size:0.88rem;margin-top:6px;">Always free to use</div>
+    </div>
+    <div class="tile col-3 row-2 tile-pad reveal" style="justify-content:center;align-items:center;text-align:center;background:#fff7ed;">
+      <div style="font-family:var(--font-h);font-size:3rem;font-weight:800;line-height:1;background:linear-gradient(135deg,#ea580c,#fb923c);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">0</div>
+      <div style="color:var(--text-mid);font-size:0.88rem;margin-top:6px;">Trackers or Ads</div>
+    </div>
+    <div class="tile col-3 row-2 tile-pad reveal" style="justify-content:center;align-items:center;text-align:center;background:#f0fdf4;">
+      <div style="font-family:var(--font-h);font-size:3rem;font-weight:800;line-height:1;background:linear-gradient(135deg,#059669,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">🇮🇳</div>
+      <div style="color:var(--text-mid);font-size:0.88rem;margin-top:6px;">Made in India</div>
+    </div>
+
+    <!-- Contact -->
+    <div class="tile tile-gradient col-12 row-3 tile-pad reveal" id="contact" style="flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;">
+      <div>
+        <div style="font-family:var(--font-h);font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:10px;">Get in Touch</div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.6;">Bug reports, feature requests, partnership enquiries — we read every message.</p>
+      </div>
+      <a href="mailto:support@myruhi.in" class="btn-white">✉️ Email Us</a>
+    </div>
+
+  </div>
+</main>
+
+  <footer class="ru-footer">
+    <div class="footer-inner">
+      <div>
+        <a href="index.html" class="footer-logo">RUHI <span>Applications</span></a>
+        <p class="footer-desc">Fast, lightweight, privacy-first apps for Android &amp; Windows.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Apps</h4>
+          <ul>
+            <li><a href="dukanbook.html">DukanBook</a></li>
+            <li><a href="rubrowser.html">RU Browser</a></li>
+            <li><a href="rugallery.html">RU Gallery</a></li>
+            <li><a href="rucalendar.html">RU Calendar</a></li>
+            <li><a href="rucalculator.html">RU Calculator</a></li>
+            <li><a href="openhub.html">OpenHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="help.html">Help &amp; FAQ</a></li>
+            <li><a href="dukanbookhelp.html">DukanBook Help</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="dukan-book-privacy-policy.html">DukanBook Privacy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RUHI Applications. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
   </footer>
 
-</div>
-
+  <script>
+    const btn = document.getElementById('mobileBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    const cls = document.getElementById('drawerClose');
+    btn.addEventListener('click', () => drawer.classList.add('open'));
+    cls.addEventListener('click', () => drawer.classList.remove('open'));
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+    // Reveal
+    const els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(el => obs.observe(el));
+    } else { els.forEach(el => el.classList.add('visible')); }
+    // FAQ
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!open) item.classList.add('open');
+      });
+    });
+  </script>
 </body>
 </html>

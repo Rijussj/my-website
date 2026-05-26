@@ -1,229 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>DukanBook – Smart Customer Credit Manager</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    }
-
-    body {
-      background: #0f172a;
-      color: #e5e7eb;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    /* HERO */
-    .hero {
-      text-align: center;
-      padding: 90px 20px 70px;
-      background: radial-gradient(circle at top, #1e3a8a, #020617);
-      animation: fadeIn 1s ease;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      background: linear-gradient(90deg, #60a5fa, #22d3ee);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      margin-top: 15px;
-      font-size: 1.1rem;
-      opacity: 0.85;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 14px 30px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: 0.3s;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-    }
-
-    .btn:hover {
-      transform: translateY(-4px) scale(1.05);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.6);
-    }
-
-    .btn-outline {
-      background: transparent;
-      border: 1px solid #9ca3af;
-      color: #e5e7eb;
-    }
-
-    .btn-outline:hover {
-      background: #111827;
-    }
-
-    /* SECTION TITLE */
-    h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin: 70px 0 25px;
-    }
-
-    /* FEATURES */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      backdrop-filter: blur(14px);
-      padding: 24px;
-      border-radius: 18px;
-      transition: 0.3s;
-      border: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: #3b82f6;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-    }
-
-    .card h3 {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      opacity: 0.8;
-    }
-
-    /* SCREENSHOTS */
-    .screens {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 18px;
-      margin-top: 20px;
-    }
-
-    .shot {
-      height: 300px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, #1e293b, #020617);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      opacity: 0.7;
-      transition: 0.3s;
-    }
-
-    .shot:hover {
-      transform: scale(1.05);
-      opacity: 1;
-    }
-
-    /* FOOTER */
-    .footer {
-      text-align: center;
-      margin-top: 80px;
-      padding: 30px;
-      font-size: 0.85rem;
-      opacity: 0.6;
-    }
-
-    .footer a {
-      color: #9ca3af;
-      text-decoration: none;
-      margin-left: 6px;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* ANIMATION */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* MOBILE */
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 2.2rem; }
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DukanBook — Digital Khata & Credit Management App | RUHI Applications</title>
+  <meta name="description" content="Manage shop credit, customer payments and ledger entries with DukanBook — a free, lightweight digital khata app for Android.">
+  <meta name="author" content="RUHI Applications">
+  <link rel="canonical" href="https://myruhi.in/dukanbook">
+  <link rel="stylesheet" href="bento.css">
 </head>
-
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <h1>DukanBook</h1>
-  <p>Smart way to manage customer credit & shop records</p>
-
-  <a class="btn" href="https://play.google.com/store/apps/details?id=com.ru.dukanbook" target="_blank">Get it on Google Play</a><br>
-
-
-  </a>
-</section>
-
-<div class="container">
-
-  <!-- FEATURES -->
-  <h2>Powerful Features</h2>
-  <div class="features">
-    <div class="card">
-      <h3>Customer Credit Tracking</h3>
-      <p>Add customers and manage their credit balance digitally.</p>
+  <nav class="ru-nav" id="ruNav">
+    <a href="index.html" class="ru-nav-logo">RUHI <span>Applications</span></a>
+    <div class="ru-nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="help.html">Support</a>
+      <a href="index.html" class="ru-nav-cta ru-nav-links">Get Apps</a>
     </div>
-
-    <div class="card">
-      <h3>Payment Records</h3>
-      <p>Track received payments and remaining dues easily.</p>
-    </div>
-
-    <div class="card">
-      <h3>Clean Dashboard</h3>
-      <p>Minimal UI designed for fast daily shop usage.</p>
-    </div>
-
-    <div class="card">
-      <h3>Lightweight & Fast</h3>
-      <p>Runs smoothly on all Android phones.</p>
-    </div>
+    <button class="ru-mobile-btn" id="mobileBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="ru-drawer" id="mobileDrawer">
+    <button class="ru-drawer-close" id="drawerClose">✕</button>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="help.html">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
   </div>
- <a class="btn" href="https://play.google.com/store/apps/details?id=com.ru.dukanbook" target="_blank">Get it on Google Play</a><br>
 
+<main class="page-wrap">
+  <div class="bento">
 
-   <a class="btn" href="https://myruhi.in/dukanbookhelp.html" target="_blank">Halp And FAG</a><br>
+    <!-- Hero Tile -->
+    <div class="tile tile-dark aurora-glow col-7 row-5">
+      <div class="tile-pad" style="justify-content:flex-end;position:relative;z-index:1;">
+        <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:rgba(255,255,255,0.5);margin-bottom:16px;">Business Utility · Android</div>
+        <h1 class="display-title" style="color:#fff;margin-bottom:14px;">DukanBook <span class="grad">Digital Khata</span></h1>
+        <p style="color:rgba(255,255,255,0.6);font-size:1rem;line-height:1.65;margin-bottom:28px;max-width:420px;">Track customer credit, record payments, and manage your shop ledger entirely offline. Built for Indian shopkeepers and small businesses.</p>
+        <div class="btns-row">
+          <a href="https://play.google.com/store/apps/details?id=com.ruhi.dukanbook" class="btn-white" target="_blank" rel="noopener">↓ Download Free</a>
+          <a href="dukanbookhelp.html" class="btn-ghost">Help Center</a>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <!-- App Icon -->
+    <div class="tile col-5 row-2 tile-pad" style="align-items:center;justify-content:center;flex-direction:row;gap:20px;">
+      <img src="https://play-lh.googleusercontent.com/CTE5B7JjRjwbIJXdNtncp_hNOwL0gefHlmTaJeo95M2iX4ItdXzCSqTjufZzqek6a8ilp7BPji-AAJlxndI0JA=w240-h480-rw" alt="DukanBook icon" style="width:80px;height:80px;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,0.1);">
+      <div>
+        <div style="font-family:var(--font-h);font-size:1.4rem;font-weight:800;">DukanBook</div>
+        <div style="color:var(--text-mid);font-size:0.9rem;margin-top:4px;">Free · Android · v2.x</div>
+      </div>
+    </div>
 
-<!-- FOOTER -->
-<div class="footer">
-  © 2026 RUHI Apps ·
-  <a href="dukan-book-privacy-policy.html">Privacy Policy</a>
-</div>
+    <!-- Stat: Offline -->
+    <div class="tile tile-light-blue col-5 row-3 tile-pad reveal" style="justify-content:center;">
+      <div class="tile-stat-num">100%</div>
+      <div style="color:var(--text-mid);font-size:0.95rem;font-weight:500;margin-top:8px;">Works Offline</div>
+    </div>
 
+    <!-- Feature 1 -->
+    <div class="tile col-4 row-3 tile-pad reveal" style="justify-content:space-between;">
+      <div class="feat-icon-box">📒</div>
+      <div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;margin-bottom:8px;">Digital Khata</div>
+        <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.55;">Replace your paper register with a clean digital ledger. Add customers, record credits and payments in seconds.</p>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="tile col-4 row-3 tile-pad reveal" style="justify-content:space-between;">
+      <div class="feat-icon-box" style="background:#dcfce7;">📊</div>
+      <div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;margin-bottom:8px;">Balance Summary</div>
+        <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.55;">See total credit given, total received, and net outstanding balance at a glance — per customer or overall.</p>
+      </div>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="tile col-4 row-3 tile-pad reveal" style="justify-content:space-between;">
+      <div class="feat-icon-box" style="background:#fae8ff;">🔔</div>
+      <div>
+        <div style="font-family:var(--font-h);font-weight:700;font-size:1.05rem;margin-bottom:8px;">Payment Reminders</div>
+        <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.55;">Set due-date reminders for pending dues. Send payment requests directly via WhatsApp with one tap.</p>
+      </div>
+    </div>
+
+    <!-- Privacy Bar -->
+    <div class="tile tile-brand col-12 row-2 tile-pad reveal" style="flex-direction:row;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <span style="font-size:2rem;">🛡️</span>
+        <div>
+          <div style="font-family:var(--font-h);font-weight:800;font-size:1.1rem;color:#fff;">Your Data Stays on Your Device</div>
+          <div style="color:rgba(255,255,255,0.7);font-size:0.88rem;margin-top:4px;">No cloud sync by default. No third-party analytics. DukanBook reads only what you enter.</div>
+        </div>
+      </div>
+      <a href="dukan-book-privacy-policy.html" class="btn-ghost">Privacy Policy →</a>
+    </div>
+
+    <!-- Help CTA -->
+    <div class="tile col-6 row-3 tile-pad reveal" style="justify-content:space-between;">
+      <div>
+        <div class="sec-tag">Need help?</div>
+        <div style="font-family:var(--font-h);font-size:1.4rem;font-weight:800;margin-bottom:10px;">DukanBook Help Center</div>
+        <p style="font-size:0.9rem;color:var(--text-mid);line-height:1.6;">Step-by-step guides for adding customers, recording transactions, backup & restore, and more.</p>
+      </div>
+      <a href="dukanbookhelp.html" class="btn-brand" style="margin-top:20px;width:fit-content;">View Help Docs</a>
+    </div>
+
+    <!-- Download CTA -->
+    <div class="tile tile-gradient col-6 row-3 tile-pad reveal" style="justify-content:space-between;">
+      <div>
+        <div style="font-family:var(--font-h);font-weight:800;font-size:1.5rem;color:#fff;margin-bottom:10px;">Get DukanBook Free</div>
+        <p style="color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.6;">Available on Google Play. Free to download, free to use. No subscription required.</p>
+      </div>
+      <a href="https://play.google.com/store/apps/details?id=com.ruhi.dukanbook" class="btn-white" target="_blank" rel="noopener" style="margin-top:20px;width:fit-content;">↓ Google Play</a>
+    </div>
+
+  </div>
+</main>
+
+  <footer class="ru-footer">
+    <div class="footer-inner">
+      <div>
+        <a href="index.html" class="footer-logo">RUHI <span>Applications</span></a>
+        <p class="footer-desc">Fast, lightweight, privacy-first apps for Android &amp; Windows.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Apps</h4>
+          <ul>
+            <li><a href="dukanbook.html">DukanBook</a></li>
+            <li><a href="rubrowser.html">RU Browser</a></li>
+            <li><a href="rugallery.html">RU Gallery</a></li>
+            <li><a href="rucalendar.html">RU Calendar</a></li>
+            <li><a href="rucalculator.html">RU Calculator</a></li>
+            <li><a href="openhub.html">OpenHub</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="help.html">Help &amp; FAQ</a></li>
+            <li><a href="dukanbookhelp.html">DukanBook Help</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="dukan-book-privacy-policy.html">DukanBook Privacy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 RUHI Applications. All rights reserved.</span>
+      <div>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="about.html">About</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('mobileBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    const cls = document.getElementById('drawerClose');
+    btn.addEventListener('click', () => drawer.classList.add('open'));
+    cls.addEventListener('click', () => drawer.classList.remove('open'));
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => drawer.classList.remove('open')));
+    // Reveal
+    const els = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+      }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+      els.forEach(el => obs.observe(el));
+    } else { els.forEach(el => el.classList.add('visible')); }
+    // FAQ
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const open = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!open) item.classList.add('open');
+      });
+    });
+  </script>
 </body>
 </html>
