@@ -33,6 +33,7 @@ html { scroll-behavior: smooth; font-size: 16px; -webkit-font-smoothing: antiali
   --c-rucalendar:   #ea580c;
   --c-rucalculator: #db2777;
   --c-openhub:      #8b5cf6;
+  --c-rumovies:     #e11d48;
 }
 
 body {
@@ -351,6 +352,7 @@ body {
 .accent-rucalendar   { border-top: 3px solid var(--c-rucalendar) !important; }
 .accent-rucalculator { border-top: 3px solid var(--c-rucalculator) !important; }
 .accent-openhub      { border-top: 3px solid var(--c-openhub) !important; }
+.accent-rumovies     { border-top: 3px solid var(--c-rumovies) !important; }
 
 /* ─── PLATFORM PILLS ─────────────────────────────────────── */
 .platform-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
